@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Api\Auth\AuthController;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,13 +16,23 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('unauthorized', function () {
+    return response(['message' => 'Unauthenticated.'], 401);
+})->name('api.unauthorized');
+
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('status', function (){
-    return response('service in operation');
-});
+Route::get('status', function (){ return response('service in operation'); });
 
-//Auth
+//AUTH
 Route::post('register', [AuthController::class, 'register'])->name('user.register');
+Route::post('login', [AuthController::class, 'login']);
+
+
+Route::group(['middleware' => ['auth:sanctum']], function () {
+    Route::get('test-token', function (){ return response('service in operation with token'); });
+    Route::get('test-user', [AuthController::class, 'testUserLogged']);
+    Route::post('logout',  [AuthController::class, 'logout']);
+});
