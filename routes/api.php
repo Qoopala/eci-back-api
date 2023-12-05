@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\Auth\AuthController;
+use App\Http\Controllers\Api\Property\PropertyController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -35,4 +36,7 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::get('test-token', function (){ return response('service in operation with token'); });
     Route::get('test-user', [AuthController::class, 'testUserLogged']);
     Route::post('logout',  [AuthController::class, 'logout']);
+    Route::apiResources([
+        'property' => PropertyController::class
+    ]);
 });

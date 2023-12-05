@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('title', 45);
             $table->string('address', 100)->nullable();
             $table->string('reference', 45);
-            $table->float('price', 8,2);
+            $table->float('price', 10,2);
             $table->string('information', 255);
             $table->integer('number_room');
             $table->integer('number_bath');
