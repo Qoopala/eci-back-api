@@ -10,7 +10,12 @@ class Image extends Model
 {
     use HasFactory;
 
-
+    protected $hidden = [
+        'deleted_at',
+        'created_at',
+        'updated_at',
+    ]; 
+    
     public function property(): BelongsTo
     {
         return $this->belongsTo(Property::class, 'property_id');

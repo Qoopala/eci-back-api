@@ -10,6 +10,18 @@ class Feature extends Model
 {
     use HasFactory;
 
+    public $table = 'features';
+
+    protected $fillable = [
+        'name',
+        'property_id'
+    ];
+
+    protected $hidden = [
+        'created_at',
+        'updated_at',
+    ];
+
     public function property(): BelongsTo
     {
         return $this->belongsTo(Property::class, 'property_id');

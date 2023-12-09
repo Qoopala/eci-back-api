@@ -2,13 +2,13 @@
 
 namespace Core\Property\Services;
 
-use App\ApiResponse;
+use App\Models\Feature;
+use App\Models\Image;
 use App\ServiceResponse;
 use App\Models\Property;
-use App\Models\User;
+use Core\Image\Services\ImageService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Hash;
 
 class PropertyService
 {
@@ -30,8 +30,26 @@ class PropertyService
             $property->status = $request->status;
             $property->office_id = $request->office_id;
             $property->locality_id = $request->locality_id;
-
             $property->save();
+
+            $images = ImageService::store($request, 'property', $property->id);
+            if($images['success']) {
+                foreach ($images['data'] as $path) {
+                    $image = new Image();
+                    $image->path = $path;
+                    $image->property_id = $property->id;
+                    $image->save();
+                }
+            }
+            
+            $arrayFeatures = json_decode($request->features);
+            foreach ($arrayFeatures as $value) {
+                $feature = new Feature();
+                $feature->name = $value;
+                $feature->property_id = $property->id;
+                $feature->save();
+            }
+
             DB::commit();
             return ServiceResponse::created(__('messages.property_create_ok'), $property);
         } catch (\Throwable $th) {

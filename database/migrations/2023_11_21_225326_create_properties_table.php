@@ -17,12 +17,12 @@ return new class extends Migration
             $table->string('address', 100)->nullable();
             $table->string('reference', 45);
             $table->float('price', 10,2);
-            $table->string('information', 255);
+            $table->string('information', 1600);
             $table->integer('number_room');
             $table->integer('number_bath');
             $table->float('square_meter', 8,2);
             $table->string('energy_certification', 2)->nullable();
-            $table->string('map', 255);
+            $table->string('map', 800);
             $table->boolean('status');
             $table->foreignId('office_id')->references('id')->on('offices');
             $table->foreignId('locality_id')->references('id')->on('localities');

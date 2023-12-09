@@ -10,6 +10,12 @@ class Locality extends Model
 {
     use HasFactory;
 
+    protected $hidden = [
+        'deleted_at',
+        'created_at',
+        'updated_at',
+    ];
+    
     public function properties(): HasMany
     {
         return $this->hasMany(Property::class, 'property_id');

@@ -58,7 +58,7 @@ class Property extends Model
 
     public function locality(): BelongsTo
     {
-        return $this->belongsTo(Locality::class, 'office_id');
+        return $this->belongsTo(Locality::class, 'locality_id');
     }
 
     public function images(): HasMany
