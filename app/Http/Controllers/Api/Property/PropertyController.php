@@ -70,6 +70,16 @@ class PropertyController extends Controller
 
     public function destroy(string $id)
     {
-        //
+        try {
+            $property = Property::find($id);
+            if ($property) {
+                $property->delete();
+                return ApiResponse::ok(__('messages.property_delete_ok'));
+            } else {
+                return ApiResponse::not_found(__('messages.property_not_found'));
+            }
+        } catch (\Throwable $th) {
+            return (config('app.debug')) ? ApiResponse::serverError($th->getMessage()) : ApiResponse::serverError();
+        }
     }
 }

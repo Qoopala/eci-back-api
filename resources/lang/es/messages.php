@@ -20,5 +20,6 @@ return [
     'property_create_ok' => 'Inmueble creado correctamente',
     'property_get_ok' => 'Inmuebles obtenidos correctamente',
     'property_not_found' => 'Inmuebles no encontrados',
+    'property_delete_ok' => 'Inmueble eliminado correctamente',
 
 ];

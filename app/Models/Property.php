@@ -6,12 +6,18 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\SoftDeletes;
+use \Askedio\SoftCascade\Traits\SoftCascadeTrait;
 
 class Property extends Model
 {
     use HasFactory;
+    use SoftDeletes;
+    use SoftCascadeTrait;
 
     public $table = 'properties';
+
+    protected $softCascade = ['images', 'features'];
 
     protected $fillable = [
         'title',

@@ -26,6 +26,7 @@ return new class extends Migration
             $table->boolean('status');
             $table->foreignId('office_id')->references('id')->on('offices');
             $table->foreignId('locality_id')->references('id')->on('localities');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

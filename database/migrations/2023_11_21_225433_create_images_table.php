@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('path', 255);
             $table->foreignId('property_id')->references('id')->on('properties');
+            $table->softDeletes();
             $table->timestamps();
         });
     }
