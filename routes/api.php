@@ -36,6 +36,7 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::get('test-token', function (){ return response('service in operation with token'); });
     Route::get('test-user', [AuthController::class, 'testUserLogged']);
     Route::post('logout',  [AuthController::class, 'logout']);
+    Route::post('edit-property/{id}', [PropertyController::class, 'update']);
     Route::apiResources([
         'property' => PropertyController::class
     ]);

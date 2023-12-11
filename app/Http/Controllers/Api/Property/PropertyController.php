@@ -49,9 +49,6 @@ class PropertyController extends Controller
         }
     }
 
-    /**
-     * Display the specified resource.
-     */
     public function show($id)
     {
         try {
@@ -65,7 +62,30 @@ class PropertyController extends Controller
 
     public function update(Request $request, string $id)
     {
-        //
+        $data = $request->all();
+        $validate = PropertyValidation::validateStore($data);
+        if($validate) return ApiResponse::badRequest($validate);
+
+        $validateImage = ImageValidation::validateImage($request);
+        if($validate) return ApiResponse::badRequest($validateImage);
+
+        try {
+            $response = PropertyService::update($request, $id);
+         
+            if($response['success']) return ApiResponse::created($response['message'], $response['data']);
+            else {
+                switch ($response['code']) {
+                    case 400:
+                        return ApiResponse::badRequest($response['message']); break;
+                    case 404:
+                        return ApiResponse::not_found($response['message']); break;
+                    case 500:
+                        return ApiResponse::serverError($response['message']); break;
+                }
+            }
+        } catch (\Throwable $th) {
+            return (config('app.debug')) ? ApiResponse::serverError($th->getMessage()) : ApiResponse::serverError();
+        }
     }
 
     public function destroy(string $id)

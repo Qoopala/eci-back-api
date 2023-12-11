@@ -51,7 +51,48 @@ class PropertyService
             }
 
             DB::commit();
-            return ServiceResponse::created(__('messages.property_create_ok'), $property);
+            $response = Property::with('office', 'locality', 'images', 'features')->find($property->id);
+            return ServiceResponse::created(__('messages.property_create_ok'), $response);
+        } catch (\Throwable $th) {
+            DB::rollBack();
+            return (config('app.debug')) ? ServiceResponse::serverError($th->getMessage()) : ServiceResponse::serverError();
+        }
+    }
+
+    static function update(Request $request, $id){
+        $data = $request->all();
+        $property = Property::find($id);
+        if(!$property) return ServiceResponse::not_found(__('messages.property_not_found'));
+
+        DB::beginTransaction();
+        try {
+            $property->update($data);
+            $old_images = Image::where('property_id', $id)->delete();
+            $delete_old_images = ImageService::delete('property', $property->id);
+            if(!$delete_old_images) return ServiceResponse::badRequest(__('messages.image_update_badrequest'));
+
+            $images = ImageService::store($request, 'property', $property->id);
+            if($images['success']) {
+                foreach ($images['data'] as $path) {
+                    $image = new Image();
+                    $image->path = $path;
+                    $image->property_id = $property->id;
+                    $image->save();
+                }
+            }
+            
+            $old_features = Feature::where('property_id', $id)->delete();
+            $arrayFeatures = json_decode($request->features);
+            foreach ($arrayFeatures as $value) {
+                $feature = new Feature();
+                $feature->name = $value;
+                $feature->property_id = $property->id;
+                $feature->save();
+            }
+
+            DB::commit();
+            $response = Property::with('office', 'locality', 'images', 'features')->find($id);
+            return ServiceResponse::created(__('messages.property_update_ok'), $response);
         } catch (\Throwable $th) {
             DB::rollBack();
             return (config('app.debug')) ? ServiceResponse::serverError($th->getMessage()) : ServiceResponse::serverError();

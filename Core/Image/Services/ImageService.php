@@ -4,6 +4,7 @@ namespace Core\Image\Services;
 
 use App\ServiceResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Storage;
 
 class ImageService
@@ -22,6 +23,20 @@ class ImageService
             }
 
             return ServiceResponse::ok('images created', $arrayPath);
+        } catch (\Throwable $th) {
+            return (config('app.debug')) ? ServiceResponse::serverError($th->getMessage()) : ServiceResponse::serverError();
+        }
+    }
+
+    static function delete($type, $id){
+        try {
+            $directory = storage_path("app/{$type}/{$id}");
+    
+            if (File::exists($directory)) {
+                File::deleteDirectory($directory);
+                return true; 
+            }
+            return false; 
         } catch (\Throwable $th) {
             return (config('app.debug')) ? ServiceResponse::serverError($th->getMessage()) : ServiceResponse::serverError();
         }

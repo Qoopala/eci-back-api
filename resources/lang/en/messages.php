@@ -22,5 +22,8 @@ return [
     'property_get_ok' => 'Properties obtained correctly',
     'property_not_found' => 'Properties not found',
     'property_delete_ok' => 'Property successfully deleted',
+    'property_update_ok' => 'Property successfully updated',
+    
+    'image_update_badrequest' => 'Error updated images',
 
 ];

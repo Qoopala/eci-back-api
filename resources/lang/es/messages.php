@@ -21,5 +21,8 @@ return [
     'property_get_ok' => 'Inmuebles obtenidos correctamente',
     'property_not_found' => 'Inmuebles no encontrados',
     'property_delete_ok' => 'Inmueble eliminado correctamente',
+    'property_update_ok' => 'Inmueble actualizado correctamente',
+    
+    'image_update_badrequest' => 'Error al actualizar imágenes',
 
 ];
