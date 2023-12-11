@@ -25,7 +25,72 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "status",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{APP_URL}}/api/status",
+									"host": [
+										"{{APP_URL}}"
+									],
+									"path": [
+										"api",
+										"status"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 29 Nov 2023 22:50:56 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 29 Nov 2023 22:50:56 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.4"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=UTF-8"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "service in operation"
+						}
+					]
 				},
 				{
 					"name": "user-register",
@@ -34,7 +99,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"matias\",\r\n    \"email\": \"matias@email.com\",\r\n    \"password\": \"12345678\"\r\n}",
+							"raw": "{\r\n    \"name\": \"matias\",\r\n    \"email\": \"matias2@email.com\",\r\n    \"password\": \"12345678\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -52,7 +117,81 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "user-register",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"matias\",\r\n    \"email\": \"matias2@email.com\",\r\n    \"password\": \"12345678\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{APP_URL}}/api/register",
+									"host": [
+										"{{APP_URL}}"
+									],
+									"path": [
+										"api",
+										"register"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 29 Nov 2023 22:45:45 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 29 Nov 2023 22:45:45 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.4"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"User successfully registered\",\n    \"data\": {\n        \"name\": \"matias\",\n        \"email\": \"matias2@email.com\",\n        \"id\": 2\n    }\n}"
+						}
+					]
 				},
 				{
 					"name": "login",
@@ -61,7 +200,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"email\": \"matias@email.com\",\r\n    \"password\": \"12345678\"\r\n}",
+							"raw": "{\r\n    \"email\": \"matias2@email.com\",\r\n    \"password\": \"12345678\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -79,7 +218,81 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"matias@email.com\",\r\n    \"password\": \"12345678\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{APP_URL}}/api/login",
+									"host": [
+										"{{APP_URL}}"
+									],
+									"path": [
+										"api",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 29 Nov 2023 22:46:27 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 29 Nov 2023 22:46:27 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.4"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"User successfully logged in\",\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"matias\",\n        \"email\": \"matias@email.com\",\n        \"email_verified_at\": null,\n        \"auth_token\": \"1|DFOLO9mssYxdNzH9ATgyXLtRXeOCNKDWZTm5KPr61c32a7a0\"\n    }\n}"
+						}
+					]
 				},
 				{
 					"name": "test-token",
@@ -89,7 +302,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "3|5DDhlMCZ67VlOH3CcS2ZDCX8dllJmPvLzQMvMIs9db886457",
+									"value": "2|JVukMIbnV3CgYWlUCL1m9T7ddCsBy1xUZNritwGa1812dc61",
 									"type": "string"
 								}
 							]
@@ -107,7 +320,72 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "test-token",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{APP_URL}}/api/test-token",
+									"host": [
+										"{{APP_URL}}"
+									],
+									"path": [
+										"api",
+										"test-token"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 29 Nov 2023 22:51:23 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 29 Nov 2023 22:51:23 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.4"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=UTF-8"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "service in operation with token"
+						}
+					]
 				},
 				{
 					"name": "test-user",
@@ -117,7 +395,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "7|CHmJdAn9wDRXEftruPmm5qfNHPofzCz6brLk6eVp4cdb1ef6",
+									"value": "2|JVukMIbnV3CgYWlUCL1m9T7ddCsBy1xUZNritwGa1812dc61",
 									"type": "string"
 								}
 							]
@@ -135,7 +413,72 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "test-user",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{APP_URL}}/api/test-user",
+									"host": [
+										"{{APP_URL}}"
+									],
+									"path": [
+										"api",
+										"test-user"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 29 Nov 2023 22:51:44 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 29 Nov 2023 22:51:44 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.4"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"name\": \"matias\",\n    \"email\": \"matias@email.com\",\n    \"email_verified_at\": null\n}"
+						}
+					]
 				},
 				{
 					"name": "logout",
@@ -145,7 +488,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "7|CHmJdAn9wDRXEftruPmm5qfNHPofzCz6brLk6eVp4cdb1ef6",
+									"value": "1|DFOLO9mssYxdNzH9ATgyXLtRXeOCNKDWZTm5KPr61c32a7a0",
 									"type": "string"
 								}
 							]
@@ -163,7 +506,997 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "logout",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{APP_URL}}/api/logout",
+									"host": [
+										"{{APP_URL}}"
+									],
+									"path": [
+										"api",
+										"logout"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 29 Nov 2023 22:50:04 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 29 Nov 2023 22:50:04 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.4"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"User successfully logout\",\n    \"data\": null\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Properties",
+			"item": [
+				{
+					"name": "create-property",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "1|bsY6TaKp7rgp6NQ67pXuqCgIeLx7cNZSKAIFTE3G3f0af6cd",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Piso en C/ Arç",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "Cornellá de Llobregat",
+									"type": "text"
+								},
+								{
+									"key": "reference",
+									"value": "AR3",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "130000",
+									"type": "text"
+								},
+								{
+									"key": "information",
+									"value": "EBUSA CONSULTORES INMOBILIARIOS presenta esta vivienda ubicada  en el barrio de Sant Ildefonso. Este piso dispone de 3 habitaciones, 2  individuales y 1 doble, cocina tipo office con salida a galería  y baño  de 3 piezas con plato de ducha, ventanas de aluminio gris y suelo de cerámica. Ya que el piso dispone de ventanas en cada estancia, hace que esta vivienda sea  luminosa  desde la primera luz del día hasta la puesta del sol y eso es algo que a todos nos gusta, ¿verdad?.  \n\nZona con facilidad de transportes como la parada de metro Sant Ildefonso L5, estación de autobuses, Tranvías y taxis con Colegios privados, concertados y públicos cercanos, negocios (supermercados, panaderías. ), parques, zonas verdes, farmacias, Cap, mercados.\n\n\nEBUSA CONSULTORES INMOBILIARIOS les ofrece un servicio exclusivo para realizar un análisis financiero gratuito y obtener la mejor hipoteca posible.\n\n\n¡ NO DUDES EN CONTACTAR CON NOSOTROS !\n\nINFORMACIÓN AL CONSUMIDOR: Les comunicamos que en el precio ofertado de venta, no están incluidos los gastos de compraventa ni los impuestos, ni los honorarios a percibir por la agencia.",
+									"type": "text"
+								},
+								{
+									"key": "number_room",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "number_bath",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "square_meter",
+									"value": "63",
+									"type": "text"
+								},
+								{
+									"key": "energy_certification",
+									"value": "E",
+									"type": "text"
+								},
+								{
+									"key": "map",
+									"value": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.7558016657213!2d-58.36733122445677!3d-34.63561087294286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a334b6925e5473%3A0x1ca5b2748858b40d!2sEstadio%20Alberto%20J.%20Armando-%20La%20Bombonera!5e0!3m2!1ses-419!2sar!4v1701474311104!5m2!1ses-419!2sar\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "office_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "locality_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "features",
+									"value": "[\"Piso segunda mano\"]",
+									"type": "text"
+								},
+								{
+									"key": "image_1",
+									"type": "file",
+									"src": "/C:/Proyectos/ECI/imagenes/property2-1.jpg"
+								},
+								{
+									"key": "image_2",
+									"type": "file",
+									"src": "/C:/Proyectos/ECI/imagenes/property2-2.jpg"
+								},
+								{
+									"key": "image_3",
+									"type": "file",
+									"src": "/C:/Proyectos/ECI/imagenes/thumb_392_1400_500_0_0_crop.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{APP_URL}}/api/property",
+							"host": [
+								"{{APP_URL}}"
+							],
+							"path": [
+								"api",
+								"property"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "create-property",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Property Title\",\r\n    \"address\": \"Property Address\",\r\n    \"reference\": \"Property Reference\",\r\n    \"price\": 1000000,\r\n    \"information\": \"Property Information\",\r\n    \"number_room\": 3,\r\n    \"number_bath\": 2,\r\n    \"square_meter\": 150.5,\r\n    \"energy_certification\": \"E\",\r\n    \"map\": \"Property Map\",\r\n    \"status\": 1,\r\n    \"office_id\": 1,\r\n    \"locality_id\": 1\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{APP_URL}}/api/property",
+									"host": [
+										"{{APP_URL}}"
+									],
+									"path": [
+										"api",
+										"property"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 29 Nov 2023 22:48:56 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 29 Nov 2023 22:48:56 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.4"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Property successfully created\",\n    \"data\": {\n        \"title\": \"Property Title\",\n        \"address\": \"Property Address\",\n        \"reference\": \"Property Reference\",\n        \"price\": 1000000,\n        \"information\": \"Property Information\",\n        \"number_room\": 3,\n        \"number_bath\": 2,\n        \"square_meter\": 150.5,\n        \"energy_certification\": \"E\",\n        \"map\": \"Property Map\",\n        \"status\": true,\n        \"office_id\": 1,\n        \"locality_id\": 1,\n        \"id\": 1\n    }\n}"
+						},
+						{
+							"name": "create-property-2",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "Espectacular casa en Cubelles",
+											"type": "text"
+										},
+										{
+											"key": "address",
+											"value": "Corrientes 1000",
+											"type": "text"
+										},
+										{
+											"key": "reference",
+											"value": "ARUS130",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "130000",
+											"type": "text"
+										},
+										{
+											"key": "information",
+											"value": "EBUSA CONSULTORES INMOBILIARIOS les presenta este inmueble en el barrio de Sant Ildefonso en la calle Doctor Tiene una superficie de 50 m2, 2 dormitorios (1 doble y 1 individual ), salón con vistas al exterior, cocina con salida a galería, baño de 3 piezas con bañera. Es una vivienda muy luminosa y soleada, tiene orientación a sur por lo cual al ser un piso alto disfrutarás de unas vistas magníficas. La finca dispone de dos ascensores.\nLa carpintería del piso es de aluminio, el suelo de parquet, cocina y baño llevan una reforma de 5 años. Nota de información al consumidor:\nEstimado Cliente, rogamos consulte las condiciones de adquisición del presente inmueble con nuestro Departamento Comercial (valor de la propiedad, impuestos, honorarios de agencia, otros gastos, etc. ).",
+											"type": "text"
+										},
+										{
+											"key": "number_room",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "number_bath",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "square_meter",
+											"value": "44",
+											"type": "text"
+										},
+										{
+											"key": "energy_certification",
+											"value": "B",
+											"type": "text"
+										},
+										{
+											"key": "map",
+											"value": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.7558016657213!2d-58.36733122445677!3d-34.63561087294286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a334b6925e5473%3A0x1ca5b2748858b40d!2sEstadio%20Alberto%20J.%20Armando-%20La%20Bombonera!5e0!3m2!1ses-419!2sar!4v1701474311104!5m2!1ses-419!2sar\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "office_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "locality_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "features",
+											"value": "[\"Piso segunda mano\", \"Aire acondicionado\", \"Ascensor\"]",
+											"type": "text"
+										},
+										{
+											"key": "image_1",
+											"type": "file",
+											"src": "/C:/Proyectos/ECI/imagenes/thumb_380_1400_500_0_0_crop.jpg"
+										},
+										{
+											"key": "image_2",
+											"type": "file",
+											"src": "/C:/Proyectos/ECI/imagenes/thumb_389_1400_500_0_0_crop.jpg"
+										}
+									],
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{APP_URL}}/api/property",
+									"host": [
+										"{{APP_URL}}"
+									],
+									"path": [
+										"api",
+										"property"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 08 Dec 2023 22:53:03 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 08 Dec 2023 22:53:03 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.4"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Property successfully created\",\n    \"data\": {\n        \"title\": \"Espectacular casa en Cubelles\",\n        \"address\": \"Corrientes 1000\",\n        \"reference\": \"ARUS130\",\n        \"price\": 130000,\n        \"information\": \"EBUSA CONSULTORES INMOBILIARIOS les presenta este inmueble en el barrio de Sant Ildefonso en la calle Doctor Tiene una superficie de 50 m2, 2 dormitorios (1 doble y 1 individual ), salón con vistas al exterior, cocina con salida a galería, baño de 3 piezas con bañera. Es una vivienda muy luminosa y soleada, tiene orientación a sur por lo cual al ser un piso alto disfrutarás de unas vistas magníficas. La finca dispone de dos ascensores.\\nLa carpintería del piso es de aluminio, el suelo de parquet, cocina y baño llevan una reforma de 5 años. Nota de información al consumidor:\\nEstimado Cliente, rogamos consulte las condiciones de adquisición del presente inmueble con nuestro Departamento Comercial (valor de la propiedad, impuestos, honorarios de agencia, otros gastos, etc. ).\",\n        \"number_room\": 2,\n        \"number_bath\": 1,\n        \"square_meter\": 44,\n        \"energy_certification\": \"B\",\n        \"map\": \"<iframe src=\\\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.7558016657213!2d-58.36733122445677!3d-34.63561087294286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a334b6925e5473%3A0x1ca5b2748858b40d!2sEstadio%20Alberto%20J.%20Armando-%20La%20Bombonera!5e0!3m2!1ses-419!2sar!4v1701474311104!5m2!1ses-419!2sar\\\" width=\\\"600\\\" height=\\\"450\\\" style=\\\"border:0;\\\" allowfullscreen=\\\"\\\" loading=\\\"lazy\\\" referrerpolicy=\\\"no-referrer-when-downgrade\\\"></iframe>\",\n        \"status\": true,\n        \"office_id\": 1,\n        \"locality_id\": 1,\n        \"id\": 10\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "edit-property",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "1|bsY6TaKp7rgp6NQ67pXuqCgIeLx7cNZSKAIFTE3G3f0af6cd",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Piso en C/ ArçUP2",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "Cornellá de LlobregatUP",
+									"type": "text"
+								},
+								{
+									"key": "reference",
+									"value": "AR3",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "130000",
+									"type": "text"
+								},
+								{
+									"key": "information",
+									"value": "EBUSA CONSULTORES INMOBILIARIOS presenta esta vivienda ubicada  en el barrio de Sant Ildefonso. Este piso dispone de 3 habitaciones, 2  individuales y 1 doble, cocina tipo office con salida a galería  y baño  de 3 piezas con plato de ducha, ventanas de aluminio gris y suelo de cerámica. Ya que el piso dispone de ventanas en cada estancia, hace que esta vivienda sea  luminosa  desde la primera luz del día hasta la puesta del sol y eso es algo que a todos nos gusta, ¿verdad?.  \n\nZona con facilidad de transportes como la parada de metro Sant Ildefonso L5, estación de autobuses, Tranvías y taxis con Colegios privados, concertados y públicos cercanos, negocios (supermercados, panaderías. ), parques, zonas verdes, farmacias, Cap, mercados.\n\n\nEBUSA CONSULTORES INMOBILIARIOS les ofrece un servicio exclusivo para realizar un análisis financiero gratuito y obtener la mejor hipoteca posible.\n\n\n¡ NO DUDES EN CONTACTAR CON NOSOTROS !\n\nINFORMACIÓN AL CONSUMIDOR: Les comunicamos que en el precio ofertado de venta, no están incluidos los gastos de compraventa ni los impuestos, ni los honorarios a percibir por la agencia.",
+									"type": "text"
+								},
+								{
+									"key": "number_room",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "number_bath",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "square_meter",
+									"value": "63",
+									"type": "text"
+								},
+								{
+									"key": "energy_certification",
+									"value": "E",
+									"type": "text"
+								},
+								{
+									"key": "map",
+									"value": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.7558016657213!2d-58.36733122445677!3d-34.63561087294286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a334b6925e5473%3A0x1ca5b2748858b40d!2sEstadio%20Alberto%20J.%20Armando-%20La%20Bombonera!5e0!3m2!1ses-419!2sar!4v1701474311104!5m2!1ses-419!2sar\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "office_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "locality_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "features",
+									"value": "[\"Piso segunda mano\", \"garage\", \"gym\"]",
+									"type": "text"
+								},
+								{
+									"key": "image_1",
+									"type": "file",
+									"src": "/C:/Users/gabri/Pictures/consola-novik-2.jpg"
+								},
+								{
+									"key": "image_2",
+									"type": "file",
+									"src": "/C:/Users/gabri/Pictures/consola-novik-3.jpg"
+								},
+								{
+									"key": "image_3",
+									"type": "file",
+									"src": [],
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{APP_URL}}/api/edit-property/1",
+							"host": [
+								"{{APP_URL}}"
+							],
+							"path": [
+								"api",
+								"edit-property",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "create-property Copy",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "Piso en C/ ArçUP",
+											"type": "text"
+										},
+										{
+											"key": "address",
+											"value": "Cornellá de LlobregatUP",
+											"type": "text"
+										},
+										{
+											"key": "reference",
+											"value": "AR3",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "130000",
+											"type": "text"
+										},
+										{
+											"key": "information",
+											"value": "EBUSA CONSULTORES INMOBILIARIOS presenta esta vivienda ubicada  en el barrio de Sant Ildefonso. Este piso dispone de 3 habitaciones, 2  individuales y 1 doble, cocina tipo office con salida a galería  y baño  de 3 piezas con plato de ducha, ventanas de aluminio gris y suelo de cerámica. Ya que el piso dispone de ventanas en cada estancia, hace que esta vivienda sea  luminosa  desde la primera luz del día hasta la puesta del sol y eso es algo que a todos nos gusta, ¿verdad?.  \n\nZona con facilidad de transportes como la parada de metro Sant Ildefonso L5, estación de autobuses, Tranvías y taxis con Colegios privados, concertados y públicos cercanos, negocios (supermercados, panaderías. ), parques, zonas verdes, farmacias, Cap, mercados.\n\n\nEBUSA CONSULTORES INMOBILIARIOS les ofrece un servicio exclusivo para realizar un análisis financiero gratuito y obtener la mejor hipoteca posible.\n\n\n¡ NO DUDES EN CONTACTAR CON NOSOTROS !\n\nINFORMACIÓN AL CONSUMIDOR: Les comunicamos que en el precio ofertado de venta, no están incluidos los gastos de compraventa ni los impuestos, ni los honorarios a percibir por la agencia.",
+											"type": "text"
+										},
+										{
+											"key": "number_room",
+											"value": "3",
+											"type": "text"
+										},
+										{
+											"key": "number_bath",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "square_meter",
+											"value": "63",
+											"type": "text"
+										},
+										{
+											"key": "energy_certification",
+											"value": "E",
+											"type": "text"
+										},
+										{
+											"key": "map",
+											"value": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.7558016657213!2d-58.36733122445677!3d-34.63561087294286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a334b6925e5473%3A0x1ca5b2748858b40d!2sEstadio%20Alberto%20J.%20Armando-%20La%20Bombonera!5e0!3m2!1ses-419!2sar!4v1701474311104!5m2!1ses-419!2sar\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "office_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "locality_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "features",
+											"value": "[\"Piso segunda mano\", \"garage\", \"gym\"]",
+											"type": "text"
+										},
+										{
+											"key": "image_1",
+											"type": "file",
+											"src": "/C:/Users/gabri/Pictures/consola-novik-2.jpg"
+										},
+										{
+											"key": "image_2",
+											"type": "file",
+											"src": "/C:/Users/gabri/Pictures/consola-novik-3.jpg"
+										},
+										{
+											"key": "image_3",
+											"type": "file",
+											"src": [],
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{APP_URL}}/api/edit-property/1",
+									"host": [
+										"{{APP_URL}}"
+									],
+									"path": [
+										"api",
+										"edit-property",
+										"1"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 11 Dec 2023 00:39:23 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 11 Dec 2023 00:39:23 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.4"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Property successfully created\",\n    \"data\": {\n        \"id\": 1,\n        \"title\": \"Piso en C/ ArçUP\",\n        \"address\": \"Cornellá de LlobregatUP\",\n        \"reference\": \"AR3\",\n        \"price\": 130000,\n        \"information\": \"EBUSA CONSULTORES INMOBILIARIOS presenta esta vivienda ubicada  en el barrio de Sant Ildefonso. Este piso dispone de 3 habitaciones, 2  individuales y 1 doble, cocina tipo office con salida a galería  y baño  de 3 piezas con plato de ducha, ventanas de aluminio gris y suelo de cerámica. Ya que el piso dispone de ventanas en cada estancia, hace que esta vivienda sea  luminosa  desde la primera luz del día hasta la puesta del sol y eso es algo que a todos nos gusta, ¿verdad?.  \\n\\nZona con facilidad de transportes como la parada de metro Sant Ildefonso L5, estación de autobuses, Tranvías y taxis con Colegios privados, concertados y públicos cercanos, negocios (supermercados, panaderías. ), parques, zonas verdes, farmacias, Cap, mercados.\\n\\n\\nEBUSA CONSULTORES INMOBILIARIOS les ofrece un servicio exclusivo para realizar un análisis financiero gratuito y obtener la mejor hipoteca posible.\\n\\n\\n¡ NO DUDES EN CONTACTAR CON NOSOTROS !\\n\\nINFORMACIÓN AL CONSUMIDOR: Les comunicamos que en el precio ofertado de venta, no están incluidos los gastos de compraventa ni los impuestos, ni los honorarios a percibir por la agencia.\",\n        \"number_room\": 3,\n        \"number_bath\": 1,\n        \"square_meter\": 63,\n        \"energy_certification\": \"E\",\n        \"map\": \"<iframe src=\\\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.7558016657213!2d-58.36733122445677!3d-34.63561087294286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a334b6925e5473%3A0x1ca5b2748858b40d!2sEstadio%20Alberto%20J.%20Armando-%20La%20Bombonera!5e0!3m2!1ses-419!2sar!4v1701474311104!5m2!1ses-419!2sar\\\" width=\\\"600\\\" height=\\\"450\\\" style=\\\"border:0;\\\" allowfullscreen=\\\"\\\" loading=\\\"lazy\\\" referrerpolicy=\\\"no-referrer-when-downgrade\\\"></iframe>\",\n        \"status\": true,\n        \"office_id\": 1,\n        \"locality_id\": 1\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "get-properties",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "1|bsY6TaKp7rgp6NQ67pXuqCgIeLx7cNZSKAIFTE3G3f0af6cd",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{APP_URL}}/api/property",
+							"host": [
+								"{{APP_URL}}"
+							],
+							"path": [
+								"api",
+								"property"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "2",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get-properties",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{APP_URL}}/api/property",
+									"host": [
+										"{{APP_URL}}"
+									],
+									"path": [
+										"api",
+										"property"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "2",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 09 Dec 2023 16:45:58 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 09 Dec 2023 16:45:58 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.4"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Properties obtained correctly\",\n    \"data\": {\n        \"current_page\": 1,\n        \"data\": [\n            {\n                \"id\": 1,\n                \"title\": \"Property Title\",\n                \"address\": \"Property Address\",\n                \"reference\": \"Property Reference\",\n                \"price\": 1000000,\n                \"information\": \"Property Information\",\n                \"number_room\": 3,\n                \"number_bath\": 2,\n                \"square_meter\": 150.5,\n                \"energy_certification\": \"E\",\n                \"map\": \"Property Map\",\n                \"status\": true,\n                \"office_id\": 1,\n                \"locality_id\": 1,\n                \"office\": {\n                    \"id\": 1,\n                    \"name\": \"Office 1\",\n                    \"cif\": \"ABC123\",\n                    \"address\": \"123 Main Street\",\n                    \"map\": \"Map coordinates for Office 1\",\n                    \"email\": \"office1@example.com\",\n                    \"phone\": \"123-456-7890\",\n                    \"path_image\": \"office1.jpg\"\n                },\n                \"locality\": {\n                    \"id\": 1,\n                    \"name\": \"Locality 1\"\n                },\n                \"images\": [],\n                \"features\": []\n            },\n            {\n                \"id\": 2,\n                \"title\": \"Property dos\",\n                \"address\": \"España 400\",\n                \"reference\": \"Property Reference\",\n                \"price\": 1000000,\n                \"information\": \"Property Information\",\n                \"number_room\": 3,\n                \"number_bath\": 2,\n                \"square_meter\": 150.5,\n                \"energy_certification\": \"B\",\n                \"map\": \"Property Map\",\n                \"status\": true,\n                \"office_id\": 1,\n                \"locality_id\": 1,\n                \"office\": {\n                    \"id\": 1,\n                    \"name\": \"Office 1\",\n                    \"cif\": \"ABC123\",\n                    \"address\": \"123 Main Street\",\n                    \"map\": \"Map coordinates for Office 1\",\n                    \"email\": \"office1@example.com\",\n                    \"phone\": \"123-456-7890\",\n                    \"path_image\": \"office1.jpg\"\n                },\n                \"locality\": {\n                    \"id\": 1,\n                    \"name\": \"Locality 1\"\n                },\n                \"images\": [],\n                \"features\": []\n            },\n            {\n                \"id\": 3,\n                \"title\": \"Property tres\",\n                \"address\": \"España 400\",\n                \"reference\": \"Property Reference\",\n                \"price\": 1000000,\n                \"information\": \"Property Information\",\n                \"number_room\": 3,\n                \"number_bath\": 2,\n                \"square_meter\": 150.5,\n                \"energy_certification\": \"B\",\n                \"map\": \"Property Map\",\n                \"status\": true,\n                \"office_id\": 1,\n                \"locality_id\": 1,\n                \"office\": {\n                    \"id\": 1,\n                    \"name\": \"Office 1\",\n                    \"cif\": \"ABC123\",\n                    \"address\": \"123 Main Street\",\n                    \"map\": \"Map coordinates for Office 1\",\n                    \"email\": \"office1@example.com\",\n                    \"phone\": \"123-456-7890\",\n                    \"path_image\": \"office1.jpg\"\n                },\n                \"locality\": {\n                    \"id\": 1,\n                    \"name\": \"Locality 1\"\n                },\n                \"images\": [],\n                \"features\": []\n            },\n            {\n                \"id\": 4,\n                \"title\": \"Property cuatro\",\n                \"address\": \"España 400\",\n                \"reference\": \"Property Reference\",\n                \"price\": 1000000,\n                \"information\": \"Property Information\",\n                \"number_room\": 3,\n                \"number_bath\": 2,\n                \"square_meter\": 150.5,\n                \"energy_certification\": \"B\",\n                \"map\": \"Property Map\",\n                \"status\": true,\n                \"office_id\": 1,\n                \"locality_id\": 1,\n                \"office\": {\n                    \"id\": 1,\n                    \"name\": \"Office 1\",\n                    \"cif\": \"ABC123\",\n                    \"address\": \"123 Main Street\",\n                    \"map\": \"Map coordinates for Office 1\",\n                    \"email\": \"office1@example.com\",\n                    \"phone\": \"123-456-7890\",\n                    \"path_image\": \"office1.jpg\"\n                },\n                \"locality\": {\n                    \"id\": 1,\n                    \"name\": \"Locality 1\"\n                },\n                \"images\": [],\n                \"features\": []\n            },\n            {\n                \"id\": 5,\n                \"title\": \"Property cinco\",\n                \"address\": \"España 400\",\n                \"reference\": \"Property Reference\",\n                \"price\": 1000000,\n                \"information\": \"Property Information\",\n                \"number_room\": 3,\n                \"number_bath\": 2,\n                \"square_meter\": 150.5,\n                \"energy_certification\": \"B\",\n                \"map\": \"Property Map\",\n                \"status\": true,\n                \"office_id\": 1,\n                \"locality_id\": 1,\n                \"office\": {\n                    \"id\": 1,\n                    \"name\": \"Office 1\",\n                    \"cif\": \"ABC123\",\n                    \"address\": \"123 Main Street\",\n                    \"map\": \"Map coordinates for Office 1\",\n                    \"email\": \"office1@example.com\",\n                    \"phone\": \"123-456-7890\",\n                    \"path_image\": \"office1.jpg\"\n                },\n                \"locality\": {\n                    \"id\": 1,\n                    \"name\": \"Locality 1\"\n                },\n                \"images\": [],\n                \"features\": []\n            },\n            {\n                \"id\": 6,\n                \"title\": \"Property seis\",\n                \"address\": \"España 400\",\n                \"reference\": \"Property Reference\",\n                \"price\": 1000000,\n                \"information\": \"Property Information\",\n                \"number_room\": 3,\n                \"number_bath\": 2,\n                \"square_meter\": 150.5,\n                \"energy_certification\": \"B\",\n                \"map\": \"Property Map\",\n                \"status\": true,\n                \"office_id\": 1,\n                \"locality_id\": 1,\n                \"office\": {\n                    \"id\": 1,\n                    \"name\": \"Office 1\",\n                    \"cif\": \"ABC123\",\n                    \"address\": \"123 Main Street\",\n                    \"map\": \"Map coordinates for Office 1\",\n                    \"email\": \"office1@example.com\",\n                    \"phone\": \"123-456-7890\",\n                    \"path_image\": \"office1.jpg\"\n                },\n                \"locality\": {\n                    \"id\": 1,\n                    \"name\": \"Locality 1\"\n                },\n                \"images\": [],\n                \"features\": []\n            },\n            {\n                \"id\": 10,\n                \"title\": \"Espectacular casa en Cubelles\",\n                \"address\": \"Corrientes 1000\",\n                \"reference\": \"ARUS130\",\n                \"price\": 130000,\n                \"information\": \"EBUSA CONSULTORES INMOBILIARIOS les presenta este inmueble en el barrio de Sant Ildefonso en la calle Doctor Tiene una superficie de 50 m2, 2 dormitorios (1 doble y 1 individual ), salón con vistas al exterior, cocina con salida a galería, baño de 3 piezas con bañera. Es una vivienda muy luminosa y soleada, tiene orientación a sur por lo cual al ser un piso alto disfrutarás de unas vistas magníficas. La finca dispone de dos ascensores.\\nLa carpintería del piso es de aluminio, el suelo de parquet, cocina y baño llevan una reforma de 5 años. Nota de información al consumidor:\\nEstimado Cliente, rogamos consulte las condiciones de adquisición del presente inmueble con nuestro Departamento Comercial (valor de la propiedad, impuestos, honorarios de agencia, otros gastos, etc. ).\",\n                \"number_room\": 2,\n                \"number_bath\": 1,\n                \"square_meter\": 44,\n                \"energy_certification\": \"B\",\n                \"map\": \"<iframe src=\\\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.7558016657213!2d-58.36733122445677!3d-34.63561087294286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a334b6925e5473%3A0x1ca5b2748858b40d!2sEstadio%20Alberto%20J.%20Armando-%20La%20Bombonera!5e0!3m2!1ses-419!2sar!4v1701474311104!5m2!1ses-419!2sar\\\" width=\\\"600\\\" height=\\\"450\\\" style=\\\"border:0;\\\" allowfullscreen=\\\"\\\" loading=\\\"lazy\\\" referrerpolicy=\\\"no-referrer-when-downgrade\\\"></iframe>\",\n                \"status\": true,\n                \"office_id\": 1,\n                \"locality_id\": 1,\n                \"office\": {\n                    \"id\": 1,\n                    \"name\": \"Office 1\",\n                    \"cif\": \"ABC123\",\n                    \"address\": \"123 Main Street\",\n                    \"map\": \"Map coordinates for Office 1\",\n                    \"email\": \"office1@example.com\",\n                    \"phone\": \"123-456-7890\",\n                    \"path_image\": \"office1.jpg\"\n                },\n                \"locality\": {\n                    \"id\": 1,\n                    \"name\": \"Locality 1\"\n                },\n                \"images\": [\n                    {\n                        \"id\": 7,\n                        \"path\": \"C:\\\\Proyectos\\\\ECI\\\\eci-back-api\\\\storage\\\\app/property\\\\10/thumb_380_1400_500_0_0_crop.jpg\",\n                        \"property_id\": 10\n                    },\n                    {\n                        \"id\": 8,\n                        \"path\": \"C:\\\\Proyectos\\\\ECI\\\\eci-back-api\\\\storage\\\\app/property\\\\10/thumb_389_1400_500_0_0_crop.jpg\",\n                        \"property_id\": 10\n                    }\n                ],\n                \"features\": [\n                    {\n                        \"id\": 1,\n                        \"name\": \"Piso segunda mano\",\n                        \"property_id\": 10\n                    },\n                    {\n                        \"id\": 2,\n                        \"name\": \"Aire acondicionado\",\n                        \"property_id\": 10\n                    },\n                    {\n                        \"id\": 3,\n                        \"name\": \"Ascensor\",\n                        \"property_id\": 10\n                    }\n                ]\n            }\n        ],\n        \"first_page_url\": \"http://localhost:8000/api/property?page=1\",\n        \"from\": 1,\n        \"last_page\": 1,\n        \"last_page_url\": \"http://localhost:8000/api/property?page=1\",\n        \"links\": [\n            {\n                \"url\": null,\n                \"label\": \"&laquo; Previous\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:8000/api/property?page=1\",\n                \"label\": \"1\",\n                \"active\": true\n            },\n            {\n                \"url\": null,\n                \"label\": \"Next &raquo;\",\n                \"active\": false\n            }\n        ],\n        \"next_page_url\": null,\n        \"path\": \"http://localhost:8000/api/property\",\n        \"per_page\": 20,\n        \"prev_page_url\": null,\n        \"to\": 7,\n        \"total\": 7\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "get-by-id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "1|bsY6TaKp7rgp6NQ67pXuqCgIeLx7cNZSKAIFTE3G3f0af6cd",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{APP_URL}}/api/property/1",
+							"host": [
+								"{{APP_URL}}"
+							],
+							"path": [
+								"api",
+								"property",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get-by-id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{APP_URL}}/api/property/2",
+									"host": [
+										"{{APP_URL}}"
+									],
+									"path": [
+										"api",
+										"property",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 10 Dec 2023 15:30:30 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 10 Dec 2023 15:30:30 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.4"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "56"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Properties obtained correctly\",\n    \"data\": {\n        \"id\": 2,\n        \"title\": \"Piso en C/ Arç\",\n        \"address\": \"Cornellá de Llobregat\",\n        \"reference\": \"AR3\",\n        \"price\": 130000,\n        \"information\": \"EBUSA CONSULTORES INMOBILIARIOS presenta esta vivienda ubicada  en el barrio de Sant Ildefonso. Este piso dispone de 3 habitaciones, 2  individuales y 1 doble, cocina tipo office con salida a galería  y baño  de 3 piezas con plato de ducha, ventanas de aluminio gris y suelo de cerámica. Ya que el piso dispone de ventanas en cada estancia, hace que esta vivienda sea  luminosa  desde la primera luz del día hasta la puesta del sol y eso es algo que a todos nos gusta, ¿verdad?.  \\n\\nZona con facilidad de transportes como la parada de metro Sant Ildefonso L5, estación de autobuses, Tranvías y taxis con Colegios privados, concertados y públicos cercanos, negocios (supermercados, panaderías. ), parques, zonas verdes, farmacias, Cap, mercados.\\n\\n\\nEBUSA CONSULTORES INMOBILIARIOS les ofrece un servicio exclusivo para realizar un análisis financiero gratuito y obtener la mejor hipoteca posible.\\n\\n\\n¡ NO DUDES EN CONTACTAR CON NOSOTROS !\\n\\nINFORMACIÓN AL CONSUMIDOR: Les comunicamos que en el precio ofertado de venta, no están incluidos los gastos de compraventa ni los impuestos, ni los honorarios a percibir por la agencia.\",\n        \"number_room\": 3,\n        \"number_bath\": 1,\n        \"square_meter\": 63,\n        \"energy_certification\": \"E\",\n        \"map\": \"<iframe src=\\\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.7558016657213!2d-58.36733122445677!3d-34.63561087294286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a334b6925e5473%3A0x1ca5b2748858b40d!2sEstadio%20Alberto%20J.%20Armando-%20La%20Bombonera!5e0!3m2!1ses-419!2sar!4v1701474311104!5m2!1ses-419!2sar\\\" width=\\\"600\\\" height=\\\"450\\\" style=\\\"border:0;\\\" allowfullscreen=\\\"\\\" loading=\\\"lazy\\\" referrerpolicy=\\\"no-referrer-when-downgrade\\\"></iframe>\",\n        \"status\": true,\n        \"office_id\": 1,\n        \"locality_id\": 1,\n        \"office\": {\n            \"id\": 1,\n            \"name\": \"Office 1\",\n            \"cif\": \"ABC123\",\n            \"address\": \"123 Main Street\",\n            \"map\": \"Map coordinates for Office 1\",\n            \"email\": \"office1@example.com\",\n            \"phone\": \"123-456-7890\",\n            \"path_image\": \"office1.jpg\"\n        },\n        \"locality\": {\n            \"id\": 1,\n            \"name\": \"Locality 1\"\n        },\n        \"images\": [\n            {\n                \"id\": 3,\n                \"path\": \"C:\\\\Proyectos\\\\ECI\\\\eci-back-api\\\\storage\\\\app/property\\\\2/property2-1.jpg\",\n                \"property_id\": 2\n            },\n            {\n                \"id\": 4,\n                \"path\": \"C:\\\\Proyectos\\\\ECI\\\\eci-back-api\\\\storage\\\\app/property\\\\2/property2-2.jpg\",\n                \"property_id\": 2\n            },\n            {\n                \"id\": 5,\n                \"path\": \"C:\\\\Proyectos\\\\ECI\\\\eci-back-api\\\\storage\\\\app/property\\\\2/thumb_392_1400_500_0_0_crop.jpg\",\n                \"property_id\": 2\n            }\n        ],\n        \"features\": [\n            {\n                \"id\": 4,\n                \"name\": \"Piso segunda mano\",\n                \"property_id\": 2,\n                \"deleted_at\": null\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "delete-property",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "1|bsY6TaKp7rgp6NQ67pXuqCgIeLx7cNZSKAIFTE3G3f0af6cd",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{APP_URL}}/api/property/1",
+							"host": [
+								"{{APP_URL}}"
+							],
+							"path": [
+								"api",
+								"property",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "delete-property",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{APP_URL}}/api/property/1",
+									"host": [
+										"{{APP_URL}}"
+									],
+									"path": [
+										"api",
+										"property",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 10 Dec 2023 15:41:35 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 10 Dec 2023 15:41:35 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.4"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Property successfully deleted\",\n    \"data\": null\n}"
+						}
+					]
 				}
 			]
 		}
