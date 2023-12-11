@@ -18,8 +18,14 @@ class AuthController extends Controller
         $validate = AuthValidation ::validateRegister($data);
         if($validate) return ApiResponse::badRequest($validate);
         try {
-            $user = AuthService::register($request);
-            return ApiResponse::created(__('messages.user_create_ok'), $user);
+            $response = AuthService::register($request);
+            if($response['success']) return ApiResponse::created($response['message'], $response['data']);
+            else {
+                switch ($response['code']) {
+                    case 500:
+                        return ApiResponse::serverError($response['message']); break;
+                }
+            }
         } catch (\Throwable $th) {
             return (config('app.debug')) ? ApiResponse::serverError($th->getMessage()) : ApiResponse::serverError();
         }
@@ -31,9 +37,18 @@ class AuthController extends Controller
         $validate = AuthValidation::validateLogin($data);
         if($validate) return ApiResponse::badRequest($validate);
         try {
-            $user = AuthService::login($request);
-            if($user)  return ApiResponse::ok(__('messages.user_logged_ok'), $user);
-            else return ApiResponse::badRequest(__('messages.user_login_error'));
+            $response = AuthService::login($request);
+            if($response['success']) return ApiResponse::ok($response['message'], $response['data']);
+            else {
+                switch ($response['code']) {
+                    case 400:
+                        return ApiResponse::badRequest($response['message']); break;
+                    case 404:
+                        return ApiResponse::not_found($response['message']); break;
+                    case 500:
+                        return ApiResponse::serverError($response['message']); break;
+                }
+            }
         } catch (\Throwable $th) {
             return (config('app.debug')) ? ApiResponse::serverError($th->getMessage()) : ApiResponse::serverError();
         }
@@ -41,8 +56,14 @@ class AuthController extends Controller
 
     public function logout(){
         try {
-            $logout = AuthService::logout();
-            if($logout) return ApiResponse::ok(__('messages.user_logout'));
+            $response = AuthService::logout();
+            if($response['success']) return ApiResponse::ok($response['message']);
+            else {
+                switch ($response['code']) {
+                    case 500:
+                        return ApiResponse::serverError($response['message']); break;
+                }
+            }
         } catch (\Throwable $th) {
             return (config('app.debug')) ? ApiResponse::serverError($th->getMessage()) : ApiResponse::serverError();
         }

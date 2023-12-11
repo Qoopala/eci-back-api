@@ -4,6 +4,7 @@ namespace Core\Auth\Services;
 
 use App\ApiResponse;
 use App\Models\User;
+use App\ServiceResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
@@ -19,10 +20,10 @@ class AuthService
             $user->password = Hash::make($request->password);
             $user->save();
             DB::commit();
-            return $user;
+            return ServiceResponse::created(__('messages.user_create_ok'), $user);
         } catch (\Throwable $th) {
             DB::rollBack();
-            return ApiResponse::serverError($th->getMessage());
+            return (config('app.debug')) ? ServiceResponse::serverError($th->getMessage()) : ServiceResponse::serverError() ;
         }
     }
 
@@ -34,15 +35,15 @@ class AuthService
                     $auth_token = $user->createToken("auth_token")->plainTextToken;
                     $user->auth_token = $auth_token;
 
-                    return $user;
+                    return ServiceResponse::ok(__('messages.user_logged_ok'), $user);
                 } else {
-                    return ApiResponse::badRequest(__('messages.user_login_badrequest'));
+                    return ServiceResponse::badRequest(__('messages.user_login_badrequest'));
                 }
             } else {
-                return ApiResponse::badRequest(__('messages.user_not_found'));
+                return ServiceResponse::not_found(__('messages.user_not_found'));
             }
         } catch (\Throwable $th) {
-            return ApiResponse::serverError($th->getMessage());
+            return (config('app.debug')) ? ServiceResponse::serverError($th->getMessage()) : ServiceResponse::serverError() ;
         }
     }
 
@@ -53,9 +54,9 @@ class AuthService
             if ($user) {
                 $user->tokens()->delete();
             }
-            return true;
+            return ServiceResponse::ok(__('messages.user_logout'));
         } catch (\Exception $th) {
-            ApiResponse::serverError($th->getMessage());
+            return (config('app.debug')) ? ServiceResponse::serverError($th->getMessage()) : ServiceResponse::serverError() ;
         }
     }
 

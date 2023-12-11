@@ -14,5 +14,15 @@ return [
     'user_not_found' => 'Usuario no encontrado',
     'user_logged_ok' => 'Usuario logeado correctamente',
     'user_login_error' => 'Ocurrió un error inesperado al logear usuario',
-    'user_logout' => 'Usuario deslogueado correctamente'
+    'user_logout' => 'Usuario deslogueado correctamente',
+
+    //PROPERTY
+    'property_create_ok' => 'Inmueble creado correctamente',
+    'property_get_ok' => 'Inmuebles obtenidos correctamente',
+    'property_not_found' => 'Inmuebles no encontrados',
+    'property_delete_ok' => 'Inmueble eliminado correctamente',
+    'property_update_ok' => 'Inmueble actualizado correctamente',
+    
+    'image_update_badrequest' => 'Error al actualizar imágenes',
+
 ];
