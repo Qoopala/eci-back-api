@@ -37,7 +37,11 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::get('test-user', [AuthController::class, 'testUserLogged']);
     Route::post('logout',  [AuthController::class, 'logout']);
     Route::post('edit-property/{id}', [PropertyController::class, 'update']);
-    Route::apiResources([
-        'property' => PropertyController::class
+    Route::resource('property', PropertyController::class)->except([
+        'index', 'show'
     ]);
 });
+
+Route::resource('property', PropertyController::class)->only([
+    'index', 'show'
+]);
