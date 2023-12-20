@@ -4,26 +4,22 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Category extends Model
+class BlogImage extends Model
 {
     use HasFactory;
     use SoftDeletes;
-
-    public $table = 'categories';
 
     protected $hidden = [
         'deleted_at',
         'created_at',
         'updated_at',
-    ];
-
-
-    public function blogs(): HasMany
+    ]; 
+    
+    public function blog(): BelongsTo
     {
-        return $this->hasMany(Blog::class);
+        return $this->belongsTo(Blog::class, 'blog_id');
     }
-
 }
