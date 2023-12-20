@@ -88,4 +88,19 @@ class BlogController extends Controller
             return (config('app.debug')) ? ApiResponse::serverError($th->getMessage()) : ApiResponse::serverError();
         }
     }
+
+    public function destroy(string $id)
+    {
+        try {
+            $blog =  Blog::find($id);
+            if ($blog) {
+                $blog->delete();
+                return ApiResponse::ok(__('messages.blog_delete_ok'));
+            } else {
+                return ApiResponse::not_found(__('messages.blog_not_found'));
+            }
+        } catch (\Throwable $th) {
+            return (config('app.debug')) ? ApiResponse::serverError($th->getMessage()) : ApiResponse::serverError();
+        }
+    }
 }
