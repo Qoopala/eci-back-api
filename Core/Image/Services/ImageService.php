@@ -11,7 +11,7 @@ class ImageService
 {
     static function store(Request $request, $type, $id){
         try {
-            $folderPath = "{$type}" . DIRECTORY_SEPARATOR . "{$id}";
+            $folderPath = "public". DIRECTORY_SEPARATOR ."{$type}" . DIRECTORY_SEPARATOR . "{$id}";
             $arrayPath = [];
             Storage::makeDirectory($folderPath);    
             $images = $request->file();
@@ -19,7 +19,7 @@ class ImageService
             foreach ($images as $image) {
                 $imageName = $image->getClientOriginalName();
                 $image->storeAs($folderPath, $imageName);
-                $arrayPath[] = storage_path("app/{$folderPath}/{$imageName}");
+                $arrayPath[] = "storage/{$type}/{$id}/{$imageName}";
             }
 
             return ServiceResponse::ok('images created', $arrayPath);
