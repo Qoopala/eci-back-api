@@ -25,4 +25,11 @@ return [
     
     'image_update_badrequest' => 'Error al actualizar imágenes',
 
+    //BLOG
+    'blog_create_ok' => 'blog creado correctamente',
+    'blog_get_ok' => 'blogs obtenidos correctamente',
+    'blog_not_found' => 'blogs no encontrados',
+    'blog_delete_ok' => 'blog eliminado correctamente',
+    'blog_update_ok' => 'blog actualizado correctamente',
+
 ];

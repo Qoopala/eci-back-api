@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\Auth\AuthController;
+use App\Http\Controllers\Api\Blog\BlogController;
 use App\Http\Controllers\Api\Property\PropertyController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -40,8 +41,17 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::resource('property', PropertyController::class)->except([
         'index', 'show'
     ]);
+
+    Route::post('edit-blog/{id}', [BlogController::class, 'update']);
+    Route::resource('blog', BlogController::class)->except([
+        'index', 'show'
+    ]);
 });
 
 Route::resource('property', PropertyController::class)->only([
+    'index', 'show'
+]);
+
+Route::resource('blog', BlogController::class)->only([
     'index', 'show'
 ]);

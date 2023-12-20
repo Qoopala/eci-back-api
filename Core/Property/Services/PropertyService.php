@@ -10,6 +10,8 @@ use Core\Image\Services\ImageService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
+use function PHPUnit\Framework\isEmpty;
+
 class PropertyService
 {
     static function store(Request $request){
@@ -67,17 +69,20 @@ class PropertyService
         DB::beginTransaction();
         try {
             $property->update($data);
-            $old_images = Image::where('property_id', $id)->delete();
-            $delete_old_images = ImageService::delete('property', $property->id);
-            if(!$delete_old_images) return ServiceResponse::badRequest(__('messages.image_update_badrequest'));
 
-            $images = ImageService::store($request, 'property', $property->id);
-            if($images['success']) {
-                foreach ($images['data'] as $path) {
-                    $image = new Image();
-                    $image->path = $path;
-                    $image->property_id = $property->id;
-                    $image->save();
+            if(!isEmpty($request->file())){
+                $old_images = Image::where('property_id', $id)->delete();
+                $delete_old_images = ImageService::delete('property', $property->id);
+                if(!$delete_old_images) return ServiceResponse::badRequest(__('messages.image_update_badrequest'));
+    
+                $images = ImageService::store($request, 'property', $property->id);
+                if($images['success']) {
+                    foreach ($images['data'] as $path) {
+                        $image = new Image();
+                        $image->path = $path;
+                        $image->property_id = $property->id;
+                        $image->save();
+                    }
                 }
             }
             

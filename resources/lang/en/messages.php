@@ -26,4 +26,11 @@ return [
     
     'image_update_badrequest' => 'Error updated images',
 
+    //BLOG
+    'blog_create_ok' => 'blog successfully created',
+    'blog_get_ok' => 'blogs obtained correctly',
+    'blog_not_found' => 'blogs not found',
+    'blog_delete_ok' => 'blog successfully deleted',
+    'blog_update_ok' => 'blog successfully updated',
+
 ];
