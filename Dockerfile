@@ -42,8 +42,8 @@ RUN mkdir -p /home/$user/.composer && \
 # Set working directory
 WORKDIR /var/www/projects/eci-site/eci-back-api
 
-# Copy everything EXCEPT storage directory
-COPY --exclude=storage / ./
+# Excluir el directorio 'storage' del contenedor
+RUN rm -rf storage
 COPY composer.json composer.lock ./
 RUN composer install --no-scripts --no-autoloader
 

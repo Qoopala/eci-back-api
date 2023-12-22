@@ -1,0 +1,4 @@
+# .dockerignore
+
+# Excluir el directorio 'storage'
+storage/
