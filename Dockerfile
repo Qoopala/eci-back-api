@@ -49,7 +49,7 @@ RUN composer install --no-scripts --no-autoloader
 
 COPY . .
 RUN chmod +x artisan
-
+RUN chmod -R 775 storage
 RUN composer dump-autoload --optimize
 
 EXPOSE 9001
