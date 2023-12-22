@@ -1,0 +1,37 @@
+version: "3.7"
+services:
+  nginx:
+    image: nginx:alpine
+    container_name: eci-api-nginx
+    restart: unless-stopped
+    ports:
+      - 9001:80
+    volumes:
+      - ./:/var/www/projects/eci-site/eci-back-api
+      - ./docker/nginx/app.conf:/etc/nginx/conf.d/default.conf
+    networks:
+      - mysql_default
+    links:
+      - app-eci-api
+
+  app-eci-api:
+    build:
+      args:
+        user: qoopala
+        uid: 1000
+      context: ./
+      dockerfile: Dockerfile
+    image: eci-api-image
+    container_name: eci-api-app
+    restart: unless-stopped
+    working_dir: /var/www/projects/eci-site/eci-back-api
+
+    volumes:
+      - ./:/var/www/projects/eci-site/eci-back-api
+      - ./storage:/var/www/projects/eci-site/eci-back-api/storage
+    networks:
+      - mysql_default
+    
+networks:
+  mysql_default:
+    external: true
