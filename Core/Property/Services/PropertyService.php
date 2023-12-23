@@ -65,12 +65,12 @@ class PropertyService
         $data = $request->all();
         $property = Property::find($id);
         if(!$property) return ServiceResponse::not_found(__('messages.property_not_found'));
-
+        
         DB::beginTransaction();
         try {
             $property->update($data);
-
-            if(!isEmpty($request->file())){
+            
+            if(count($request->file())){
                 $old_images = Image::where('property_id', $id)->delete();
                 $delete_old_images = ImageService::delete('property', $property->id);
                 if(!$delete_old_images) return ServiceResponse::badRequest(__('messages.image_update_badrequest'));

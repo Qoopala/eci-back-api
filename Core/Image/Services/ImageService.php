@@ -11,17 +11,20 @@ class ImageService
 {
     static function store(Request $request, $type, $id){
         try {
-            $folderPath = "public". DIRECTORY_SEPARATOR ."{$type}" . DIRECTORY_SEPARATOR . "{$id}";
+            $folderPath = "{$type}" . DIRECTORY_SEPARATOR . "{$id}";
             $arrayPath = [];
-            Storage::makeDirectory($folderPath);    
+    
+            if (!file_exists(public_path($folderPath))) {
+                mkdir(public_path($folderPath), 0755, true);
+            }
             $images = $request->file();
     
             foreach ($images as $image) {
                 $imageName = $image->getClientOriginalName();
-                $image->storeAs($folderPath, $imageName);
-                $arrayPath[] = "storage/{$type}/{$id}/{$imageName}";
+                $image->move(public_path($folderPath), $imageName);
+                $arrayPath[] = "/{$type}/{$id}/{$imageName}";
             }
-
+    
             return ServiceResponse::ok('images created', $arrayPath);
         } catch (\Throwable $th) {
             return (config('app.debug')) ? ServiceResponse::serverError($th->getMessage()) : ServiceResponse::serverError();
@@ -30,7 +33,7 @@ class ImageService
 
     static function delete($type, $id){
         try {
-            $directory = storage_path("app/{$type}/{$id}");
+            $directory = public_path("{$type}/{$id}");
     
             if (File::exists($directory)) {
                 File::deleteDirectory($directory);

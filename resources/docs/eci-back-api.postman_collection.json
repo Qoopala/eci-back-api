@@ -200,7 +200,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"email\": \"matias2@email.com\",\r\n    \"password\": \"12345678\"\r\n}",
+							"raw": "{\r\n    \"email\": \"admin@mail.com\",\r\n    \"password\": \"12345678\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -932,7 +932,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "1|bsY6TaKp7rgp6NQ67pXuqCgIeLx7cNZSKAIFTE3G3f0af6cd",
+									"value": "25|NPo7uVPzzL7RH5FWvKwqw4vZ2hG1LKh9EwJ42aTLa39be1e0",
 									"type": "string"
 								}
 							]
@@ -944,7 +944,7 @@
 							"formdata": [
 								{
 									"key": "title",
-									"value": "Piso en C/ ArçUP2",
+									"value": "Piso en C/ ArçUP3",
 									"type": "text"
 								},
 								{
@@ -955,7 +955,8 @@
 								{
 									"key": "reference",
 									"value": "AR3",
-									"type": "text"
+									"type": "text",
+									"disabled": true
 								},
 								{
 									"key": "price",
@@ -1015,12 +1016,14 @@
 								{
 									"key": "image_1",
 									"type": "file",
-									"src": "/C:/Users/gabri/Pictures/consola-novik-2.jpg"
+									"src": "/C:/Users/gabri/Pictures/consola-novik-2.jpg",
+									"disabled": true
 								},
 								{
 									"key": "image_2",
 									"type": "file",
-									"src": "/C:/Users/gabri/Pictures/consola-novik-3.jpg"
+									"src": "/C:/Users/gabri/Pictures/consola-novik-3.jpg",
+									"disabled": true
 								},
 								{
 									"key": "image_3",
@@ -1205,14 +1208,7 @@
 					"name": "get-properties",
 					"request": {
 						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "1|bsY6TaKp7rgp6NQ67pXuqCgIeLx7cNZSKAIFTE3G3f0af6cd",
-									"type": "string"
-								}
-							]
+							"type": "noauth"
 						},
 						"method": "GET",
 						"header": [],
@@ -1312,14 +1308,7 @@
 					"name": "get-by-id",
 					"request": {
 						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "1|bsY6TaKp7rgp6NQ67pXuqCgIeLx7cNZSKAIFTE3G3f0af6cd",
-									"type": "string"
-								}
-							]
+							"type": "noauth"
 						},
 						"method": "GET",
 						"header": [],
@@ -1499,12 +1488,656 @@
 					]
 				}
 			]
+		},
+		{
+			"name": "Blog",
+			"item": [
+				{
+					"name": "create-blog",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "23|U95ZWgyeeeEharmCSqJd9iuleGgtaSiANU29fIzU2e98a76b",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Blog title 3",
+									"type": "text"
+								},
+								{
+									"key": "down",
+									"value": "this is down",
+									"type": "text"
+								},
+								{
+									"key": "author",
+									"value": "Juan Paez",
+									"type": "text"
+								},
+								{
+									"key": "body",
+									"value": "<div contenteditable=\"true\" style=\"border: 1px solid #ccc; padding: 10px;\">\n    <p>¡Hola! Este es un ejemplo de contenido generado por un editor WYSIWYG.</p>\n    <p>Los usuarios pueden editar y dar formato al texto directamente.</p>\n    <ul>\n        <li>Elemento de lista 1</li>\n        <li>Elemento de lista 2</li>\n        <li>Elemento de lista 3</li>\n    </ul>\n    <p>Pueden agregar imágenes, enlaces, y más...</p>\n</div>",
+									"type": "text"
+								},
+								{
+									"key": "date",
+									"value": "2023-10-20",
+									"type": "text"
+								},
+								{
+									"key": "category_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "image_1",
+									"type": "file",
+									"src": "/C:/Proyectos/ECI/imagenes/thumb_390_1400_500_0_0_crop.jpg"
+								},
+								{
+									"key": "image_2",
+									"type": "file",
+									"src": "/C:/Proyectos/ECI/imagenes/thumb_393_1400_500_0_0_crop.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{APP_URL}}/api/blog",
+							"host": [
+								"{{APP_URL}}"
+							],
+							"path": [
+								"api",
+								"blog"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "create-ok",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "Blog title 2",
+											"type": "text"
+										},
+										{
+											"key": "down",
+											"value": "this is down",
+											"type": "text"
+										},
+										{
+											"key": "author",
+											"value": "Juan Paez",
+											"type": "text"
+										},
+										{
+											"key": "body",
+											"value": "<div contenteditable=\"true\" style=\"border: 1px solid #ccc; padding: 10px;\">\n    <p>¡Hola! Este es un ejemplo de contenido generado por un editor WYSIWYG.</p>\n    <p>Los usuarios pueden editar y dar formato al texto directamente.</p>\n    <ul>\n        <li>Elemento de lista 1</li>\n        <li>Elemento de lista 2</li>\n        <li>Elemento de lista 3</li>\n    </ul>\n    <p>Pueden agregar imágenes, enlaces, y más...</p>\n</div>",
+											"type": "text"
+										},
+										{
+											"key": "date",
+											"value": "2023-10-20",
+											"type": "text"
+										},
+										{
+											"key": "category_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "image_1",
+											"type": "file",
+											"src": "/C:/Users/gabri/Pictures/argentina-campeon.jpg"
+										},
+										{
+											"key": "image_2",
+											"type": "file",
+											"src": "/C:/Users/gabri/Pictures/wallpaper-mundial/MessiCampeon.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{APP_URL}}/api/blog",
+									"host": [
+										"{{APP_URL}}"
+									],
+									"path": [
+										"api",
+										"blog"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 20 Dec 2023 00:00:44 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 20 Dec 2023 00:00:44 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.4"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"blog successfully created\",\n    \"data\": {\n        \"id\": 3,\n        \"title\": \"Blog title 2\",\n        \"down\": \"this is down\",\n        \"author\": \"Juan Paez\",\n        \"body\": \"<div contenteditable=\\\"true\\\" style=\\\"border: 1px solid #ccc; padding: 10px;\\\">\\n    <p>¡Hola! Este es un ejemplo de contenido generado por un editor WYSIWYG.</p>\\n    <p>Los usuarios pueden editar y dar formato al texto directamente.</p>\\n    <ul>\\n        <li>Elemento de lista 1</li>\\n        <li>Elemento de lista 2</li>\\n        <li>Elemento de lista 3</li>\\n    </ul>\\n    <p>Pueden agregar imágenes, enlaces, y más...</p>\\n</div>\",\n        \"date\": \"2023-10-20T00:00:00.000000Z\",\n        \"category_id\": 1,\n        \"category\": {\n            \"id\": 1,\n            \"name\": \"interes general\"\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "edit-blog",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "3|M3QXCIT1koiPQBfdRzSluXUMV6V8yFWP8x2ye06C09a3567d",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Blog title 2UP",
+									"type": "text"
+								},
+								{
+									"key": "down",
+									"value": "this is down",
+									"type": "text"
+								},
+								{
+									"key": "author",
+									"value": "Juan Paez",
+									"type": "text"
+								},
+								{
+									"key": "body",
+									"value": "<div contenteditable=\"true\" style=\"border: 1px solid #ccc; padding: 10px;\">\n    <p>¡Hola! Este es un ejemplo de contenido generado por un editor WYSIWYG.</p>\n    <p>Los usuarios pueden editar y dar formato al texto directamente.</p>\n    <ul>\n        <li>Elemento de lista 1</li>\n        <li>Elemento de lista 2</li>\n        <li>Elemento de lista 3</li>\n    </ul>\n    <p>Pueden agregar imágenes, enlaces, y más...</p>\n</div>",
+									"type": "text"
+								},
+								{
+									"key": "date",
+									"value": "2023-10-20",
+									"type": "text"
+								},
+								{
+									"key": "category_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "image_1",
+									"type": "file",
+									"src": "/C:/Users/gabri/Pictures/wallpaper-mundial/69b4aa03dd8d23a7cbfc820de417f86b.jpg",
+									"disabled": true
+								},
+								{
+									"key": "image_2",
+									"type": "file",
+									"src": "/C:/Users/gabri/Pictures/wallpaper-mundial/MessiCampeon.jpg",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{APP_URL}}/api/edit-blog/3",
+							"host": [
+								"{{APP_URL}}"
+							],
+							"path": [
+								"api",
+								"edit-blog",
+								"3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "edit-ok",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "Blog title 2UP",
+											"type": "text"
+										},
+										{
+											"key": "down",
+											"value": "this is down",
+											"type": "text"
+										},
+										{
+											"key": "author",
+											"value": "Juan Paez",
+											"type": "text"
+										},
+										{
+											"key": "body",
+											"value": "<div contenteditable=\"true\" style=\"border: 1px solid #ccc; padding: 10px;\">\n    <p>¡Hola! Este es un ejemplo de contenido generado por un editor WYSIWYG.</p>\n    <p>Los usuarios pueden editar y dar formato al texto directamente.</p>\n    <ul>\n        <li>Elemento de lista 1</li>\n        <li>Elemento de lista 2</li>\n        <li>Elemento de lista 3</li>\n    </ul>\n    <p>Pueden agregar imágenes, enlaces, y más...</p>\n</div>",
+											"type": "text"
+										},
+										{
+											"key": "date",
+											"value": "2023-10-20",
+											"type": "text"
+										},
+										{
+											"key": "category_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "image_1",
+											"type": "file",
+											"src": "/C:/Users/gabri/Pictures/wallpaper-mundial/69b4aa03dd8d23a7cbfc820de417f86b.jpg",
+											"disabled": true
+										},
+										{
+											"key": "image_2",
+											"type": "file",
+											"src": "/C:/Users/gabri/Pictures/wallpaper-mundial/MessiCampeon.jpg",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{APP_URL}}/api/edit-blog/3",
+									"host": [
+										"{{APP_URL}}"
+									],
+									"path": [
+										"api",
+										"edit-blog",
+										"3"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 20 Dec 2023 00:16:10 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 20 Dec 2023 00:16:10 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.4"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Property successfully updated\",\n    \"data\": {\n        \"id\": 3,\n        \"title\": \"Blog title 2UP\",\n        \"down\": \"this is down\",\n        \"author\": \"Juan Paez\",\n        \"body\": \"<div contenteditable=\\\"true\\\" style=\\\"border: 1px solid #ccc; padding: 10px;\\\">\\n    <p>¡Hola! Este es un ejemplo de contenido generado por un editor WYSIWYG.</p>\\n    <p>Los usuarios pueden editar y dar formato al texto directamente.</p>\\n    <ul>\\n        <li>Elemento de lista 1</li>\\n        <li>Elemento de lista 2</li>\\n        <li>Elemento de lista 3</li>\\n    </ul>\\n    <p>Pueden agregar imágenes, enlaces, y más...</p>\\n</div>\",\n        \"date\": \"2023-10-20T00:00:00.000000Z\",\n        \"category_id\": 1,\n        \"category\": {\n            \"id\": 1,\n            \"name\": \"interes general\"\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "get-blogs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{APP_URL}}/api/blog",
+							"host": [
+								"{{APP_URL}}"
+							],
+							"path": [
+								"api",
+								"blog"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get-ok",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{APP_URL}}/api/blog",
+									"host": [
+										"{{APP_URL}}"
+									],
+									"path": [
+										"api",
+										"blog"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 20 Dec 2023 00:01:54 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 20 Dec 2023 00:01:54 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.4"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"blogs obtained correctly\",\n    \"data\": {\n        \"current_page\": 1,\n        \"data\": [\n            {\n                \"id\": 2,\n                \"title\": \"Blog title 1\",\n                \"down\": \"this is down\",\n                \"author\": \"Juan Perez\",\n                \"body\": \"<div contenteditable=\\\"true\\\" style=\\\"border: 1px solid #ccc; padding: 10px;\\\">\\n    <p>¡Hola! Este es un ejemplo de contenido generado por un editor WYSIWYG.</p>\\n    <p>Los usuarios pueden editar y dar formato al texto directamente.</p>\\n    <ul>\\n        <li>Elemento de lista 1</li>\\n        <li>Elemento de lista 2</li>\\n        <li>Elemento de lista 3</li>\\n    </ul>\\n    <p>Pueden agregar imágenes, enlaces, y más...</p>\\n</div>\",\n                \"date\": \"2023-10-20T00:00:00.000000Z\",\n                \"category_id\": 1,\n                \"category\": {\n                    \"id\": 1,\n                    \"name\": \"interes general\"\n                },\n                \"blog_images\": [\n                    {\n                        \"id\": 1,\n                        \"path\": \"C:\\\\Proyectos\\\\ECI\\\\eci-back-api\\\\storage\\\\app/blog\\\\2/argentina-campeon.jpg\",\n                        \"blog_id\": 2\n                    },\n                    {\n                        \"id\": 2,\n                        \"path\": \"C:\\\\Proyectos\\\\ECI\\\\eci-back-api\\\\storage\\\\app/blog\\\\2/MessiCampeon.jpg\",\n                        \"blog_id\": 2\n                    }\n                ]\n            },\n            {\n                \"id\": 3,\n                \"title\": \"Blog title 2\",\n                \"down\": \"this is down\",\n                \"author\": \"Juan Paez\",\n                \"body\": \"<div contenteditable=\\\"true\\\" style=\\\"border: 1px solid #ccc; padding: 10px;\\\">\\n    <p>¡Hola! Este es un ejemplo de contenido generado por un editor WYSIWYG.</p>\\n    <p>Los usuarios pueden editar y dar formato al texto directamente.</p>\\n    <ul>\\n        <li>Elemento de lista 1</li>\\n        <li>Elemento de lista 2</li>\\n        <li>Elemento de lista 3</li>\\n    </ul>\\n    <p>Pueden agregar imágenes, enlaces, y más...</p>\\n</div>\",\n                \"date\": \"2023-10-20T00:00:00.000000Z\",\n                \"category_id\": 1,\n                \"category\": {\n                    \"id\": 1,\n                    \"name\": \"interes general\"\n                },\n                \"blog_images\": [\n                    {\n                        \"id\": 3,\n                        \"path\": \"C:\\\\Proyectos\\\\ECI\\\\eci-back-api\\\\storage\\\\app/blog\\\\3/argentina-campeon.jpg\",\n                        \"blog_id\": 3\n                    },\n                    {\n                        \"id\": 4,\n                        \"path\": \"C:\\\\Proyectos\\\\ECI\\\\eci-back-api\\\\storage\\\\app/blog\\\\3/MessiCampeon.jpg\",\n                        \"blog_id\": 3\n                    }\n                ]\n            }\n        ],\n        \"first_page_url\": \"http://localhost:8000/api/blog?page=1\",\n        \"from\": 1,\n        \"last_page\": 1,\n        \"last_page_url\": \"http://localhost:8000/api/blog?page=1\",\n        \"links\": [\n            {\n                \"url\": null,\n                \"label\": \"&laquo; Previous\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:8000/api/blog?page=1\",\n                \"label\": \"1\",\n                \"active\": true\n            },\n            {\n                \"url\": null,\n                \"label\": \"Next &raquo;\",\n                \"active\": false\n            }\n        ],\n        \"next_page_url\": null,\n        \"path\": \"http://localhost:8000/api/blog\",\n        \"per_page\": 20,\n        \"prev_page_url\": null,\n        \"to\": 2,\n        \"total\": 2\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "get-by-id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{APP_URL}}/api/blog/3",
+							"host": [
+								"{{APP_URL}}"
+							],
+							"path": [
+								"api",
+								"blog",
+								"3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "getById-ok",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{APP_URL}}/api/blog/3",
+									"host": [
+										"{{APP_URL}}"
+									],
+									"path": [
+										"api",
+										"blog",
+										"3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 20 Dec 2023 00:02:59 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 20 Dec 2023 00:02:59 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.4"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"blogs obtained correctly\",\n    \"data\": {\n        \"id\": 3,\n        \"title\": \"Blog title 2\",\n        \"down\": \"this is down\",\n        \"author\": \"Juan Paez\",\n        \"body\": \"<div contenteditable=\\\"true\\\" style=\\\"border: 1px solid #ccc; padding: 10px;\\\">\\n    <p>¡Hola! Este es un ejemplo de contenido generado por un editor WYSIWYG.</p>\\n    <p>Los usuarios pueden editar y dar formato al texto directamente.</p>\\n    <ul>\\n        <li>Elemento de lista 1</li>\\n        <li>Elemento de lista 2</li>\\n        <li>Elemento de lista 3</li>\\n    </ul>\\n    <p>Pueden agregar imágenes, enlaces, y más...</p>\\n</div>\",\n        \"date\": \"2023-10-20T00:00:00.000000Z\",\n        \"category_id\": 1,\n        \"category\": {\n            \"id\": 1,\n            \"name\": \"interes general\"\n        },\n        \"blog_images\": [\n            {\n                \"id\": 3,\n                \"path\": \"C:\\\\Proyectos\\\\ECI\\\\eci-back-api\\\\storage\\\\app/blog\\\\3/argentina-campeon.jpg\",\n                \"blog_id\": 3\n            },\n            {\n                \"id\": 4,\n                \"path\": \"C:\\\\Proyectos\\\\ECI\\\\eci-back-api\\\\storage\\\\app/blog\\\\3/MessiCampeon.jpg\",\n                \"blog_id\": 3\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "delete-blog",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "3|M3QXCIT1koiPQBfdRzSluXUMV6V8yFWP8x2ye06C09a3567d",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{APP_URL}}/api/blog/3",
+							"host": [
+								"{{APP_URL}}"
+							],
+							"path": [
+								"api",
+								"blog",
+								"3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "delte-ok",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{APP_URL}}/api/blog/3",
+									"host": [
+										"{{APP_URL}}"
+									],
+									"path": [
+										"api",
+										"blog",
+										"3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 20 Dec 2023 00:20:12 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 20 Dec 2023 00:20:12 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.4"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"blog successfully deleted\",\n    \"data\": null\n}"
+						}
+					]
+				}
+			]
 		}
 	],
 	"variable": [
 		{
 			"key": "TOKEN",
 			"value": "5DDhlMCZ67VlOH3CcS2ZDCX8dllJmPvLzQMvMIs9db886457"
+		},
+		{
+			"key": "ECIAPI",
+			"value": "APP_URL"
 		}
 	]
 }
