@@ -28,7 +28,6 @@ services:
 
     volumes:
       - ./:/var/www/projects/eci-site/eci-back-api
-      - ./storage:/var/www/projects/eci-site/eci-back-api/storage
     networks:
       - mysql_default
     

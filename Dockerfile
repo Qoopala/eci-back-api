@@ -42,14 +42,12 @@ RUN mkdir -p /home/$user/.composer && \
 # Set working directory
 WORKDIR /var/www/projects/eci-site/eci-back-api
 
-# Excluir el directorio 'storage' del contenedor
-RUN rm -rf storage
 COPY composer.json composer.lock ./
 RUN composer install --no-scripts --no-autoloader
 
 COPY . .
 RUN chmod +x artisan
-RUN chmod -R 775 storage
+
 RUN composer dump-autoload --optimize
 
 EXPOSE 9001
