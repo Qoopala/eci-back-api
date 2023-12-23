@@ -15,19 +15,19 @@ class OfficeTableSeeder extends Seeder
     {
         DB::table('offices')->insert([
             [
-                'name' => 'Office 1',
-                'cif' => 'ABC123',
-                'address' => '123 Main Street',
+                'name' => 'Oficina ECI en Sant Ildefons',
+                'cif' => 'B67336958',
+                'address' => 'Av. Sant Ildefons 8, Local 6',
                 'map' => 'Map coordinates for Office 1',
-                'email' => 'office1@example.com',
-                'phone' => '123-456-7890',
+                'email' => 'info@ebusa.es',
+                'phone' => '931 564 980',
                 'path_image' => 'office1.jpg',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
             [
-                'name' => 'Office 2',
-                'cif' => 'DEF456',
+                'name' => 'Oficina ECI en Sant Ildefons',
+                'cif' => 'B67336958',
                 'address' => '456 Oak Avenue',
                 'map' => 'Map coordinates for Office 2',
                 'email' => 'office2@example.com',
@@ -38,7 +38,7 @@ class OfficeTableSeeder extends Seeder
             ],
             [
                 'name' => 'Office 3',
-                'cif' => 'GHI789',
+                'cif' => 'B67336958',
                 'address' => '789 Pine Road',
                 'map' => 'Map coordinates for Office 3',
                 'email' => 'office3@example.com',
