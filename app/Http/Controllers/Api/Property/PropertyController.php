@@ -17,7 +17,7 @@ class PropertyController extends Controller
         $perPage = $request->query('per_page', 20);
         try {
             $query = Property::query();
-            $properties = $query->with('office', 'locality', 'images')->paginate($perPage);
+            $properties = $query->with('office', 'locality', 'images', 'metadata')->paginate($perPage);
             if($properties) return ApiResponse::ok(__('messages.property_get_ok'), $properties);
             else return ApiResponse::not_found(__('messages.property_not_found'));
         } catch (\Throwable $th) {
@@ -52,7 +52,7 @@ class PropertyController extends Controller
     public function show($id)
     {
         try {
-            $property = Property::with('office', 'locality', 'images')->find($id);
+            $property = Property::with('office', 'locality', 'images', 'metadata')->find($id);
             if($property) return ApiResponse::ok(__('messages.property_get_ok'), $property);
             else return ApiResponse::not_found(__('messages.property_not_found'));
         } catch (\Throwable $th) {
@@ -106,7 +106,7 @@ class PropertyController extends Controller
     public function getBySlug($slug)
     {
         try {
-            $property = Property::with('office', 'locality', 'images')->where('slug', $slug)->first();
+            $property = Property::with('office', 'locality', 'images', 'metadata')->where('slug', $slug)->first();
             if($property) return ApiResponse::ok(__('messages.property_get_ok'), $property);
             else return ApiResponse::not_found(__('messages.property_not_found'));
         } catch (\Throwable $th) {
