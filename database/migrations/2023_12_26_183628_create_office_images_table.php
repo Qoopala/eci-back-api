@@ -11,15 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('offices', function (Blueprint $table) {
+        Schema::create('office_images', function (Blueprint $table) {
             $table->id();
-            $table->string('name', 45);
-            $table->string('cif', 100);
-            $table->string('address', 255);
-            $table->string('map', 255);
-            $table->string('email', 255);
-            $table->string('phone', 255)->nullable();
-            $table->text('feature')->nullable();
+            $table->string('path', 255);
+            $table->foreignId('office_id')->references('id')->on('offices');
             $table->softDeletes();
             $table->timestamps();
         });
@@ -30,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('offices');
+        Schema::dropIfExists('office_images');
     }
 };

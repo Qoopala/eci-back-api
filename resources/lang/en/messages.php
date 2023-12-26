@@ -27,17 +27,31 @@ return [
     'image_update_badrequest' => 'Error updated images',
 
     //BLOG
-    'blog_create_ok' => 'blog successfully created',
-    'blog_get_ok' => 'blogs obtained correctly',
-    'blog_not_found' => 'blogs not found',
-    'blog_delete_ok' => 'blog successfully deleted',
-    'blog_update_ok' => 'blog successfully updated',
+    'blog_create_ok' => 'Blog successfully created',
+    'blog_get_ok' => 'Blogs obtained correctly',
+    'blog_not_found' => 'Blogs not found',
+    'blog_delete_ok' => 'Blog successfully deleted',
+    'blog_update_ok' => 'Blog successfully updated',
 
     //METADATA  
-    'metadata_create_ok' => 'metadata successfully created',
-    'metadata_get_ok' => 'metadata obtained correctly',
-    'metadata_not_found' => 'metadata not found',
-    'metadata_delete_ok' => 'metadata successfully deleted',
-    'metadata_update_ok' => 'metadata successfully updated',
+    'metadata_create_ok' => 'Metadata successfully created',
+    'metadata_get_ok' => 'Metadata obtained correctly',
+    'metadata_not_found' => 'Metadata not found',
+    'metadata_delete_ok' => 'Metadata successfully deleted',
+    'metadata_update_ok' => 'Metadata successfully updated',
+
+    //OFFICE  
+    'office_create_ok' => 'Office successfully created',
+    'office_get_ok' => 'Office obtained correctly',
+    'office_not_found' => 'Office not found',
+    'office_delete_ok' => 'Office successfully deleted',
+    'office_update_ok' => 'Office successfully updated',
+   
+    //PARTNERS  
+    'partner_create_ok' => 'Partner successfully created',
+    'partner_get_ok' => 'Partner obtained correctly',
+    'partner_not_found' => 'Partner not found',
+    'partner_delete_ok' => 'Partner successfully deleted',
+    'partner_update_ok' => 'Partner successfully updated',
 
 ];

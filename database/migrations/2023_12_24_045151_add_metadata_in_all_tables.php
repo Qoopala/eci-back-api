@@ -17,9 +17,6 @@ return new class extends Migration
         Schema::table('offices', function (Blueprint $table) {
             $table->foreignId('metadata_id')->nullable()->references('id')->on('metadata');
         });
-        Schema::table('partners', function (Blueprint $table) {
-            $table->foreignId('metadata_id')->nullable()->references('id')->on('metadata');
-        });
         Schema::table('blogs', function (Blueprint $table) {
             $table->foreignId('metadata_id')->nullable()->references('id')->on('metadata');
         });

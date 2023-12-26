@@ -14,7 +14,6 @@ class DatabaseSeeder extends Seeder
     {
         $this->call([
             LocalityTableSeeder::class,
-            OfficeTableSeeder::class,
             GeneralSeeder::class
         ]);
     }
