@@ -31,5 +31,12 @@ return [
     'blog_not_found' => 'blogs no encontrados',
     'blog_delete_ok' => 'blog eliminado correctamente',
     'blog_update_ok' => 'blog actualizado correctamente',
+   
+    //METADATA
+    'metadata_create_ok' => 'metadata creada correctamente',
+    'metadata_get_ok' => 'metadatas obtenida correctamente',
+    'metadata_not_found' => 'metadatas no encontrada',
+    'metadata_delete_ok' => 'metadata eliminada correctamente',
+    'metadata_update_ok' => 'metadata actualizada correctamente',
 
 ];

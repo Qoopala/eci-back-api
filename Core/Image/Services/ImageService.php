@@ -5,7 +5,6 @@ namespace Core\Image\Services;
 use App\ServiceResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
-use Illuminate\Support\Facades\Storage;
 
 class ImageService
 {
@@ -18,13 +17,20 @@ class ImageService
                 mkdir(public_path($folderPath), 0755, true);
             }
             $images = $request->file();
-    
-            foreach ($images as $image) {
+            if($type === 'metadata'){
+                $image = $images['image_meta'];
                 $imageName = $image->getClientOriginalName();
                 $image->move(public_path($folderPath), $imageName);
                 $arrayPath[] = "/{$type}/{$id}/{$imageName}";
+            }else{
+                foreach ($images as $key => $image) {
+                    if($key !== 'image_meta'){
+                        $imageName = $image->getClientOriginalName();
+                        $image->move(public_path($folderPath), $imageName);
+                        $arrayPath[] = "/{$type}/{$id}/{$imageName}";
+                    }
+                }
             }
-    
             return ServiceResponse::ok('images created', $arrayPath);
         } catch (\Throwable $th) {
             return (config('app.debug')) ? ServiceResponse::serverError($th->getMessage()) : ServiceResponse::serverError();

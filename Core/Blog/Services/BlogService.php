@@ -7,6 +7,7 @@ use App\Models\BlogImage;
 use App\Models\Image;
 use App\ServiceResponse;
 use Core\Image\Services\ImageService;
+use Core\Metadata\Services\MetadataService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -35,9 +36,12 @@ class BlogService
                     $image->save();
                 }
             }
-
+            $metadataId = MetadataService::store($request);
+            if(!$metadataId) return ServiceResponse::badRequest('Error updated metadata');
+            $blog->metadata_id = $metadataId;
+            $blog->save();
             DB::commit();
-            $response = Blog::with('category')->find($blog->id);
+            $response = Blog::with('category','blogImages', 'metadata')->find($blog->id);
             return ServiceResponse::created(__('messages.blog_create_ok'), $response);
         } catch (\Throwable $th) {
             DB::rollBack();
@@ -55,7 +59,7 @@ class BlogService
         try {
             $blog->update($data);
             
-            if(!isEmpty($request->file())){
+            if(count($request->file())){
                 $old_images =  BlogImage::where('blog_id', $id)->delete();
                 $delete_old_images = ImageService::delete('blog', $blog->id);
                 if(!$delete_old_images) return ServiceResponse::badRequest(__('messages.image_update_badrequest'));
@@ -70,8 +74,10 @@ class BlogService
                     }
                 }
             }
+            $metadataId = MetadataService::update($request, $blog->metadata_id);
+            if(!$metadataId) return ServiceResponse::badRequest('Error updated metadata');
             DB::commit();
-            $response = Blog::with('category')->find($id);
+            $response = Blog::with('category','blogImages', 'metadata')->find($id);
             return ServiceResponse::created(__('messages.property_update_ok'), $response);
         } catch (\Throwable $th) {
             DB::rollBack();
