@@ -33,4 +33,11 @@ return [
     'blog_delete_ok' => 'blog successfully deleted',
     'blog_update_ok' => 'blog successfully updated',
 
+    //METADATA  
+    'metadata_create_ok' => 'metadata successfully created',
+    'metadata_get_ok' => 'metadata obtained correctly',
+    'metadata_not_found' => 'metadata not found',
+    'metadata_delete_ok' => 'metadata successfully deleted',
+    'metadata_update_ok' => 'metadata successfully updated',
+
 ];

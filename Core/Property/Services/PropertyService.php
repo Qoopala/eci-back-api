@@ -7,10 +7,9 @@ use App\Models\Image;
 use App\ServiceResponse;
 use App\Models\Property;
 use Core\Image\Services\ImageService;
+use Core\Metadata\Services\MetadataService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-
-use function PHPUnit\Framework\isEmpty;
 
 class PropertyService
 {
@@ -51,9 +50,12 @@ class PropertyService
                 $feature->property_id = $property->id;
                 $feature->save();
             }
-
+            $metadataId = MetadataService::store($request);
+            if(!$metadataId) return ServiceResponse::badRequest('Error updated metadata');
+            $property->metadata_id = $metadataId;
+            $property->save();
             DB::commit();
-            $response = Property::with('office', 'locality', 'images', 'features')->find($property->id);
+            $response = Property::with('office', 'locality', 'images', 'features','metadata')->find($property->id);
             return ServiceResponse::created(__('messages.property_create_ok'), $response);
         } catch (\Throwable $th) {
             DB::rollBack();
@@ -95,6 +97,8 @@ class PropertyService
                 $feature->save();
             }
 
+            $metadataId = MetadataService::update($request, $property->metadata_id);
+            if(!$metadataId) return ServiceResponse::badRequest('Error updated metadata');
             DB::commit();
             $response = Property::with('office', 'locality', 'images', 'features')->find($id);
             return ServiceResponse::created(__('messages.property_update_ok'), $response);

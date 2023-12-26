@@ -32,10 +32,12 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{APP_URL}}/api/status",
+									"raw": "http://localhost:8000/api/status",
+									"protocol": "http",
 									"host": [
-										"{{APP_URL}}"
+										"localhost"
 									],
+									"port": "8000",
 									"path": [
 										"api",
 										"status"
@@ -133,10 +135,12 @@
 									}
 								},
 								"url": {
-									"raw": "{{APP_URL}}/api/register",
+									"raw": "http://localhost:8000/api/register",
+									"protocol": "http",
 									"host": [
-										"{{APP_URL}}"
+										"localhost"
 									],
+									"port": "8000",
 									"path": [
 										"api",
 										"register"
@@ -234,10 +238,12 @@
 									}
 								},
 								"url": {
-									"raw": "{{APP_URL}}/api/login",
+									"raw": "http://localhost:8000/api/login",
+									"protocol": "http",
 									"host": [
-										"{{APP_URL}}"
+										"localhost"
 									],
+									"port": "8000",
 									"path": [
 										"api",
 										"login"
@@ -302,7 +308,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "2|JVukMIbnV3CgYWlUCL1m9T7ddCsBy1xUZNritwGa1812dc61",
+									"value": "{{TOKEN}}",
 									"type": "string"
 								}
 							]
@@ -327,10 +333,12 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{APP_URL}}/api/test-token",
+									"raw": "http://localhost:8000/api/test-token",
+									"protocol": "http",
 									"host": [
-										"{{APP_URL}}"
+										"localhost"
 									],
+									"port": "8000",
 									"path": [
 										"api",
 										"test-token"
@@ -395,7 +403,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "2|JVukMIbnV3CgYWlUCL1m9T7ddCsBy1xUZNritwGa1812dc61",
+									"value": "{{TOKEN}}",
 									"type": "string"
 								}
 							]
@@ -420,10 +428,12 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{APP_URL}}/api/test-user",
+									"raw": "http://localhost:8000/api/test-user",
+									"protocol": "http",
 									"host": [
-										"{{APP_URL}}"
+										"localhost"
 									],
+									"port": "8000",
 									"path": [
 										"api",
 										"test-user"
@@ -488,7 +498,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "1|DFOLO9mssYxdNzH9ATgyXLtRXeOCNKDWZTm5KPr61c32a7a0",
+									"value": "{{TOKEN}}",
 									"type": "string"
 								}
 							]
@@ -513,10 +523,12 @@
 								"method": "POST",
 								"header": [],
 								"url": {
-									"raw": "{{APP_URL}}/api/logout",
+									"raw": "http://localhost:8000/api/logout",
+									"protocol": "http",
 									"host": [
-										"{{APP_URL}}"
+										"localhost"
 									],
+									"port": "8000",
 									"path": [
 										"api",
 										"logout"
@@ -586,7 +598,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "1|bsY6TaKp7rgp6NQ67pXuqCgIeLx7cNZSKAIFTE3G3f0af6cd",
+									"value": "{{TOKEN}}",
 									"type": "string"
 								}
 							]
@@ -598,12 +610,12 @@
 							"formdata": [
 								{
 									"key": "title",
-									"value": "Piso en C/ Arç",
+									"value": "Ático en el corazón de Esplugues",
 									"type": "text"
 								},
 								{
 									"key": "address",
-									"value": "Cornellá de Llobregat",
+									"value": "Esplugues de Llobregat",
 									"type": "text"
 								},
 								{
@@ -613,12 +625,12 @@
 								},
 								{
 									"key": "price",
-									"value": "130000",
+									"value": "780.000",
 									"type": "text"
 								},
 								{
 									"key": "information",
-									"value": "EBUSA CONSULTORES INMOBILIARIOS presenta esta vivienda ubicada  en el barrio de Sant Ildefonso. Este piso dispone de 3 habitaciones, 2  individuales y 1 doble, cocina tipo office con salida a galería  y baño  de 3 piezas con plato de ducha, ventanas de aluminio gris y suelo de cerámica. Ya que el piso dispone de ventanas en cada estancia, hace que esta vivienda sea  luminosa  desde la primera luz del día hasta la puesta del sol y eso es algo que a todos nos gusta, ¿verdad?.  \n\nZona con facilidad de transportes como la parada de metro Sant Ildefonso L5, estación de autobuses, Tranvías y taxis con Colegios privados, concertados y públicos cercanos, negocios (supermercados, panaderías. ), parques, zonas verdes, farmacias, Cap, mercados.\n\n\nEBUSA CONSULTORES INMOBILIARIOS les ofrece un servicio exclusivo para realizar un análisis financiero gratuito y obtener la mejor hipoteca posible.\n\n\n¡ NO DUDES EN CONTACTAR CON NOSOTROS !\n\nINFORMACIÓN AL CONSUMIDOR: Les comunicamos que en el precio ofertado de venta, no están incluidos los gastos de compraventa ni los impuestos, ni los honorarios a percibir por la agencia.",
+									"value": "Ebusa Consultores inmobiliarios le presenta esta vivienda construida en 1993 en pleno centro de esplugues de llobregat, vivienda que consta de 125m², amplio salón con cocina americana y chimenea en este, 3 dormitorios, 2 individuales y 1 matrimonial, baño y aseo,\n\nEs una vivienda muy luminosa, materiales de primera clase, salón con salida a balcón de aproximadamente 10m², suelo de marmol negro que se dejará recien pulido, la cocina dispone de vitrocerámica eléctrica con pequeños detalles como son una freidora y un grill para hacer comidas a la brasa. La habitación de matrimonio es una suite con un espectacular baño con jacuzzi mas entrada a un bonito vestidor. Arriba tenemos la cubierta por la cual solo se puede entrar por la vivienda exclusivamente, es una terraza de uso y disfrute propios para el propietario de esta vivienda. INCLUYE 2 PLAZAS DE PARQUING EN EL PRECIO.",
 									"type": "text"
 								},
 								{
@@ -628,12 +640,12 @@
 								},
 								{
 									"key": "number_bath",
-									"value": "1",
+									"value": "2",
 									"type": "text"
 								},
 								{
 									"key": "square_meter",
-									"value": "63",
+									"value": "125",
 									"type": "text"
 								},
 								{
@@ -663,23 +675,30 @@
 								},
 								{
 									"key": "features",
-									"value": "[\"Piso segunda mano\"]",
+									"value": "[\"Piso segunda mano\", \"garage\"]",
 									"type": "text"
 								},
 								{
 									"key": "image_1",
 									"type": "file",
-									"src": "/C:/Proyectos/ECI/imagenes/property2-1.jpg"
+									"src": "/C:/Proyectos/ECI/imagenes/prop3-1.jpg"
 								},
 								{
 									"key": "image_2",
 									"type": "file",
-									"src": "/C:/Proyectos/ECI/imagenes/property2-2.jpg"
+									"src": "/C:/Proyectos/ECI/imagenes/prop3-2.jpg"
 								},
 								{
 									"key": "image_3",
 									"type": "file",
-									"src": "/C:/Proyectos/ECI/imagenes/thumb_392_1400_500_0_0_crop.jpg"
+									"src": [],
+									"disabled": true
+								},
+								{
+									"key": "slug",
+									"value": "abc",
+									"type": "text",
+									"disabled": true
 								}
 							]
 						},
@@ -710,10 +729,12 @@
 									}
 								},
 								"url": {
-									"raw": "{{APP_URL}}/api/property",
+									"raw": "http://localhost:8000/api/property",
+									"protocol": "http",
 									"host": [
-										"{{APP_URL}}"
+										"localhost"
 									],
+									"port": "8000",
 									"path": [
 										"api",
 										"property"
@@ -932,7 +953,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "25|NPo7uVPzzL7RH5FWvKwqw4vZ2hG1LKh9EwJ42aTLa39be1e0",
+									"value": "{{TOKEN}}",
 									"type": "string"
 								}
 							]
@@ -944,7 +965,7 @@
 							"formdata": [
 								{
 									"key": "title",
-									"value": "Piso en C/ ArçUP3",
+									"value": "Piso en C/",
 									"type": "text"
 								},
 								{
@@ -955,8 +976,7 @@
 								{
 									"key": "reference",
 									"value": "AR3",
-									"type": "text",
-									"disabled": true
+									"type": "text"
 								},
 								{
 									"key": "price",
@@ -1016,14 +1036,12 @@
 								{
 									"key": "image_1",
 									"type": "file",
-									"src": "/C:/Users/gabri/Pictures/consola-novik-2.jpg",
-									"disabled": true
+									"src": "/C:/Proyectos/ECI/imagenes/property2-2.jpg"
 								},
 								{
 									"key": "image_2",
 									"type": "file",
-									"src": "/C:/Users/gabri/Pictures/consola-novik-3.jpg",
-									"disabled": true
+									"src": "/C:/Proyectos/ECI/imagenes/property2-1.jpg"
 								},
 								{
 									"key": "image_3",
@@ -1034,14 +1052,14 @@
 							]
 						},
 						"url": {
-							"raw": "{{APP_URL}}/api/edit-property/1",
+							"raw": "{{APP_URL}}/api/edit-property/5",
 							"host": [
 								"{{APP_URL}}"
 							],
 							"path": [
 								"api",
 								"edit-property",
-								"1"
+								"5"
 							]
 						}
 					},
@@ -1143,10 +1161,12 @@
 									]
 								},
 								"url": {
-									"raw": "{{APP_URL}}/api/edit-property/1",
+									"raw": "http://localhost:8000/api/edit-property/1",
+									"protocol": "http",
 									"host": [
-										"{{APP_URL}}"
+										"localhost"
 									],
+									"port": "8000",
 									"path": [
 										"api",
 										"edit-property",
@@ -1237,10 +1257,12 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{APP_URL}}/api/property",
+									"raw": "http://localhost:8000/api/property",
+									"protocol": "http",
 									"host": [
-										"{{APP_URL}}"
+										"localhost"
 									],
+									"port": "8000",
 									"path": [
 										"api",
 										"property"
@@ -1331,10 +1353,12 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{APP_URL}}/api/property/2",
+									"raw": "http://localhost:8000/api/property/2",
+									"protocol": "http",
 									"host": [
-										"{{APP_URL}}"
+										"localhost"
 									],
+									"port": "8000",
 									"path": [
 										"api",
 										"property",
@@ -1400,7 +1424,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "1|bsY6TaKp7rgp6NQ67pXuqCgIeLx7cNZSKAIFTE3G3f0af6cd",
+									"value": "{{TOKEN}}",
 									"type": "string"
 								}
 							]
@@ -1426,10 +1450,12 @@
 								"method": "DELETE",
 								"header": [],
 								"url": {
-									"raw": "{{APP_URL}}/api/property/1",
+									"raw": "http://localhost:8000/api/property/1",
+									"protocol": "http",
 									"host": [
-										"{{APP_URL}}"
+										"localhost"
 									],
+									"port": "8000",
 									"path": [
 										"api",
 										"property",
@@ -1500,7 +1526,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "23|U95ZWgyeeeEharmCSqJd9iuleGgtaSiANU29fIzU2e98a76b",
+									"value": "{{TOKEN}}",
 									"type": "string"
 								}
 							]
@@ -1512,7 +1538,7 @@
 							"formdata": [
 								{
 									"key": "title",
-									"value": "Blog title 3",
+									"value": "Blog title 4",
 									"type": "text"
 								},
 								{
@@ -1548,7 +1574,8 @@
 								{
 									"key": "image_2",
 									"type": "file",
-									"src": "/C:/Proyectos/ECI/imagenes/thumb_393_1400_500_0_0_crop.jpg"
+									"src": [],
+									"disabled": true
 								}
 							]
 						},
@@ -1683,7 +1710,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "3|M3QXCIT1koiPQBfdRzSluXUMV6V8yFWP8x2ye06C09a3567d",
+									"value": "{{TOKEN}}",
 									"type": "string"
 								}
 							]
@@ -2040,7 +2067,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "3|M3QXCIT1koiPQBfdRzSluXUMV6V8yFWP8x2ye06C09a3567d",
+									"value": "{{TOKEN}}",
 									"type": "string"
 								}
 							]
@@ -2048,14 +2075,14 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{APP_URL}}/api/blog/3",
+							"raw": "{{APP_URL}}/api/blog/45",
 							"host": [
 								"{{APP_URL}}"
 							],
 							"path": [
 								"api",
 								"blog",
-								"3"
+								"45"
 							]
 						}
 					},

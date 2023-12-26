@@ -22,6 +22,7 @@ class Blog extends Model
         'body',
         'date',
         'category_id',
+        'metadata_id',
     ];
 
     protected $hidden = [
@@ -37,12 +38,18 @@ class Blog extends Model
         'body'=>'string',
         'date'=>'datetime',
         'category_id'=>'integer',
+        'metadata_id'=>'integer',
     ];
 
 
     public function category(): BelongsTo
     {
         return $this->belongsTo(Category::class, 'category_id');
+    }
+
+    public function metadata(): BelongsTo
+    {
+        return $this->belongsTo(Metadata::class, 'metadata_id');
     }
 
     public function blogImages(): HasMany

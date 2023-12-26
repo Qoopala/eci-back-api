@@ -67,6 +67,11 @@ class Property extends Model
         return $this->belongsTo(Locality::class, 'locality_id');
     }
 
+    public function metadata(): BelongsTo
+    {
+        return $this->belongsTo(Metadata::class, 'metadata_id');
+    }
+
     public function images(): HasMany
     {
         return $this->hasMany(Image::class, 'property_id');

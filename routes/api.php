@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Api\Auth\AuthController;
 use App\Http\Controllers\Api\Blog\BlogController;
+use App\Http\Controllers\Api\Metadata\MetadataController;
 use App\Http\Controllers\Api\Property\PropertyController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -46,6 +47,11 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::resource('blog', BlogController::class)->except([
         'index', 'show'
     ]);
+
+    Route::post('edit-metadata/{id}', [MetadataController::class, 'update']);
+    Route::resource('metadata', MetadataController::class)->except([
+        'index', 'show'
+    ]);
 });
 
 Route::resource('property', PropertyController::class)->only([
@@ -53,5 +59,9 @@ Route::resource('property', PropertyController::class)->only([
 ]);
 
 Route::resource('blog', BlogController::class)->only([
+    'index', 'show'
+]);
+
+Route::resource('metadata', MetadataController::class)->only([
     'index', 'show'
 ]);
