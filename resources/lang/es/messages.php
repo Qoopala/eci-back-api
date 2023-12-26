@@ -45,5 +45,12 @@ return [
     'office_not_found' => 'Oficina no encontrada',
     'office_delete_ok' => 'Oficina eliminada correctamente',
     'office_update_ok' => 'Oficina actualizada correctamente',
+    
+    //PARTNERS
+    'partner_create_ok' => 'Colaborador creado correctamente',
+    'partner_get_ok' => 'Colaborador obtenido correctamente',
+    'partner_not_found' => 'Colaborador no encontrado',
+    'partner_delete_ok' => 'Colaborador eliminado correctamente',
+    'partner_update_ok' => 'Colaborador actualizado correctamente',
 
 ];

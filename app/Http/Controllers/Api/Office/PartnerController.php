@@ -4,20 +4,20 @@ namespace App\Http\Controllers\Api\Office;
 
 use App\ApiResponse;
 use App\Http\Controllers\Controller;
-use App\Models\Office;
+use App\Models\Partner;
 use Core\Image\Validations\ImageValidation;
-use Core\Office\Services\OfficeService;
-use Core\Office\Validations\OfficeValidation;
+use Core\Office\Services\PartnerService;
+use Core\Office\Validations\PartnerValidation;
 use Illuminate\Http\Request;
 
-class OfficeController extends Controller
+class PartnerController extends Controller
 {
     public function index()
     {
         try {
-            $office = Office::with('officeImages', 'metadata', 'partners')->get();
-            if($office) return ApiResponse::ok(__('messages.office_get_ok'), $office);
-            else return ApiResponse::not_found(__('messages.office_not_found'));
+            $partner = Partner::with('office')->get();
+            if($partner) return ApiResponse::ok(__('messages.partner_get_ok'), $partner);
+            else return ApiResponse::not_found(__('messages.partner_not_found'));
         } catch (\Throwable $th) {
             return (config('app.debug')) ? ApiResponse::serverError($th->getMessage()) : ApiResponse::serverError();
         }
@@ -26,14 +26,14 @@ class OfficeController extends Controller
     public function store(Request $request)
     {
         $data = $request->all();
-        $validate = OfficeValidation::validateStore($data);
+        $validate = PartnerValidation::validateStore($data);
         if($validate) return ApiResponse::badRequest($validate);
 
         $validateImage = ImageValidation::validateImage($request);
         if($validate) return ApiResponse::badRequest($validateImage);
 
         try {
-            $response = OfficeService::store($request);
+            $response = PartnerService::store($request);
          
             if($response['success']) return ApiResponse::created($response['message'], $response['data']);
             else {
@@ -50,9 +50,9 @@ class OfficeController extends Controller
     public function show(string $id)
     {
         try {
-            $office = Office::with('officeImages', 'metadata', 'partners')->find($id);
-            if($office) return ApiResponse::ok(__('messages.office_get_ok'), $office);
-            else return ApiResponse::not_found(__('messages.office_not_found'));
+            $partner = Partner::with('office')->find($id);
+            if($partner) return ApiResponse::ok(__('messages.partner_get_ok'), $partner);
+            else return ApiResponse::not_found(__('messages.partner_not_found'));
         } catch (\Throwable $th) {
             return (config('app.debug')) ? ApiResponse::serverError($th->getMessage()) : ApiResponse::serverError();
         }
@@ -61,14 +61,14 @@ class OfficeController extends Controller
     public function update(Request $request, string $id)
     {
         $data = $request->all();
-        $validate = OfficeValidation::validateStore($data, $id);
+        $validate = PartnerValidation::validateStore($data, $id);
         if($validate) return ApiResponse::badRequest($validate);
 
         $validateImage = ImageValidation::validateImage($request);
         if($validate) return ApiResponse::badRequest($validateImage);
 
         try {
-            $response = OfficeService::update($request, $id);
+            $response = PartnerService::update($request, $id);
          
             if($response['success']) return ApiResponse::created($response['message'], $response['data']);
             else {
@@ -89,26 +89,16 @@ class OfficeController extends Controller
     public function destroy(string $id)
     {
         try {
-            $office =  Office::find($id);
-            if ($office) {
-                $office->delete();
-                return ApiResponse::ok(__('messages.office_delete_ok'));
+            $partner =  Partner::find($id);
+            if ($partner) {
+                $partner->delete();
+                return ApiResponse::ok(__('messages.partner_delete_ok'));
             } else {
-                return ApiResponse::not_found(__('messages.office_not_found'));
+                return ApiResponse::not_found(__('messages.partner_not_found'));
             }
         } catch (\Throwable $th) {
             return (config('app.debug')) ? ApiResponse::serverError($th->getMessage()) : ApiResponse::serverError();
         }
     }
 
-    public function getBySlug($slug)
-    {
-        try {
-            $office = Office::with('officeImages', 'metadata', 'partners')->where('slug', $slug)->first();
-            if($office) return ApiResponse::ok(__('messages.office_get_ok'), $office);
-            else return ApiResponse::not_found(__('messages.office_not_found'));
-        } catch (\Throwable $th) {
-            return (config('app.debug')) ? ApiResponse::serverError($th->getMessage()) : ApiResponse::serverError();
-        }
-    }
 }

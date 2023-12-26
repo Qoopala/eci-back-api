@@ -64,4 +64,9 @@ class Office extends Model
         return $this->hasMany(OfficeImages::class);
     }
 
+    public function partners(): HasMany
+    {
+        return $this->hasMany(Partner::class);
+    }
+
 }

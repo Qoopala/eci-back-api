@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('role');
-            $table->string('path_image');
+            $table->string('path_image')->nullable();
             $table->foreignId('office_id')->references('id')->on('offices');
             $table->softDeletes();
             $table->timestamps();

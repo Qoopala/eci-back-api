@@ -4,6 +4,7 @@ use App\Http\Controllers\Api\Auth\AuthController;
 use App\Http\Controllers\Api\Blog\BlogController;
 use App\Http\Controllers\Api\Metadata\MetadataController;
 use App\Http\Controllers\Api\Office\OfficeController;
+use App\Http\Controllers\Api\Office\PartnerController;
 use App\Http\Controllers\Api\Property\PropertyController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -63,6 +64,12 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::resource('office', OfficeController::class)->except([
         'index', 'show'
     ]);
+
+    //PARTNERS PROTECTED
+    Route::post('edit-partner/{id}', [PartnerController::class, 'update']);
+    Route::resource('partner', PartnerController::class)->except([
+        'index', 'show'
+    ]);
 });
 
 // PROPERTY
@@ -85,5 +92,10 @@ Route::resource('metadata', MetadataController::class)->only([
 // OFFICE   
 Route::get('get-office/{slug}', [OfficeController::class, 'getBySlug']);
 Route::resource('office', OfficeController::class)->only([
+    'index', 'show'
+]);
+
+// PARTNERS
+Route::resource('partner', PartnerController::class)->only([
     'index', 'show'
 ]);

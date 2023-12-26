@@ -46,5 +46,12 @@ return [
     'office_not_found' => 'Office not found',
     'office_delete_ok' => 'Office successfully deleted',
     'office_update_ok' => 'Office successfully updated',
+   
+    //PARTNERS  
+    'partner_create_ok' => 'Partner successfully created',
+    'partner_get_ok' => 'Partner obtained correctly',
+    'partner_not_found' => 'Partner not found',
+    'partner_delete_ok' => 'Partner successfully deleted',
+    'partner_update_ok' => 'Partner successfully updated',
 
 ];
