@@ -25,6 +25,7 @@ class BlogService
             $blog->body = $request->body;
             $blog->date = $request->date;
             $blog->category_id = $request->category_id;
+            $blog->slug = $request->slug;
             $blog->save();
 
             $images = ImageService::store($request, 'blog', $blog->id);

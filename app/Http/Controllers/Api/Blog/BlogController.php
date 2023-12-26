@@ -64,7 +64,7 @@ class BlogController extends Controller
     public function update(Request $request, string $id)
     {
         $data = $request->all();
-        $validate = BlogValidation::validateStore($data);
+        $validate = BlogValidation::validateStore($data, $id);
         if($validate) return ApiResponse::badRequest($validate);
 
         $validateImage = ImageValidation::validateImage($request);
@@ -99,6 +99,17 @@ class BlogController extends Controller
             } else {
                 return ApiResponse::not_found(__('messages.blog_not_found'));
             }
+        } catch (\Throwable $th) {
+            return (config('app.debug')) ? ApiResponse::serverError($th->getMessage()) : ApiResponse::serverError();
+        }
+    }
+
+    public function getBySlug($slug)
+    {
+        try {
+            $blog = Blog::with('category', 'blogImages')->where('slug', $slug)->first();
+            if($blog) return ApiResponse::ok(__('messages.blog_get_ok'), $blog);
+            else return ApiResponse::not_found(__('messages.blog_not_found'));
         } catch (\Throwable $th) {
             return (config('app.debug')) ? ApiResponse::serverError($th->getMessage()) : ApiResponse::serverError();
         }

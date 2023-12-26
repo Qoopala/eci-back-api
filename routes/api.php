@@ -38,6 +38,7 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::get('test-token', function (){ return response('service in operation with token'); });
     Route::get('test-user', [AuthController::class, 'testUserLogged']);
     Route::post('logout',  [AuthController::class, 'logout']);
+
     Route::post('edit-property/{id}', [PropertyController::class, 'update']);
     Route::resource('property', PropertyController::class)->except([
         'index', 'show'
@@ -54,10 +55,12 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     ]);
 });
 
+Route::get('get-property/{slug}', [PropertyController::class, 'getBySlug']);
 Route::resource('property', PropertyController::class)->only([
     'index', 'show'
 ]);
 
+Route::get('get-blog/{slug}', [BlogController::class, 'getBySlug']);
 Route::resource('blog', BlogController::class)->only([
     'index', 'show'
 ]);

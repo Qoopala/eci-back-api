@@ -32,7 +32,8 @@ class Property extends Model
         'map',
         'status',
         'office_id',
-        'locality_id'
+        'locality_id',
+        'slug'
     ];
 
     protected $hidden = [
@@ -54,7 +55,8 @@ class Property extends Model
         'map'=>'string',
         'status'=>'boolean',
         'office_id'=>'integer',
-        'locality_id'=>'integer'
+        'locality_id'=>'integer',
+        'slug' => 'string'
     ];
 
     public function office(): BelongsTo

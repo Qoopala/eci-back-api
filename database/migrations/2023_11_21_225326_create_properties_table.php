@@ -13,11 +13,11 @@ return new class extends Migration
     {
         Schema::create('properties', function (Blueprint $table) {
             $table->id();
-            $table->string('title', 45);
+            $table->string('title', 100);
             $table->string('address', 100)->nullable();
             $table->string('reference', 45);
             $table->float('price', 10,2);
-            $table->string('information', 1600);
+            $table->text('information');
             $table->integer('number_room');
             $table->integer('number_bath');
             $table->float('square_meter', 8,2);

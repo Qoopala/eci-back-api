@@ -31,6 +31,7 @@ class PropertyService
             $property->status = $request->status;
             $property->office_id = $request->office_id;
             $property->locality_id = $request->locality_id;
+            $property->slug = $request->slug;
             $property->save();
 
             $images = ImageService::store($request, 'property', $property->id);

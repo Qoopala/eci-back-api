@@ -63,7 +63,7 @@ class PropertyController extends Controller
     public function update(Request $request, string $id)
     {
         $data = $request->all();
-        $validate = PropertyValidation::validateStore($data);
+        $validate = PropertyValidation::validateStore($data, $id);
         if($validate) return ApiResponse::badRequest($validate);
 
         $validateImage = ImageValidation::validateImage($request);
@@ -98,6 +98,17 @@ class PropertyController extends Controller
             } else {
                 return ApiResponse::not_found(__('messages.property_not_found'));
             }
+        } catch (\Throwable $th) {
+            return (config('app.debug')) ? ApiResponse::serverError($th->getMessage()) : ApiResponse::serverError();
+        }
+    }
+
+    public function getBySlug($slug)
+    {
+        try {
+            $property = Property::with('office', 'locality', 'images', 'features')->where('slug', $slug)->first();
+            if($property) return ApiResponse::ok(__('messages.property_get_ok'), $property);
+            else return ApiResponse::not_found(__('messages.property_not_found'));
         } catch (\Throwable $th) {
             return (config('app.debug')) ? ApiResponse::serverError($th->getMessage()) : ApiResponse::serverError();
         }

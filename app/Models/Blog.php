@@ -23,6 +23,7 @@ class Blog extends Model
         'date',
         'category_id',
         'metadata_id',
+        'slug'
     ];
 
     protected $hidden = [
@@ -39,6 +40,7 @@ class Blog extends Model
         'date'=>'datetime',
         'category_id'=>'integer',
         'metadata_id'=>'integer',
+        'slug' => 'string'
     ];
 
 
