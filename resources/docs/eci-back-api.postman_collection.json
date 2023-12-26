@@ -3315,6 +3315,1403 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "Office",
+			"item": [
+				{
+					"name": "create-office",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Oficina ECI en Sant Ildefons2",
+									"type": "text"
+								},
+								{
+									"key": "cif",
+									"value": "B67336958B67336958",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "av. Sant Ildefons 8, Local 6a",
+									"type": "text"
+								},
+								{
+									"key": "map",
+									"value": "Map coordinates for Office 1",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "info@ebusa.es",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "931 564 980",
+									"type": "text"
+								},
+								{
+									"key": "image_1",
+									"type": "file",
+									"src": "/C:/Proyectos/ECI/Tools/imagenes/office-1.webp"
+								},
+								{
+									"key": "Image_2",
+									"type": "file",
+									"src": "/C:/Proyectos/ECI/Tools/imagenes/office-2.webp"
+								},
+								{
+									"key": "image_meta",
+									"type": "file",
+									"src": "/C:/Users/gabri/Pictures/cv_gabriel/174857.png"
+								},
+								{
+									"key": "slug",
+									"value": "Oficina-ECI-en-Sant-Ildefons2",
+									"type": "text"
+								},
+								{
+									"key": "feature",
+									"value": "<ul class=\"list\" data-astro-cid-prcas4qd=\"\"><li data-astro-cid-prcas4qd=\"\"><strong data-astro-cid-prcas4qd=\"\">Asesoramiento integral</strong><br data-astro-cid-prcas4qd=\"\">\nOfrecemos un enfoque personalizado que abarca desde la valoración inicial hasta el cierre de la transacción.\n</li><li data-astro-cid-prcas4qd=\"\"><strong data-astro-cid-prcas4qd=\"\">Rapidez y Eficacia</strong><br data-astro-cid-prcas4qd=\"\">\nNuestros procesos ágiles garantizan una transacción rápida y sin contratiempos.\n</li><li data-astro-cid-prcas4qd=\"\"><strong data-astro-cid-prcas4qd=\"\">\nConfianza y seguridad\n</strong><br data-astro-cid-prcas4qd=\"\">\nManejamos todas las cuestiones legales para que tu experiencia sea totalmente segura.\n</li><li data-astro-cid-prcas4qd=\"\"><strong data-astro-cid-prcas4qd=\"\">Ubicación Estratégica:</strong><br data-astro-cid-prcas4qd=\"\">\nNos encontramos en el corazón de Sant Ildefons, cerca de ti y de tus necesidades.\n</li></ul>",
+									"type": "text"
+								},
+								{
+									"key": "metaTitle",
+									"value": "example meta",
+									"type": "text"
+								},
+								{
+									"key": "metaDescription",
+									"value": "meta description",
+									"type": "text"
+								},
+								{
+									"key": "metaStatusindex",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{APP_URL}}/api/office",
+							"host": [
+								"{{APP_URL}}"
+							],
+							"path": [
+								"api",
+								"office"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "create-office",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Oficina ECI en Sant Ildefons",
+											"type": "text"
+										},
+										{
+											"key": "cif",
+											"value": "B67336958B67336958",
+											"type": "text"
+										},
+										{
+											"key": "address",
+											"value": "av. Sant Ildefons 8, Local 6a",
+											"type": "text"
+										},
+										{
+											"key": "map",
+											"value": "Map coordinates for Office 1",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "info@ebusa.es",
+											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "931 564 980",
+											"type": "text"
+										},
+										{
+											"key": "image_1",
+											"type": "file",
+											"src": "/C:/Proyectos/ECI/Tools/imagenes/office-1.webp"
+										},
+										{
+											"key": "Image_2",
+											"type": "file",
+											"src": "/C:/Proyectos/ECI/Tools/imagenes/office-2.webp"
+										},
+										{
+											"key": "image_meta",
+											"type": "file",
+											"src": "/C:/Users/gabri/Pictures/cv_gabriel/174857.png"
+										},
+										{
+											"key": "slug",
+											"value": "Oficina-ECI-en-Sant-Ildefons",
+											"type": "text"
+										},
+										{
+											"key": "feature",
+											"value": "<ul class=\"list\" data-astro-cid-prcas4qd=\"\"><li data-astro-cid-prcas4qd=\"\"><strong data-astro-cid-prcas4qd=\"\">Asesoramiento integral</strong><br data-astro-cid-prcas4qd=\"\">\nOfrecemos un enfoque personalizado que abarca desde la valoración inicial hasta el cierre de la transacción.\n</li><li data-astro-cid-prcas4qd=\"\"><strong data-astro-cid-prcas4qd=\"\">Rapidez y Eficacia</strong><br data-astro-cid-prcas4qd=\"\">\nNuestros procesos ágiles garantizan una transacción rápida y sin contratiempos.\n</li><li data-astro-cid-prcas4qd=\"\"><strong data-astro-cid-prcas4qd=\"\">\nConfianza y seguridad\n</strong><br data-astro-cid-prcas4qd=\"\">\nManejamos todas las cuestiones legales para que tu experiencia sea totalmente segura.\n</li><li data-astro-cid-prcas4qd=\"\"><strong data-astro-cid-prcas4qd=\"\">Ubicación Estratégica:</strong><br data-astro-cid-prcas4qd=\"\">\nNos encontramos en el corazón de Sant Ildefons, cerca de ti y de tus necesidades.\n</li></ul>",
+											"type": "text"
+										},
+										{
+											"key": "metaTitle",
+											"value": "example meta",
+											"type": "text"
+										},
+										{
+											"key": "metaDescription",
+											"value": "meta description",
+											"type": "text"
+										},
+										{
+											"key": "metaStatusindex",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{APP_URL}}/api/office",
+									"host": [
+										"{{APP_URL}}"
+									],
+									"path": [
+										"api",
+										"office"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 26 Dec 2023 19:39:14 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 26 Dec 2023 19:39:14 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.4"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Office successfully created\",\n    \"data\": {\n        \"id\": 2,\n        \"name\": \"Oficina ECI en Sant Ildefons\",\n        \"cif\": \"B67336958B67336958\",\n        \"address\": \"av. Sant Ildefons 8, Local 6a\",\n        \"map\": \"Map coordinates for Office 1\",\n        \"email\": \"info@ebusa.es\",\n        \"phone\": \"931 564 980\",\n        \"feature\": \"<ul class=\\\"list\\\" data-astro-cid-prcas4qd=\\\"\\\"><li data-astro-cid-prcas4qd=\\\"\\\"><strong data-astro-cid-prcas4qd=\\\"\\\">Asesoramiento integral</strong><br data-astro-cid-prcas4qd=\\\"\\\">\\nOfrecemos un enfoque personalizado que abarca desde la valoración inicial hasta el cierre de la transacción.\\n</li><li data-astro-cid-prcas4qd=\\\"\\\"><strong data-astro-cid-prcas4qd=\\\"\\\">Rapidez y Eficacia</strong><br data-astro-cid-prcas4qd=\\\"\\\">\\nNuestros procesos ágiles garantizan una transacción rápida y sin contratiempos.\\n</li><li data-astro-cid-prcas4qd=\\\"\\\"><strong data-astro-cid-prcas4qd=\\\"\\\">\\nConfianza y seguridad\\n</strong><br data-astro-cid-prcas4qd=\\\"\\\">\\nManejamos todas las cuestiones legales para que tu experiencia sea totalmente segura.\\n</li><li data-astro-cid-prcas4qd=\\\"\\\"><strong data-astro-cid-prcas4qd=\\\"\\\">Ubicación Estratégica:</strong><br data-astro-cid-prcas4qd=\\\"\\\">\\nNos encontramos en el corazón de Sant Ildefons, cerca de ti y de tus necesidades.\\n</li></ul>\",\n        \"metadata_id\": 1,\n        \"slug\": \"Oficina-ECI-en-Sant-Ildefons\",\n        \"office_images\": [\n            {\n                \"id\": 3,\n                \"path\": \"/office/2/office-1.webp\",\n                \"office_id\": 2\n            },\n            {\n                \"id\": 4,\n                \"path\": \"/office/2/office-2.webp\",\n                \"office_id\": 2\n            }\n        ],\n        \"metadata\": {\n            \"id\": 1,\n            \"title\": \"example meta\",\n            \"description\": \"meta description\",\n            \"path_image\": \"/metadata/1/174857.png\",\n            \"status_index\": \"1\",\n            \"section\": null\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "edit-office",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Oficina ECI en Sant IldefonsUp",
+									"type": "text"
+								},
+								{
+									"key": "cif",
+									"value": "B67336958B67336958",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "av. Sant Ildefons 8, Local 6a",
+									"type": "text"
+								},
+								{
+									"key": "map",
+									"value": "Map coordinates for Office 1",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "info@ebusa.es",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "931 564 980",
+									"type": "text"
+								},
+								{
+									"key": "image_1",
+									"type": "file",
+									"src": "/C:/Proyectos/ECI/Tools/imagenes/office-1.webp"
+								},
+								{
+									"key": "Image_2",
+									"type": "file",
+									"src": "/C:/Proyectos/ECI/Tools/imagenes/office-2.webp"
+								},
+								{
+									"key": "image_meta",
+									"type": "file",
+									"src": "/C:/Users/gabri/Pictures/cv_gabriel/174857.png"
+								},
+								{
+									"key": "slug",
+									"value": "Oficina-ECI-en-Sant-Ildefons",
+									"type": "text"
+								},
+								{
+									"key": "feature",
+									"value": "<ul class=\"list\" data-astro-cid-prcas4qd=\"\"><li data-astro-cid-prcas4qd=\"\"><strong data-astro-cid-prcas4qd=\"\">Asesoramiento integral</strong><br data-astro-cid-prcas4qd=\"\">\nOfrecemos un enfoque personalizado que abarca desde la valoración inicial hasta el cierre de la transacción.\n</li><li data-astro-cid-prcas4qd=\"\"><strong data-astro-cid-prcas4qd=\"\">Rapidez y Eficacia</strong><br data-astro-cid-prcas4qd=\"\">\nNuestros procesos ágiles garantizan una transacción rápida y sin contratiempos.\n</li><li data-astro-cid-prcas4qd=\"\"><strong data-astro-cid-prcas4qd=\"\">\nConfianza y seguridad\n</strong><br data-astro-cid-prcas4qd=\"\">\nManejamos todas las cuestiones legales para que tu experiencia sea totalmente segura.\n</li><li data-astro-cid-prcas4qd=\"\"><strong data-astro-cid-prcas4qd=\"\">Ubicación Estratégica:</strong><br data-astro-cid-prcas4qd=\"\">\nNos encontramos en el corazón de Sant Ildefons, cerca de ti y de tus necesidades.\n</li></ul>",
+									"type": "text"
+								},
+								{
+									"key": "metaTitle",
+									"value": "example meta",
+									"type": "text"
+								},
+								{
+									"key": "metaDescription",
+									"value": "meta description",
+									"type": "text"
+								},
+								{
+									"key": "metaStatusindex",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{APP_URL}}/api/edit-office/2",
+							"host": [
+								"{{APP_URL}}"
+							],
+							"path": [
+								"api",
+								"edit-office",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "edit-office",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Oficina ECI en Sant IldefonsUp",
+											"type": "text"
+										},
+										{
+											"key": "cif",
+											"value": "B67336958B67336958",
+											"type": "text"
+										},
+										{
+											"key": "address",
+											"value": "av. Sant Ildefons 8, Local 6a",
+											"type": "text"
+										},
+										{
+											"key": "map",
+											"value": "Map coordinates for Office 1",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "info@ebusa.es",
+											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "931 564 980",
+											"type": "text"
+										},
+										{
+											"key": "image_1",
+											"type": "file",
+											"src": "/C:/Proyectos/ECI/Tools/imagenes/office-1.webp"
+										},
+										{
+											"key": "Image_2",
+											"type": "file",
+											"src": "/C:/Proyectos/ECI/Tools/imagenes/office-2.webp"
+										},
+										{
+											"key": "image_meta",
+											"type": "file",
+											"src": "/C:/Users/gabri/Pictures/cv_gabriel/174857.png"
+										},
+										{
+											"key": "slug",
+											"value": "Oficina-ECI-en-Sant-Ildefons",
+											"type": "text"
+										},
+										{
+											"key": "feature",
+											"value": "<ul class=\"list\" data-astro-cid-prcas4qd=\"\"><li data-astro-cid-prcas4qd=\"\"><strong data-astro-cid-prcas4qd=\"\">Asesoramiento integral</strong><br data-astro-cid-prcas4qd=\"\">\nOfrecemos un enfoque personalizado que abarca desde la valoración inicial hasta el cierre de la transacción.\n</li><li data-astro-cid-prcas4qd=\"\"><strong data-astro-cid-prcas4qd=\"\">Rapidez y Eficacia</strong><br data-astro-cid-prcas4qd=\"\">\nNuestros procesos ágiles garantizan una transacción rápida y sin contratiempos.\n</li><li data-astro-cid-prcas4qd=\"\"><strong data-astro-cid-prcas4qd=\"\">\nConfianza y seguridad\n</strong><br data-astro-cid-prcas4qd=\"\">\nManejamos todas las cuestiones legales para que tu experiencia sea totalmente segura.\n</li><li data-astro-cid-prcas4qd=\"\"><strong data-astro-cid-prcas4qd=\"\">Ubicación Estratégica:</strong><br data-astro-cid-prcas4qd=\"\">\nNos encontramos en el corazón de Sant Ildefons, cerca de ti y de tus necesidades.\n</li></ul>",
+											"type": "text"
+										},
+										{
+											"key": "metaTitle",
+											"value": "example meta",
+											"type": "text"
+										},
+										{
+											"key": "metaDescription",
+											"value": "meta description",
+											"type": "text"
+										},
+										{
+											"key": "metaStatusindex",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{APP_URL}}/api/edit-office/2",
+									"host": [
+										"{{APP_URL}}"
+									],
+									"path": [
+										"api",
+										"edit-office",
+										"2"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 26 Dec 2023 20:08:47 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 26 Dec 2023 20:08:47 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.4"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Office successfully updated\",\n    \"data\": {\n        \"id\": 2,\n        \"name\": \"Oficina ECI en Sant IldefonsUp\",\n        \"cif\": \"B67336958B67336958\",\n        \"address\": \"av. Sant Ildefons 8, Local 6a\",\n        \"map\": \"Map coordinates for Office 1\",\n        \"email\": \"info@ebusa.es\",\n        \"phone\": \"931 564 980\",\n        \"feature\": \"<ul class=\\\"list\\\" data-astro-cid-prcas4qd=\\\"\\\"><li data-astro-cid-prcas4qd=\\\"\\\"><strong data-astro-cid-prcas4qd=\\\"\\\">Asesoramiento integral</strong><br data-astro-cid-prcas4qd=\\\"\\\">\\nOfrecemos un enfoque personalizado que abarca desde la valoración inicial hasta el cierre de la transacción.\\n</li><li data-astro-cid-prcas4qd=\\\"\\\"><strong data-astro-cid-prcas4qd=\\\"\\\">Rapidez y Eficacia</strong><br data-astro-cid-prcas4qd=\\\"\\\">\\nNuestros procesos ágiles garantizan una transacción rápida y sin contratiempos.\\n</li><li data-astro-cid-prcas4qd=\\\"\\\"><strong data-astro-cid-prcas4qd=\\\"\\\">\\nConfianza y seguridad\\n</strong><br data-astro-cid-prcas4qd=\\\"\\\">\\nManejamos todas las cuestiones legales para que tu experiencia sea totalmente segura.\\n</li><li data-astro-cid-prcas4qd=\\\"\\\"><strong data-astro-cid-prcas4qd=\\\"\\\">Ubicación Estratégica:</strong><br data-astro-cid-prcas4qd=\\\"\\\">\\nNos encontramos en el corazón de Sant Ildefons, cerca de ti y de tus necesidades.\\n</li></ul>\",\n        \"metadata_id\": 1,\n        \"slug\": \"Oficina-ECI-en-Sant-Ildefons\",\n        \"office_images\": [\n            {\n                \"id\": 3,\n                \"path\": \"/office/2/office-1.webp\",\n                \"office_id\": 2\n            },\n            {\n                \"id\": 4,\n                \"path\": \"/office/2/office-2.webp\",\n                \"office_id\": 2\n            }\n        ],\n        \"metadata\": {\n            \"id\": 1,\n            \"title\": \"example meta\",\n            \"description\": \"meta description\",\n            \"path_image\": \"/metadata/1/174857.png\",\n            \"status_index\": \"1\",\n            \"section\": null\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "getBySlug",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{APP_URL}}/api/get-office/Oficina-ECI-en-Sant-Ildefons",
+							"host": [
+								"{{APP_URL}}"
+							],
+							"path": [
+								"api",
+								"get-office",
+								"Oficina-ECI-en-Sant-Ildefons"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get-ok",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{APP_URL}}/api/get-office/Oficina-ECI-en-Sant-Ildefons",
+									"host": [
+										"{{APP_URL}}"
+									],
+									"path": [
+										"api",
+										"get-office",
+										"Oficina-ECI-en-Sant-Ildefons"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 26 Dec 2023 20:17:06 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 26 Dec 2023 20:17:06 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.4"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Office obtained correctly\",\n    \"data\": {\n        \"id\": 2,\n        \"name\": \"Oficina ECI en Sant IldefonsUp\",\n        \"cif\": \"B67336958B67336958\",\n        \"address\": \"av. Sant Ildefons 8, Local 6a\",\n        \"map\": \"Map coordinates for Office 1\",\n        \"email\": \"info@ebusa.es\",\n        \"phone\": \"931 564 980\",\n        \"feature\": \"<ul class=\\\"list\\\" data-astro-cid-prcas4qd=\\\"\\\"><li data-astro-cid-prcas4qd=\\\"\\\"><strong data-astro-cid-prcas4qd=\\\"\\\">Asesoramiento integral</strong><br data-astro-cid-prcas4qd=\\\"\\\">\\nOfrecemos un enfoque personalizado que abarca desde la valoración inicial hasta el cierre de la transacción.\\n</li><li data-astro-cid-prcas4qd=\\\"\\\"><strong data-astro-cid-prcas4qd=\\\"\\\">Rapidez y Eficacia</strong><br data-astro-cid-prcas4qd=\\\"\\\">\\nNuestros procesos ágiles garantizan una transacción rápida y sin contratiempos.\\n</li><li data-astro-cid-prcas4qd=\\\"\\\"><strong data-astro-cid-prcas4qd=\\\"\\\">\\nConfianza y seguridad\\n</strong><br data-astro-cid-prcas4qd=\\\"\\\">\\nManejamos todas las cuestiones legales para que tu experiencia sea totalmente segura.\\n</li><li data-astro-cid-prcas4qd=\\\"\\\"><strong data-astro-cid-prcas4qd=\\\"\\\">Ubicación Estratégica:</strong><br data-astro-cid-prcas4qd=\\\"\\\">\\nNos encontramos en el corazón de Sant Ildefons, cerca de ti y de tus necesidades.\\n</li></ul>\",\n        \"metadata_id\": 1,\n        \"slug\": \"Oficina-ECI-en-Sant-Ildefons\",\n        \"office_images\": [\n            {\n                \"id\": 3,\n                \"path\": \"/office/2/office-1.webp\",\n                \"office_id\": 2\n            },\n            {\n                \"id\": 4,\n                \"path\": \"/office/2/office-2.webp\",\n                \"office_id\": 2\n            }\n        ],\n        \"metadata\": {\n            \"id\": 1,\n            \"title\": \"example meta\",\n            \"description\": \"meta description\",\n            \"path_image\": \"/metadata/1/174857.png\",\n            \"status_index\": \"1\",\n            \"section\": null\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "get-offices",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{APP_URL}}/api/office",
+							"host": [
+								"{{APP_URL}}"
+							],
+							"path": [
+								"api",
+								"office"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get-all-ok",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{APP_URL}}/api/office",
+									"host": [
+										"{{APP_URL}}"
+									],
+									"path": [
+										"api",
+										"office"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 26 Dec 2023 20:18:21 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 26 Dec 2023 20:18:21 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.4"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Office obtained correctly\",\n    \"data\": [\n        {\n            \"id\": 2,\n            \"name\": \"Oficina ECI en Sant IldefonsUp\",\n            \"cif\": \"B67336958B67336958\",\n            \"address\": \"av. Sant Ildefons 8, Local 6a\",\n            \"map\": \"Map coordinates for Office 1\",\n            \"email\": \"info@ebusa.es\",\n            \"phone\": \"931 564 980\",\n            \"feature\": \"<ul class=\\\"list\\\" data-astro-cid-prcas4qd=\\\"\\\"><li data-astro-cid-prcas4qd=\\\"\\\"><strong data-astro-cid-prcas4qd=\\\"\\\">Asesoramiento integral</strong><br data-astro-cid-prcas4qd=\\\"\\\">\\nOfrecemos un enfoque personalizado que abarca desde la valoración inicial hasta el cierre de la transacción.\\n</li><li data-astro-cid-prcas4qd=\\\"\\\"><strong data-astro-cid-prcas4qd=\\\"\\\">Rapidez y Eficacia</strong><br data-astro-cid-prcas4qd=\\\"\\\">\\nNuestros procesos ágiles garantizan una transacción rápida y sin contratiempos.\\n</li><li data-astro-cid-prcas4qd=\\\"\\\"><strong data-astro-cid-prcas4qd=\\\"\\\">\\nConfianza y seguridad\\n</strong><br data-astro-cid-prcas4qd=\\\"\\\">\\nManejamos todas las cuestiones legales para que tu experiencia sea totalmente segura.\\n</li><li data-astro-cid-prcas4qd=\\\"\\\"><strong data-astro-cid-prcas4qd=\\\"\\\">Ubicación Estratégica:</strong><br data-astro-cid-prcas4qd=\\\"\\\">\\nNos encontramos en el corazón de Sant Ildefons, cerca de ti y de tus necesidades.\\n</li></ul>\",\n            \"metadata_id\": 1,\n            \"slug\": \"Oficina-ECI-en-Sant-Ildefons\",\n            \"office_images\": [\n                {\n                    \"id\": 3,\n                    \"path\": \"/office/2/office-1.webp\",\n                    \"office_id\": 2\n                },\n                {\n                    \"id\": 4,\n                    \"path\": \"/office/2/office-2.webp\",\n                    \"office_id\": 2\n                }\n            ],\n            \"metadata\": {\n                \"id\": 1,\n                \"title\": \"example meta\",\n                \"description\": \"meta description\",\n                \"path_image\": \"/metadata/1/174857.png\",\n                \"status_index\": \"1\",\n                \"section\": null\n            }\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Partners",
+			"item": [
+				{
+					"name": "create-partner",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Juan Perez",
+									"type": "text"
+								},
+								{
+									"key": "role",
+									"value": "Vendedor",
+									"type": "text"
+								},
+								{
+									"key": "office_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "image_1",
+									"type": "file",
+									"src": "/C:/Proyectos/ECI/Tools/imagenes/partner-1.webp"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{APP_URL}}/api/partner",
+							"host": [
+								"{{APP_URL}}"
+							],
+							"path": [
+								"api",
+								"partner"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "create-partner",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Juan Perez",
+											"type": "text"
+										},
+										{
+											"key": "role",
+											"value": "Vendedor",
+											"type": "text"
+										},
+										{
+											"key": "office_id",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "image_1",
+											"type": "file",
+											"src": "/C:/Proyectos/ECI/Tools/imagenes/partner-1.webp"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{APP_URL}}/api/partner",
+									"host": [
+										"{{APP_URL}}"
+									],
+									"path": [
+										"api",
+										"partner"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 26 Dec 2023 21:01:08 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 26 Dec 2023 21:01:07 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.4"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Partner successfully created\",\n    \"data\": {\n        \"id\": 2,\n        \"name\": \"Juan Perez\",\n        \"role\": \"Vendedor\",\n        \"path_image\": \"/partner/2/partner-1.webp\",\n        \"office_id\": 2,\n        \"metadata_id\": null,\n        \"office\": {\n            \"id\": 2,\n            \"name\": \"Oficina ECI en Sant IldefonsUp\",\n            \"cif\": \"B67336958B67336958\",\n            \"address\": \"av. Sant Ildefons 8, Local 6a\",\n            \"map\": \"Map coordinates for Office 1\",\n            \"email\": \"info@ebusa.es\",\n            \"phone\": \"931 564 980\",\n            \"feature\": \"<ul class=\\\"list\\\" data-astro-cid-prcas4qd=\\\"\\\"><li data-astro-cid-prcas4qd=\\\"\\\"><strong data-astro-cid-prcas4qd=\\\"\\\">Asesoramiento integral</strong><br data-astro-cid-prcas4qd=\\\"\\\">\\nOfrecemos un enfoque personalizado que abarca desde la valoración inicial hasta el cierre de la transacción.\\n</li><li data-astro-cid-prcas4qd=\\\"\\\"><strong data-astro-cid-prcas4qd=\\\"\\\">Rapidez y Eficacia</strong><br data-astro-cid-prcas4qd=\\\"\\\">\\nNuestros procesos ágiles garantizan una transacción rápida y sin contratiempos.\\n</li><li data-astro-cid-prcas4qd=\\\"\\\"><strong data-astro-cid-prcas4qd=\\\"\\\">\\nConfianza y seguridad\\n</strong><br data-astro-cid-prcas4qd=\\\"\\\">\\nManejamos todas las cuestiones legales para que tu experiencia sea totalmente segura.\\n</li><li data-astro-cid-prcas4qd=\\\"\\\"><strong data-astro-cid-prcas4qd=\\\"\\\">Ubicación Estratégica:</strong><br data-astro-cid-prcas4qd=\\\"\\\">\\nNos encontramos en el corazón de Sant Ildefons, cerca de ti y de tus necesidades.\\n</li></ul>\",\n            \"metadata_id\": 1,\n            \"slug\": \"Oficina-ECI-en-Sant-Ildefons\"\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "edit-partner",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Juan Peres",
+									"type": "text"
+								},
+								{
+									"key": "role",
+									"value": "Vendedor",
+									"type": "text"
+								},
+								{
+									"key": "office_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "image_1",
+									"type": "file",
+									"src": "/C:/Proyectos/ECI/Tools/imagenes/partner-1.webp",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{APP_URL}}/api/edit-partner/2",
+							"host": [
+								"{{APP_URL}}"
+							],
+							"path": [
+								"api",
+								"edit-partner",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "edit-partner",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Juan Peres",
+											"type": "text"
+										},
+										{
+											"key": "role",
+											"value": "Vendedor",
+											"type": "text"
+										},
+										{
+											"key": "office_id",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "image_1",
+											"type": "file",
+											"src": "/C:/Proyectos/ECI/Tools/imagenes/partner-1.webp",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{APP_URL}}/api/edit-partner/2",
+									"host": [
+										"{{APP_URL}}"
+									],
+									"path": [
+										"api",
+										"edit-partner",
+										"2"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 26 Dec 2023 21:04:44 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 26 Dec 2023 21:04:44 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.4"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Partner successfully updated\",\n    \"data\": {\n        \"id\": 2,\n        \"name\": \"Juan Peres\",\n        \"role\": \"Vendedor\",\n        \"path_image\": \"/partner/2/partner-1.webp\",\n        \"office_id\": 2,\n        \"metadata_id\": null,\n        \"office\": {\n            \"id\": 2,\n            \"name\": \"Oficina ECI en Sant IldefonsUp\",\n            \"cif\": \"B67336958B67336958\",\n            \"address\": \"av. Sant Ildefons 8, Local 6a\",\n            \"map\": \"Map coordinates for Office 1\",\n            \"email\": \"info@ebusa.es\",\n            \"phone\": \"931 564 980\",\n            \"feature\": \"<ul class=\\\"list\\\" data-astro-cid-prcas4qd=\\\"\\\"><li data-astro-cid-prcas4qd=\\\"\\\"><strong data-astro-cid-prcas4qd=\\\"\\\">Asesoramiento integral</strong><br data-astro-cid-prcas4qd=\\\"\\\">\\nOfrecemos un enfoque personalizado que abarca desde la valoración inicial hasta el cierre de la transacción.\\n</li><li data-astro-cid-prcas4qd=\\\"\\\"><strong data-astro-cid-prcas4qd=\\\"\\\">Rapidez y Eficacia</strong><br data-astro-cid-prcas4qd=\\\"\\\">\\nNuestros procesos ágiles garantizan una transacción rápida y sin contratiempos.\\n</li><li data-astro-cid-prcas4qd=\\\"\\\"><strong data-astro-cid-prcas4qd=\\\"\\\">\\nConfianza y seguridad\\n</strong><br data-astro-cid-prcas4qd=\\\"\\\">\\nManejamos todas las cuestiones legales para que tu experiencia sea totalmente segura.\\n</li><li data-astro-cid-prcas4qd=\\\"\\\"><strong data-astro-cid-prcas4qd=\\\"\\\">Ubicación Estratégica:</strong><br data-astro-cid-prcas4qd=\\\"\\\">\\nNos encontramos en el corazón de Sant Ildefons, cerca de ti y de tus necesidades.\\n</li></ul>\",\n            \"metadata_id\": 1,\n            \"slug\": \"Oficina-ECI-en-Sant-Ildefons\"\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "get-partners",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{APP_URL}}/api/partner",
+							"host": [
+								"{{APP_URL}}"
+							],
+							"path": [
+								"api",
+								"partner"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get-ok",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{APP_URL}}/api/partner",
+									"host": [
+										"{{APP_URL}}"
+									],
+									"path": [
+										"api",
+										"partner"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 26 Dec 2023 21:05:35 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 26 Dec 2023 21:05:35 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.4"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Partner obtained correctly\",\n    \"data\": [\n        {\n            \"id\": 2,\n            \"name\": \"Juan Peres\",\n            \"role\": \"Vendedor\",\n            \"path_image\": \"/partner/2/partner-1.webp\",\n            \"office_id\": 2,\n            \"metadata_id\": null,\n            \"office\": {\n                \"id\": 2,\n                \"name\": \"Oficina ECI en Sant IldefonsUp\",\n                \"cif\": \"B67336958B67336958\",\n                \"address\": \"av. Sant Ildefons 8, Local 6a\",\n                \"map\": \"Map coordinates for Office 1\",\n                \"email\": \"info@ebusa.es\",\n                \"phone\": \"931 564 980\",\n                \"feature\": \"<ul class=\\\"list\\\" data-astro-cid-prcas4qd=\\\"\\\"><li data-astro-cid-prcas4qd=\\\"\\\"><strong data-astro-cid-prcas4qd=\\\"\\\">Asesoramiento integral</strong><br data-astro-cid-prcas4qd=\\\"\\\">\\nOfrecemos un enfoque personalizado que abarca desde la valoración inicial hasta el cierre de la transacción.\\n</li><li data-astro-cid-prcas4qd=\\\"\\\"><strong data-astro-cid-prcas4qd=\\\"\\\">Rapidez y Eficacia</strong><br data-astro-cid-prcas4qd=\\\"\\\">\\nNuestros procesos ágiles garantizan una transacción rápida y sin contratiempos.\\n</li><li data-astro-cid-prcas4qd=\\\"\\\"><strong data-astro-cid-prcas4qd=\\\"\\\">\\nConfianza y seguridad\\n</strong><br data-astro-cid-prcas4qd=\\\"\\\">\\nManejamos todas las cuestiones legales para que tu experiencia sea totalmente segura.\\n</li><li data-astro-cid-prcas4qd=\\\"\\\"><strong data-astro-cid-prcas4qd=\\\"\\\">Ubicación Estratégica:</strong><br data-astro-cid-prcas4qd=\\\"\\\">\\nNos encontramos en el corazón de Sant Ildefons, cerca de ti y de tus necesidades.\\n</li></ul>\",\n                \"metadata_id\": 1,\n                \"slug\": \"Oficina-ECI-en-Sant-Ildefons\"\n            }\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Review",
+			"item": [
+				{
+					"name": "create-review",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Matias Gonza",
+									"type": "text"
+								},
+								{
+									"key": "quote",
+									"value": "El acompañamiento durante cada fase del proceso de venta fue excepcional, en todo momento nos sentimos apoyados y logramos vender el piso que teníamos en Cornellà de Llobregat con ECI.",
+									"type": "text"
+								},
+								{
+									"key": "image_1",
+									"type": "file",
+									"src": "/C:/Proyectos/ECI/Tools/imagenes/partner-1.webp"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{APP_URL}}/api/review",
+							"host": [
+								"{{APP_URL}}"
+							],
+							"path": [
+								"api",
+								"review"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "create-review",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Matias Perez",
+											"type": "text"
+										},
+										{
+											"key": "quote",
+											"value": "El acompañamiento durante cada fase del proceso de venta fue excepcional, en todo momento nos sentimos apoyados y logramos vender el piso que teníamos en Cornellà de Llobregat con ECI.",
+											"type": "text"
+										},
+										{
+											"key": "image_1",
+											"type": "file",
+											"src": "/C:/Proyectos/ECI/Tools/imagenes/partner-1.webp"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{APP_URL}}/api/review",
+									"host": [
+										"{{APP_URL}}"
+									],
+									"path": [
+										"api",
+										"review"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 26 Dec 2023 22:54:42 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 26 Dec 2023 22:54:42 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.4"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"messages.review_create_ok\",\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"Matias Perez\",\n        \"quote\": \"El acompañamiento durante cada fase del proceso de venta fue excepcional, en todo momento nos sentimos apoyados y logramos vender el piso que teníamos en Cornellà de Llobregat con ECI.\",\n        \"thumbnail\": \"/review/1/partner-1.webp\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "edit-review",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Matias Perezz",
+									"type": "text"
+								},
+								{
+									"key": "quote",
+									"value": "El acompañamiento durante cada fase del proceso de venta fue excepcional, en todo momento nos sentimos apoyados y logramos vender el piso que teníamos en Cornellà de Llobregat con ECI.",
+									"type": "text"
+								},
+								{
+									"key": "image_1",
+									"type": "file",
+									"src": "/C:/Proyectos/ECI/Tools/imagenes/partner-1.webp",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{APP_URL}}/api/edit-review/1",
+							"host": [
+								"{{APP_URL}}"
+							],
+							"path": [
+								"api",
+								"edit-review",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "edit-review",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Matias Perezz",
+											"type": "text"
+										},
+										{
+											"key": "quote",
+											"value": "El acompañamiento durante cada fase del proceso de venta fue excepcional, en todo momento nos sentimos apoyados y logramos vender el piso que teníamos en Cornellà de Llobregat con ECI.",
+											"type": "text"
+										},
+										{
+											"key": "image_1",
+											"type": "file",
+											"src": "/C:/Proyectos/ECI/Tools/imagenes/partner-1.webp",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{APP_URL}}/api/edit-review/1",
+									"host": [
+										"{{APP_URL}}"
+									],
+									"path": [
+										"api",
+										"edit-review",
+										"1"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 26 Dec 2023 22:56:13 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 26 Dec 2023 22:56:13 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.4"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"messages.review_update_ok\",\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"Matias Perezz\",\n        \"quote\": \"El acompañamiento durante cada fase del proceso de venta fue excepcional, en todo momento nos sentimos apoyados y logramos vender el piso que teníamos en Cornellà de Llobregat con ECI.\",\n        \"thumbnail\": \"/review/1/partner-1.webp\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "get-reviews",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{APP_URL}}/api/review",
+							"host": [
+								"{{APP_URL}}"
+							],
+							"path": [
+								"api",
+								"review"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get-ok",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{APP_URL}}/api/review",
+									"host": [
+										"{{APP_URL}}"
+									],
+									"path": [
+										"api",
+										"review"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 26 Dec 2023 22:57:06 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 26 Dec 2023 22:57:06 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.4"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"messages.review_get_ok\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"Matias Perezz\",\n            \"quote\": \"El acompañamiento durante cada fase del proceso de venta fue excepcional, en todo momento nos sentimos apoyados y logramos vender el piso que teníamos en Cornellà de Llobregat con ECI.\",\n            \"thumbnail\": \"/review/1/partner-1.webp\"\n        },\n        {\n            \"id\": 2,\n            \"name\": \"Matias Gonza\",\n            \"quote\": \"El acompañamiento durante cada fase del proceso de venta fue excepcional, en todo momento nos sentimos apoyados y logramos vender el piso que teníamos en Cornellà de Llobregat con ECI.\",\n            \"thumbnail\": \"/review/2/partner-1.webp\"\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
 		}
 	],
 	"variable": [

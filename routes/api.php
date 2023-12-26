@@ -6,6 +6,7 @@ use App\Http\Controllers\Api\Metadata\MetadataController;
 use App\Http\Controllers\Api\Office\OfficeController;
 use App\Http\Controllers\Api\Office\PartnerController;
 use App\Http\Controllers\Api\Property\PropertyController;
+use App\Http\Controllers\Api\Review\ReviewController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -70,6 +71,12 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::resource('partner', PartnerController::class)->except([
         'index', 'show'
     ]);
+    
+    //REVIEW PROTECTED
+    Route::post('edit-review/{id}', [ReviewController::class, 'update']);
+    Route::resource('review', ReviewController::class)->except([
+        'index', 'show'
+    ]);
 });
 
 // PROPERTY
@@ -97,5 +104,10 @@ Route::resource('office', OfficeController::class)->only([
 
 // PARTNERS
 Route::resource('partner', PartnerController::class)->only([
+    'index', 'show'
+]);
+
+// REVIEW
+Route::resource('review', ReviewController::class)->only([
     'index', 'show'
 ]);
