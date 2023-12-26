@@ -32,12 +32,10 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "http://localhost:8000/api/status",
-									"protocol": "http",
+									"raw": "{{APP_URL}}/api/status",
 									"host": [
-										"localhost"
+										"{{APP_URL}}"
 									],
-									"port": "8000",
 									"path": [
 										"api",
 										"status"
@@ -135,12 +133,10 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:8000/api/register",
-									"protocol": "http",
+									"raw": "{{APP_URL}}/api/register",
 									"host": [
-										"localhost"
+										"{{APP_URL}}"
 									],
-									"port": "8000",
 									"path": [
 										"api",
 										"register"
@@ -238,12 +234,10 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:8000/api/login",
-									"protocol": "http",
+									"raw": "{{APP_URL}}/api/login",
 									"host": [
-										"localhost"
+										"{{APP_URL}}"
 									],
-									"port": "8000",
 									"path": [
 										"api",
 										"login"
@@ -333,12 +327,10 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "http://localhost:8000/api/test-token",
-									"protocol": "http",
+									"raw": "{{APP_URL}}/api/test-token",
 									"host": [
-										"localhost"
+										"{{APP_URL}}"
 									],
-									"port": "8000",
 									"path": [
 										"api",
 										"test-token"
@@ -428,12 +420,10 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "http://localhost:8000/api/test-user",
-									"protocol": "http",
+									"raw": "{{APP_URL}}/api/test-user",
 									"host": [
-										"localhost"
+										"{{APP_URL}}"
 									],
-									"port": "8000",
 									"path": [
 										"api",
 										"test-user"
@@ -523,12 +513,10 @@
 								"method": "POST",
 								"header": [],
 								"url": {
-									"raw": "http://localhost:8000/api/logout",
-									"protocol": "http",
+									"raw": "{{APP_URL}}/api/logout",
 									"host": [
-										"localhost"
+										"{{APP_URL}}"
 									],
-									"port": "8000",
 									"path": [
 										"api",
 										"logout"
@@ -610,7 +598,7 @@
 							"formdata": [
 								{
 									"key": "title",
-									"value": "Ático en el corazón de Esplugues",
+									"value": "Ático en el corazón de Esplugues3",
 									"type": "text"
 								},
 								{
@@ -644,7 +632,7 @@
 									"type": "text"
 								},
 								{
-									"key": "square_meter",
+									"key": "area",
 									"value": "125",
 									"type": "text"
 								},
@@ -676,17 +664,19 @@
 								{
 									"key": "features",
 									"value": "[\"Piso segunda mano\", \"garage\"]",
-									"type": "text"
+									"type": "text",
+									"disabled": true
 								},
 								{
 									"key": "image_1",
 									"type": "file",
-									"src": "/C:/Proyectos/ECI/imagenes/prop3-1.jpg"
+									"src": "/C:/Users/gabri/Pictures/ARGENTINA/pngtree-3-golden-3d-realistic-stars-png-image_6506672.jpg"
 								},
 								{
 									"key": "image_2",
 									"type": "file",
-									"src": "/C:/Proyectos/ECI/imagenes/prop3-2.jpg"
+									"src": [],
+									"disabled": true
 								},
 								{
 									"key": "image_3",
@@ -695,10 +685,124 @@
 									"disabled": true
 								},
 								{
+									"key": "metaTitle",
+									"value": "example title",
+									"type": "text"
+								},
+								{
+									"key": "metaDescription",
+									"value": "example description",
+									"type": "text"
+								},
+								{
+									"key": "metaStatusindex",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "hall_area",
+									"value": "10",
+									"type": "text"
+								},
+								{
+									"key": "terrace_area",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "balcony_area",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "heating",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "airconditioning",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "year_construction",
+									"value": "2010",
+									"type": "text"
+								},
+								{
+									"key": "floor_type",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "gas",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "elevator",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "shared_terrace",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "parking",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "storage_room",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "pool",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "garden",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "public_transport",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "shopping",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "market",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "education_center",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "health_center",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "recreation_area",
+									"value": "",
+									"type": "text"
+								},
+								{
 									"key": "slug",
-									"value": "abc",
-									"type": "text",
-									"disabled": true
+									"value": "Ático-en-el-corazón-de-Esplugues3",
+									"type": "text"
 								}
 							]
 						},
@@ -715,82 +819,7 @@
 					},
 					"response": [
 						{
-							"name": "create-property",
-							"originalRequest": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"title\": \"Property Title\",\r\n    \"address\": \"Property Address\",\r\n    \"reference\": \"Property Reference\",\r\n    \"price\": 1000000,\r\n    \"information\": \"Property Information\",\r\n    \"number_room\": 3,\r\n    \"number_bath\": 2,\r\n    \"square_meter\": 150.5,\r\n    \"energy_certification\": \"E\",\r\n    \"map\": \"Property Map\",\r\n    \"status\": 1,\r\n    \"office_id\": 1,\r\n    \"locality_id\": 1\r\n}\r\n",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "http://localhost:8000/api/property",
-									"protocol": "http",
-									"host": [
-										"localhost"
-									],
-									"port": "8000",
-									"path": [
-										"api",
-										"property"
-									]
-								}
-							},
-							"status": "Created",
-							"code": 201,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Host",
-									"value": "localhost:8000"
-								},
-								{
-									"key": "Date",
-									"value": "Wed, 29 Nov 2023 22:48:56 GMT"
-								},
-								{
-									"key": "Date",
-									"value": "Wed, 29 Nov 2023 22:48:56 GMT"
-								},
-								{
-									"key": "Connection",
-									"value": "close"
-								},
-								{
-									"key": "X-Powered-By",
-									"value": "PHP/8.2.4"
-								},
-								{
-									"key": "Cache-Control",
-									"value": "no-cache, private"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json"
-								},
-								{
-									"key": "X-RateLimit-Limit",
-									"value": "60"
-								},
-								{
-									"key": "X-RateLimit-Remaining",
-									"value": "58"
-								},
-								{
-									"key": "Access-Control-Allow-Origin",
-									"value": "*"
-								}
-							],
-							"cookie": [],
-							"body": "{\n    \"success\": true,\n    \"message\": \"Property successfully created\",\n    \"data\": {\n        \"title\": \"Property Title\",\n        \"address\": \"Property Address\",\n        \"reference\": \"Property Reference\",\n        \"price\": 1000000,\n        \"information\": \"Property Information\",\n        \"number_room\": 3,\n        \"number_bath\": 2,\n        \"square_meter\": 150.5,\n        \"energy_certification\": \"E\",\n        \"map\": \"Property Map\",\n        \"status\": true,\n        \"office_id\": 1,\n        \"locality_id\": 1,\n        \"id\": 1\n    }\n}"
-						},
-						{
-							"name": "create-property-2",
+							"name": "create-property-con-metadata",
 							"originalRequest": {
 								"method": "POST",
 								"header": [],
@@ -799,287 +828,12 @@
 									"formdata": [
 										{
 											"key": "title",
-											"value": "Espectacular casa en Cubelles",
+											"value": "Ático en el corazón de Esplugues3",
 											"type": "text"
 										},
 										{
 											"key": "address",
-											"value": "Corrientes 1000",
-											"type": "text"
-										},
-										{
-											"key": "reference",
-											"value": "ARUS130",
-											"type": "text"
-										},
-										{
-											"key": "price",
-											"value": "130000",
-											"type": "text"
-										},
-										{
-											"key": "information",
-											"value": "EBUSA CONSULTORES INMOBILIARIOS les presenta este inmueble en el barrio de Sant Ildefonso en la calle Doctor Tiene una superficie de 50 m2, 2 dormitorios (1 doble y 1 individual ), salón con vistas al exterior, cocina con salida a galería, baño de 3 piezas con bañera. Es una vivienda muy luminosa y soleada, tiene orientación a sur por lo cual al ser un piso alto disfrutarás de unas vistas magníficas. La finca dispone de dos ascensores.\nLa carpintería del piso es de aluminio, el suelo de parquet, cocina y baño llevan una reforma de 5 años. Nota de información al consumidor:\nEstimado Cliente, rogamos consulte las condiciones de adquisición del presente inmueble con nuestro Departamento Comercial (valor de la propiedad, impuestos, honorarios de agencia, otros gastos, etc. ).",
-											"type": "text"
-										},
-										{
-											"key": "number_room",
-											"value": "2",
-											"type": "text"
-										},
-										{
-											"key": "number_bath",
-											"value": "1",
-											"type": "text"
-										},
-										{
-											"key": "square_meter",
-											"value": "44",
-											"type": "text"
-										},
-										{
-											"key": "energy_certification",
-											"value": "B",
-											"type": "text"
-										},
-										{
-											"key": "map",
-											"value": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.7558016657213!2d-58.36733122445677!3d-34.63561087294286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a334b6925e5473%3A0x1ca5b2748858b40d!2sEstadio%20Alberto%20J.%20Armando-%20La%20Bombonera!5e0!3m2!1ses-419!2sar!4v1701474311104!5m2!1ses-419!2sar\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
-											"type": "text"
-										},
-										{
-											"key": "status",
-											"value": "1",
-											"type": "text"
-										},
-										{
-											"key": "office_id",
-											"value": "1",
-											"type": "text"
-										},
-										{
-											"key": "locality_id",
-											"value": "1",
-											"type": "text"
-										},
-										{
-											"key": "features",
-											"value": "[\"Piso segunda mano\", \"Aire acondicionado\", \"Ascensor\"]",
-											"type": "text"
-										},
-										{
-											"key": "image_1",
-											"type": "file",
-											"src": "/C:/Proyectos/ECI/imagenes/thumb_380_1400_500_0_0_crop.jpg"
-										},
-										{
-											"key": "image_2",
-											"type": "file",
-											"src": "/C:/Proyectos/ECI/imagenes/thumb_389_1400_500_0_0_crop.jpg"
-										}
-									],
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{APP_URL}}/api/property",
-									"host": [
-										"{{APP_URL}}"
-									],
-									"path": [
-										"api",
-										"property"
-									]
-								}
-							},
-							"status": "Created",
-							"code": 201,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Host",
-									"value": "localhost:8000"
-								},
-								{
-									"key": "Date",
-									"value": "Fri, 08 Dec 2023 22:53:03 GMT"
-								},
-								{
-									"key": "Date",
-									"value": "Fri, 08 Dec 2023 22:53:03 GMT"
-								},
-								{
-									"key": "Connection",
-									"value": "close"
-								},
-								{
-									"key": "X-Powered-By",
-									"value": "PHP/8.2.4"
-								},
-								{
-									"key": "Cache-Control",
-									"value": "no-cache, private"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json"
-								},
-								{
-									"key": "X-RateLimit-Limit",
-									"value": "60"
-								},
-								{
-									"key": "X-RateLimit-Remaining",
-									"value": "59"
-								},
-								{
-									"key": "Access-Control-Allow-Origin",
-									"value": "*"
-								}
-							],
-							"cookie": [],
-							"body": "{\n    \"success\": true,\n    \"message\": \"Property successfully created\",\n    \"data\": {\n        \"title\": \"Espectacular casa en Cubelles\",\n        \"address\": \"Corrientes 1000\",\n        \"reference\": \"ARUS130\",\n        \"price\": 130000,\n        \"information\": \"EBUSA CONSULTORES INMOBILIARIOS les presenta este inmueble en el barrio de Sant Ildefonso en la calle Doctor Tiene una superficie de 50 m2, 2 dormitorios (1 doble y 1 individual ), salón con vistas al exterior, cocina con salida a galería, baño de 3 piezas con bañera. Es una vivienda muy luminosa y soleada, tiene orientación a sur por lo cual al ser un piso alto disfrutarás de unas vistas magníficas. La finca dispone de dos ascensores.\\nLa carpintería del piso es de aluminio, el suelo de parquet, cocina y baño llevan una reforma de 5 años. Nota de información al consumidor:\\nEstimado Cliente, rogamos consulte las condiciones de adquisición del presente inmueble con nuestro Departamento Comercial (valor de la propiedad, impuestos, honorarios de agencia, otros gastos, etc. ).\",\n        \"number_room\": 2,\n        \"number_bath\": 1,\n        \"square_meter\": 44,\n        \"energy_certification\": \"B\",\n        \"map\": \"<iframe src=\\\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.7558016657213!2d-58.36733122445677!3d-34.63561087294286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a334b6925e5473%3A0x1ca5b2748858b40d!2sEstadio%20Alberto%20J.%20Armando-%20La%20Bombonera!5e0!3m2!1ses-419!2sar!4v1701474311104!5m2!1ses-419!2sar\\\" width=\\\"600\\\" height=\\\"450\\\" style=\\\"border:0;\\\" allowfullscreen=\\\"\\\" loading=\\\"lazy\\\" referrerpolicy=\\\"no-referrer-when-downgrade\\\"></iframe>\",\n        \"status\": true,\n        \"office_id\": 1,\n        \"locality_id\": 1,\n        \"id\": 10\n    }\n}"
-						}
-					]
-				},
-				{
-					"name": "edit-property",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{TOKEN}}",
-									"type": "string"
-								}
-							]
-						},
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "title",
-									"value": "Piso en C/",
-									"type": "text"
-								},
-								{
-									"key": "address",
-									"value": "Cornellá de LlobregatUP",
-									"type": "text"
-								},
-								{
-									"key": "reference",
-									"value": "AR3",
-									"type": "text"
-								},
-								{
-									"key": "price",
-									"value": "130000",
-									"type": "text"
-								},
-								{
-									"key": "information",
-									"value": "EBUSA CONSULTORES INMOBILIARIOS presenta esta vivienda ubicada  en el barrio de Sant Ildefonso. Este piso dispone de 3 habitaciones, 2  individuales y 1 doble, cocina tipo office con salida a galería  y baño  de 3 piezas con plato de ducha, ventanas de aluminio gris y suelo de cerámica. Ya que el piso dispone de ventanas en cada estancia, hace que esta vivienda sea  luminosa  desde la primera luz del día hasta la puesta del sol y eso es algo que a todos nos gusta, ¿verdad?.  \n\nZona con facilidad de transportes como la parada de metro Sant Ildefonso L5, estación de autobuses, Tranvías y taxis con Colegios privados, concertados y públicos cercanos, negocios (supermercados, panaderías. ), parques, zonas verdes, farmacias, Cap, mercados.\n\n\nEBUSA CONSULTORES INMOBILIARIOS les ofrece un servicio exclusivo para realizar un análisis financiero gratuito y obtener la mejor hipoteca posible.\n\n\n¡ NO DUDES EN CONTACTAR CON NOSOTROS !\n\nINFORMACIÓN AL CONSUMIDOR: Les comunicamos que en el precio ofertado de venta, no están incluidos los gastos de compraventa ni los impuestos, ni los honorarios a percibir por la agencia.",
-									"type": "text"
-								},
-								{
-									"key": "number_room",
-									"value": "3",
-									"type": "text"
-								},
-								{
-									"key": "number_bath",
-									"value": "1",
-									"type": "text"
-								},
-								{
-									"key": "square_meter",
-									"value": "63",
-									"type": "text"
-								},
-								{
-									"key": "energy_certification",
-									"value": "E",
-									"type": "text"
-								},
-								{
-									"key": "map",
-									"value": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.7558016657213!2d-58.36733122445677!3d-34.63561087294286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a334b6925e5473%3A0x1ca5b2748858b40d!2sEstadio%20Alberto%20J.%20Armando-%20La%20Bombonera!5e0!3m2!1ses-419!2sar!4v1701474311104!5m2!1ses-419!2sar\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
-									"type": "text"
-								},
-								{
-									"key": "status",
-									"value": "1",
-									"type": "text"
-								},
-								{
-									"key": "office_id",
-									"value": "1",
-									"type": "text"
-								},
-								{
-									"key": "locality_id",
-									"value": "1",
-									"type": "text"
-								},
-								{
-									"key": "features",
-									"value": "[\"Piso segunda mano\", \"garage\", \"gym\"]",
-									"type": "text"
-								},
-								{
-									"key": "image_1",
-									"type": "file",
-									"src": "/C:/Proyectos/ECI/imagenes/property2-2.jpg"
-								},
-								{
-									"key": "image_2",
-									"type": "file",
-									"src": "/C:/Proyectos/ECI/imagenes/property2-1.jpg"
-								},
-								{
-									"key": "image_3",
-									"type": "file",
-									"src": [],
-									"disabled": true
-								}
-							]
-						},
-						"url": {
-							"raw": "{{APP_URL}}/api/edit-property/5",
-							"host": [
-								"{{APP_URL}}"
-							],
-							"path": [
-								"api",
-								"edit-property",
-								"5"
-							]
-						}
-					},
-					"response": [
-						{
-							"name": "create-property Copy",
-							"originalRequest": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "formdata",
-									"formdata": [
-										{
-											"key": "title",
-											"value": "Piso en C/ ArçUP",
-											"type": "text"
-										},
-										{
-											"key": "address",
-											"value": "Cornellá de LlobregatUP",
+											"value": "Esplugues de Llobregat",
 											"type": "text"
 										},
 										{
@@ -1089,12 +843,12 @@
 										},
 										{
 											"key": "price",
-											"value": "130000",
+											"value": "780.000",
 											"type": "text"
 										},
 										{
 											"key": "information",
-											"value": "EBUSA CONSULTORES INMOBILIARIOS presenta esta vivienda ubicada  en el barrio de Sant Ildefonso. Este piso dispone de 3 habitaciones, 2  individuales y 1 doble, cocina tipo office con salida a galería  y baño  de 3 piezas con plato de ducha, ventanas de aluminio gris y suelo de cerámica. Ya que el piso dispone de ventanas en cada estancia, hace que esta vivienda sea  luminosa  desde la primera luz del día hasta la puesta del sol y eso es algo que a todos nos gusta, ¿verdad?.  \n\nZona con facilidad de transportes como la parada de metro Sant Ildefonso L5, estación de autobuses, Tranvías y taxis con Colegios privados, concertados y públicos cercanos, negocios (supermercados, panaderías. ), parques, zonas verdes, farmacias, Cap, mercados.\n\n\nEBUSA CONSULTORES INMOBILIARIOS les ofrece un servicio exclusivo para realizar un análisis financiero gratuito y obtener la mejor hipoteca posible.\n\n\n¡ NO DUDES EN CONTACTAR CON NOSOTROS !\n\nINFORMACIÓN AL CONSUMIDOR: Les comunicamos que en el precio ofertado de venta, no están incluidos los gastos de compraventa ni los impuestos, ni los honorarios a percibir por la agencia.",
+											"value": "Ebusa Consultores inmobiliarios le presenta esta vivienda construida en 1993 en pleno centro de esplugues de llobregat, vivienda que consta de 125m², amplio salón con cocina americana y chimenea en este, 3 dormitorios, 2 individuales y 1 matrimonial, baño y aseo,\n\nEs una vivienda muy luminosa, materiales de primera clase, salón con salida a balcón de aproximadamente 10m², suelo de marmol negro que se dejará recien pulido, la cocina dispone de vitrocerámica eléctrica con pequeños detalles como son una freidora y un grill para hacer comidas a la brasa. La habitación de matrimonio es una suite con un espectacular baño con jacuzzi mas entrada a un bonito vestidor. Arriba tenemos la cubierta por la cual solo se puede entrar por la vivienda exclusivamente, es una terraza de uso y disfrute propios para el propietario de esta vivienda. INCLUYE 2 PLAZAS DE PARQUING EN EL PRECIO.",
 											"type": "text"
 										},
 										{
@@ -1104,12 +858,12 @@
 										},
 										{
 											"key": "number_bath",
-											"value": "1",
+											"value": "2",
 											"type": "text"
 										},
 										{
 											"key": "square_meter",
-											"value": "63",
+											"value": "125",
 											"type": "text"
 										},
 										{
@@ -1139,38 +893,51 @@
 										},
 										{
 											"key": "features",
-											"value": "[\"Piso segunda mano\", \"garage\", \"gym\"]",
+											"value": "[\"Piso segunda mano\", \"garage\"]",
 											"type": "text"
 										},
 										{
 											"key": "image_1",
 											"type": "file",
-											"src": "/C:/Users/gabri/Pictures/consola-novik-2.jpg"
+											"src": "/C:/Users/gabri/Pictures/43dc3d50-8b90-4129-8d50-e5982ed723da_16-9-discover-aspect-ratio_default_0.jpg"
 										},
 										{
 											"key": "image_2",
 											"type": "file",
-											"src": "/C:/Users/gabri/Pictures/consola-novik-3.jpg"
+											"src": [],
+											"disabled": true
 										},
 										{
 											"key": "image_3",
 											"type": "file",
 											"src": [],
 											"disabled": true
+										},
+										{
+											"key": "metaTitle",
+											"value": "example title",
+											"type": "text"
+										},
+										{
+											"key": "metaDescription",
+											"value": "example description",
+											"type": "text"
+										},
+										{
+											"key": "metaStatusindex",
+											"value": "true",
+											"type": "text"
 										}
 									]
 								},
 								"url": {
-									"raw": "http://localhost:8000/api/edit-property/1",
-									"protocol": "http",
+									"raw": "{{APP_URL}}/api/property",
 									"host": [
-										"localhost"
+										"{{APP_URL}}"
 									],
-									"port": "8000",
 									"path": [
 										"api",
-										"edit-property",
-										"1"
+										"property"
 									]
 								}
 							},
@@ -1184,11 +951,11 @@
 								},
 								{
 									"key": "Date",
-									"value": "Mon, 11 Dec 2023 00:39:23 GMT"
+									"value": "Mon, 25 Dec 2023 21:33:43 GMT"
 								},
 								{
 									"key": "Date",
-									"value": "Mon, 11 Dec 2023 00:39:23 GMT"
+									"value": "Mon, 25 Dec 2023 21:33:43 GMT"
 								},
 								{
 									"key": "Connection",
@@ -1220,7 +987,807 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"success\": true,\n    \"message\": \"Property successfully created\",\n    \"data\": {\n        \"id\": 1,\n        \"title\": \"Piso en C/ ArçUP\",\n        \"address\": \"Cornellá de LlobregatUP\",\n        \"reference\": \"AR3\",\n        \"price\": 130000,\n        \"information\": \"EBUSA CONSULTORES INMOBILIARIOS presenta esta vivienda ubicada  en el barrio de Sant Ildefonso. Este piso dispone de 3 habitaciones, 2  individuales y 1 doble, cocina tipo office con salida a galería  y baño  de 3 piezas con plato de ducha, ventanas de aluminio gris y suelo de cerámica. Ya que el piso dispone de ventanas en cada estancia, hace que esta vivienda sea  luminosa  desde la primera luz del día hasta la puesta del sol y eso es algo que a todos nos gusta, ¿verdad?.  \\n\\nZona con facilidad de transportes como la parada de metro Sant Ildefonso L5, estación de autobuses, Tranvías y taxis con Colegios privados, concertados y públicos cercanos, negocios (supermercados, panaderías. ), parques, zonas verdes, farmacias, Cap, mercados.\\n\\n\\nEBUSA CONSULTORES INMOBILIARIOS les ofrece un servicio exclusivo para realizar un análisis financiero gratuito y obtener la mejor hipoteca posible.\\n\\n\\n¡ NO DUDES EN CONTACTAR CON NOSOTROS !\\n\\nINFORMACIÓN AL CONSUMIDOR: Les comunicamos que en el precio ofertado de venta, no están incluidos los gastos de compraventa ni los impuestos, ni los honorarios a percibir por la agencia.\",\n        \"number_room\": 3,\n        \"number_bath\": 1,\n        \"square_meter\": 63,\n        \"energy_certification\": \"E\",\n        \"map\": \"<iframe src=\\\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.7558016657213!2d-58.36733122445677!3d-34.63561087294286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a334b6925e5473%3A0x1ca5b2748858b40d!2sEstadio%20Alberto%20J.%20Armando-%20La%20Bombonera!5e0!3m2!1ses-419!2sar!4v1701474311104!5m2!1ses-419!2sar\\\" width=\\\"600\\\" height=\\\"450\\\" style=\\\"border:0;\\\" allowfullscreen=\\\"\\\" loading=\\\"lazy\\\" referrerpolicy=\\\"no-referrer-when-downgrade\\\"></iframe>\",\n        \"status\": true,\n        \"office_id\": 1,\n        \"locality_id\": 1\n    }\n}"
+							"body": "{\n    \"success\": true,\n    \"message\": \"Property successfully created\",\n    \"data\": {\n        \"id\": 5,\n        \"title\": \"Ático en el corazón de Esplugues3\",\n        \"address\": \"Esplugues de Llobregat\",\n        \"reference\": \"AR3\",\n        \"price\": 780,\n        \"information\": \"Ebusa Consultores inmobiliarios le presenta esta vivienda construida en 1993 en pleno centro de esplugues de llobregat, vivienda que consta de 125m², amplio salón con cocina americana y chimenea en este, 3 dormitorios, 2 individuales y 1 matrimonial, baño y aseo,\\n\\nEs una vivienda muy luminosa, materiales de primera clase, salón con salida a balcón de aproximadamente 10m², suelo de marmol negro que se dejará recien pulido, la cocina dispone de vitrocerámica eléctrica con pequeños detalles como son una freidora y un grill para hacer comidas a la brasa. La habitación de matrimonio es una suite con un espectacular baño con jacuzzi mas entrada a un bonito vestidor. Arriba tenemos la cubierta por la cual solo se puede entrar por la vivienda exclusivamente, es una terraza de uso y disfrute propios para el propietario de esta vivienda. INCLUYE 2 PLAZAS DE PARQUING EN EL PRECIO.\",\n        \"number_room\": 3,\n        \"number_bath\": 2,\n        \"square_meter\": 125,\n        \"energy_certification\": \"E\",\n        \"map\": \"<iframe src=\\\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.7558016657213!2d-58.36733122445677!3d-34.63561087294286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a334b6925e5473%3A0x1ca5b2748858b40d!2sEstadio%20Alberto%20J.%20Armando-%20La%20Bombonera!5e0!3m2!1ses-419!2sar!4v1701474311104!5m2!1ses-419!2sar\\\" width=\\\"600\\\" height=\\\"450\\\" style=\\\"border:0;\\\" allowfullscreen=\\\"\\\" loading=\\\"lazy\\\" referrerpolicy=\\\"no-referrer-when-downgrade\\\"></iframe>\",\n        \"status\": true,\n        \"office_id\": 1,\n        \"locality_id\": 1,\n        \"metadata_id\": 2,\n        \"office\": {\n            \"id\": 1,\n            \"name\": \"Oficina ECI en Sant Ildefons\",\n            \"cif\": \"B67336958\",\n            \"address\": \"Av. Sant Ildefons 8, Local 6\",\n            \"map\": \"Map coordinates for Office 1\",\n            \"email\": \"info@ebusa.es\",\n            \"phone\": \"931 564 980\",\n            \"path_image\": \"office1.jpg\",\n            \"metadata_id\": null\n        },\n        \"locality\": {\n            \"id\": 1,\n            \"name\": \"Locality 1\"\n        },\n        \"images\": [\n            {\n                \"id\": 3,\n                \"path\": \"/property/5/43dc3d50-8b90-4129-8d50-e5982ed723da_16-9-discover-aspect-ratio_default_0.jpg\",\n                \"property_id\": 5\n            }\n        ],\n        \"features\": [\n            {\n                \"id\": 9,\n                \"name\": \"Piso segunda mano\",\n                \"property_id\": 5,\n                \"deleted_at\": null\n            },\n            {\n                \"id\": 10,\n                \"name\": \"garage\",\n                \"property_id\": 5,\n                \"deleted_at\": null\n            }\n        ],\n        \"metadata\": {\n            \"id\": 2,\n            \"title\": \"example title\",\n            \"description\": \"example description\",\n            \"path_image\": null,\n            \"status_index\": \"true\",\n            \"section\": null\n        }\n    }\n}"
+						},
+						{
+							"name": "create-property-new",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "Ático en el corazón de Esplugues3",
+											"type": "text"
+										},
+										{
+											"key": "address",
+											"value": "Esplugues de Llobregat",
+											"type": "text"
+										},
+										{
+											"key": "reference",
+											"value": "AR3",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "780.000",
+											"type": "text"
+										},
+										{
+											"key": "information",
+											"value": "Ebusa Consultores inmobiliarios le presenta esta vivienda construida en 1993 en pleno centro de esplugues de llobregat, vivienda que consta de 125m², amplio salón con cocina americana y chimenea en este, 3 dormitorios, 2 individuales y 1 matrimonial, baño y aseo,\n\nEs una vivienda muy luminosa, materiales de primera clase, salón con salida a balcón de aproximadamente 10m², suelo de marmol negro que se dejará recien pulido, la cocina dispone de vitrocerámica eléctrica con pequeños detalles como son una freidora y un grill para hacer comidas a la brasa. La habitación de matrimonio es una suite con un espectacular baño con jacuzzi mas entrada a un bonito vestidor. Arriba tenemos la cubierta por la cual solo se puede entrar por la vivienda exclusivamente, es una terraza de uso y disfrute propios para el propietario de esta vivienda. INCLUYE 2 PLAZAS DE PARQUING EN EL PRECIO.",
+											"type": "text"
+										},
+										{
+											"key": "number_room",
+											"value": "3",
+											"type": "text"
+										},
+										{
+											"key": "number_bath",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "area",
+											"value": "125",
+											"type": "text"
+										},
+										{
+											"key": "energy_certification",
+											"value": "E",
+											"type": "text"
+										},
+										{
+											"key": "map",
+											"value": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.7558016657213!2d-58.36733122445677!3d-34.63561087294286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a334b6925e5473%3A0x1ca5b2748858b40d!2sEstadio%20Alberto%20J.%20Armando-%20La%20Bombonera!5e0!3m2!1ses-419!2sar!4v1701474311104!5m2!1ses-419!2sar\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "office_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "locality_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "features",
+											"value": "[\"Piso segunda mano\", \"garage\"]",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "image_1",
+											"type": "file",
+											"src": "/C:/Users/gabri/Pictures/ARGENTINA/pngtree-3-golden-3d-realistic-stars-png-image_6506672.jpg"
+										},
+										{
+											"key": "image_2",
+											"type": "file",
+											"src": [],
+											"disabled": true
+										},
+										{
+											"key": "image_3",
+											"type": "file",
+											"src": [],
+											"disabled": true
+										},
+										{
+											"key": "metaTitle",
+											"value": "example title",
+											"type": "text"
+										},
+										{
+											"key": "metaDescription",
+											"value": "example description",
+											"type": "text"
+										},
+										{
+											"key": "metaStatusindex",
+											"value": "true",
+											"type": "text"
+										},
+										{
+											"key": "hall_area",
+											"value": "10",
+											"type": "text"
+										},
+										{
+											"key": "terrace_area",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "balcony_area",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "heating",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "airconditioning",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "year_construction",
+											"value": "2010",
+											"type": "text"
+										},
+										{
+											"key": "floor_type",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "gas",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "elevator",
+											"value": "0",
+											"type": "text"
+										},
+										{
+											"key": "shared_terrace",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "parking",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "storage_room",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "pool",
+											"value": "0",
+											"type": "text"
+										},
+										{
+											"key": "garden",
+											"value": "0",
+											"type": "text"
+										},
+										{
+											"key": "public_transport",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "shopping",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "market",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "education_center",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "health_center",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "recreation_area",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "slug",
+											"value": "Ático-en-el-corazón-de-Esplugues3",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{APP_URL}}/api/property",
+									"host": [
+										"{{APP_URL}}"
+									],
+									"path": [
+										"api",
+										"property"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 26 Dec 2023 15:52:09 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 26 Dec 2023 15:52:09 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.4"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Property successfully created\",\n    \"data\": {\n        \"id\": 1,\n        \"title\": \"Ático en el corazón de Esplugues3\",\n        \"address\": \"Esplugues de Llobregat\",\n        \"reference\": \"AR3\",\n        \"price\": 780,\n        \"information\": \"Ebusa Consultores inmobiliarios le presenta esta vivienda construida en 1993 en pleno centro de esplugues de llobregat, vivienda que consta de 125m², amplio salón con cocina americana y chimenea en este, 3 dormitorios, 2 individuales y 1 matrimonial, baño y aseo,\\n\\nEs una vivienda muy luminosa, materiales de primera clase, salón con salida a balcón de aproximadamente 10m², suelo de marmol negro que se dejará recien pulido, la cocina dispone de vitrocerámica eléctrica con pequeños detalles como son una freidora y un grill para hacer comidas a la brasa. La habitación de matrimonio es una suite con un espectacular baño con jacuzzi mas entrada a un bonito vestidor. Arriba tenemos la cubierta por la cual solo se puede entrar por la vivienda exclusivamente, es una terraza de uso y disfrute propios para el propietario de esta vivienda. INCLUYE 2 PLAZAS DE PARQUING EN EL PRECIO.\",\n        \"office_id\": 1,\n        \"locality_id\": 1,\n        \"map\": \"<iframe src=\\\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.7558016657213!2d-58.36733122445677!3d-34.63561087294286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a334b6925e5473%3A0x1ca5b2748858b40d!2sEstadio%20Alberto%20J.%20Armando-%20La%20Bombonera!5e0!3m2!1ses-419!2sar!4v1701474311104!5m2!1ses-419!2sar\\\" width=\\\"600\\\" height=\\\"450\\\" style=\\\"border:0;\\\" allowfullscreen=\\\"\\\" loading=\\\"lazy\\\" referrerpolicy=\\\"no-referrer-when-downgrade\\\"></iframe>\",\n        \"status\": true,\n        \"number_room\": 3,\n        \"hall_area\": 10,\n        \"area\": 125,\n        \"number_bath\": 2,\n        \"terrace_area\": null,\n        \"balcony_area\": null,\n        \"heating\": true,\n        \"airconditioning\": true,\n        \"year_construction\": 2010,\n        \"floor_type\": null,\n        \"gas\": true,\n        \"energy_certification\": \"E\",\n        \"elevator\": false,\n        \"shared_terrace\": null,\n        \"parking\": true,\n        \"storage_room\": null,\n        \"pool\": false,\n        \"garden\": false,\n        \"public_transport\": null,\n        \"shopping\": true,\n        \"market\": true,\n        \"education_center\": true,\n        \"health_center\": true,\n        \"recreation_area\": null,\n        \"metadata_id\": 1,\n        \"slug\": \"Ático-en-el-corazón-de-Esplugues3\",\n        \"office\": {\n            \"id\": 1,\n            \"name\": \"Oficina ECI en Sant Ildefons\",\n            \"cif\": \"B67336958\",\n            \"address\": \"Av. Sant Ildefons 8, Local 6\",\n            \"map\": \"Map coordinates for Office 1\",\n            \"email\": \"info@ebusa.es\",\n            \"phone\": \"931 564 980\",\n            \"path_image\": \"office1.jpg\",\n            \"metadata_id\": null,\n            \"slug\": null\n        },\n        \"locality\": {\n            \"id\": 1,\n            \"name\": \"Locality 1\"\n        },\n        \"images\": [\n            {\n                \"id\": 1,\n                \"path\": \"/property/1/pngtree-3-golden-3d-realistic-stars-png-image_6506672.jpg\",\n                \"property_id\": 1\n            }\n        ],\n        \"features\": [],\n        \"metadata\": {\n            \"id\": 1,\n            \"title\": \"example title\",\n            \"description\": \"example description\",\n            \"path_image\": null,\n            \"status_index\": \"true\",\n            \"section\": null\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "edit-property",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Ático en el corazón de Esplugues3UPp",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "Esplugues de Llobregat",
+									"type": "text"
+								},
+								{
+									"key": "reference",
+									"value": "AR3",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "780.000",
+									"type": "text"
+								},
+								{
+									"key": "information",
+									"value": "Ebusa Consultores inmobiliarios le presenta esta vivienda construida en 1993 en pleno centro de esplugues de llobregat, vivienda que consta de 125m², amplio salón con cocina americana y chimenea en este, 3 dormitorios, 2 individuales y 1 matrimonial, baño y aseo,\n\nEs una vivienda muy luminosa, materiales de primera clase, salón con salida a balcón de aproximadamente 10m², suelo de marmol negro que se dejará recien pulido, la cocina dispone de vitrocerámica eléctrica con pequeños detalles como son una freidora y un grill para hacer comidas a la brasa. La habitación de matrimonio es una suite con un espectacular baño con jacuzzi mas entrada a un bonito vestidor. Arriba tenemos la cubierta por la cual solo se puede entrar por la vivienda exclusivamente, es una terraza de uso y disfrute propios para el propietario de esta vivienda. INCLUYE 2 PLAZAS DE PARQUING EN EL PRECIO.",
+									"type": "text"
+								},
+								{
+									"key": "number_room",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "number_bath",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "area",
+									"value": "125",
+									"type": "text"
+								},
+								{
+									"key": "energy_certification",
+									"value": "E",
+									"type": "text"
+								},
+								{
+									"key": "map",
+									"value": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.7558016657213!2d-58.36733122445677!3d-34.63561087294286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a334b6925e5473%3A0x1ca5b2748858b40d!2sEstadio%20Alberto%20J.%20Armando-%20La%20Bombonera!5e0!3m2!1ses-419!2sar!4v1701474311104!5m2!1ses-419!2sar\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "office_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "locality_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "features",
+									"value": "[\"Piso segunda mano\", \"garage\"]",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "image_1",
+									"type": "file",
+									"src": "/C:/Users/gabri/Pictures/ARGENTINA/pngtree-3-golden-3d-realistic-stars-png-image_6506672.jpg",
+									"disabled": true
+								},
+								{
+									"key": "image_2",
+									"type": "file",
+									"src": [],
+									"disabled": true
+								},
+								{
+									"key": "image_3",
+									"type": "file",
+									"src": [],
+									"disabled": true
+								},
+								{
+									"key": "metaTitle",
+									"value": "example title",
+									"type": "text"
+								},
+								{
+									"key": "metaDescription",
+									"value": "example description",
+									"type": "text"
+								},
+								{
+									"key": "metaStatusindex",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "hall_area",
+									"value": "10",
+									"type": "text"
+								},
+								{
+									"key": "terrace_area",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "balcony_area",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "heating",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "airconditioning",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "year_construction",
+									"value": "2010",
+									"type": "text"
+								},
+								{
+									"key": "floor_type",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "gas",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "elevator",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "shared_terrace",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "parking",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "storage_room",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "pool",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "garden",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "public_transport",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "shopping",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "market",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "education_center",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "health_center",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "recreation_area",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "slug",
+									"value": "Ático-en-el-corazón-de-Esplugues3UP",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{APP_URL}}/api/edit-property/1",
+							"host": [
+								"{{APP_URL}}"
+							],
+							"path": [
+								"api",
+								"edit-property",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "edit-property",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "Ático en el corazón de Esplugues3UPp",
+											"type": "text"
+										},
+										{
+											"key": "address",
+											"value": "Esplugues de Llobregat",
+											"type": "text"
+										},
+										{
+											"key": "reference",
+											"value": "AR3",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "780.000",
+											"type": "text"
+										},
+										{
+											"key": "information",
+											"value": "Ebusa Consultores inmobiliarios le presenta esta vivienda construida en 1993 en pleno centro de esplugues de llobregat, vivienda que consta de 125m², amplio salón con cocina americana y chimenea en este, 3 dormitorios, 2 individuales y 1 matrimonial, baño y aseo,\n\nEs una vivienda muy luminosa, materiales de primera clase, salón con salida a balcón de aproximadamente 10m², suelo de marmol negro que se dejará recien pulido, la cocina dispone de vitrocerámica eléctrica con pequeños detalles como son una freidora y un grill para hacer comidas a la brasa. La habitación de matrimonio es una suite con un espectacular baño con jacuzzi mas entrada a un bonito vestidor. Arriba tenemos la cubierta por la cual solo se puede entrar por la vivienda exclusivamente, es una terraza de uso y disfrute propios para el propietario de esta vivienda. INCLUYE 2 PLAZAS DE PARQUING EN EL PRECIO.",
+											"type": "text"
+										},
+										{
+											"key": "number_room",
+											"value": "3",
+											"type": "text"
+										},
+										{
+											"key": "number_bath",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "area",
+											"value": "125",
+											"type": "text"
+										},
+										{
+											"key": "energy_certification",
+											"value": "E",
+											"type": "text"
+										},
+										{
+											"key": "map",
+											"value": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.7558016657213!2d-58.36733122445677!3d-34.63561087294286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a334b6925e5473%3A0x1ca5b2748858b40d!2sEstadio%20Alberto%20J.%20Armando-%20La%20Bombonera!5e0!3m2!1ses-419!2sar!4v1701474311104!5m2!1ses-419!2sar\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "office_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "locality_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "features",
+											"value": "[\"Piso segunda mano\", \"garage\"]",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "image_1",
+											"type": "file",
+											"src": "/C:/Users/gabri/Pictures/ARGENTINA/pngtree-3-golden-3d-realistic-stars-png-image_6506672.jpg",
+											"disabled": true
+										},
+										{
+											"key": "image_2",
+											"type": "file",
+											"src": [],
+											"disabled": true
+										},
+										{
+											"key": "image_3",
+											"type": "file",
+											"src": [],
+											"disabled": true
+										},
+										{
+											"key": "metaTitle",
+											"value": "example title",
+											"type": "text"
+										},
+										{
+											"key": "metaDescription",
+											"value": "example description",
+											"type": "text"
+										},
+										{
+											"key": "metaStatusindex",
+											"value": "true",
+											"type": "text"
+										},
+										{
+											"key": "hall_area",
+											"value": "10",
+											"type": "text"
+										},
+										{
+											"key": "terrace_area",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "balcony_area",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "heating",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "airconditioning",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "year_construction",
+											"value": "2010",
+											"type": "text"
+										},
+										{
+											"key": "floor_type",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "gas",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "elevator",
+											"value": "0",
+											"type": "text"
+										},
+										{
+											"key": "shared_terrace",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "parking",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "storage_room",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "pool",
+											"value": "0",
+											"type": "text"
+										},
+										{
+											"key": "garden",
+											"value": "0",
+											"type": "text"
+										},
+										{
+											"key": "public_transport",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "shopping",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "market",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "education_center",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "health_center",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "recreation_area",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "slug",
+											"value": "Ático-en-el-corazón-de-Esplugues3UP",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{APP_URL}}/api/edit-property/1",
+									"host": [
+										"{{APP_URL}}"
+									],
+									"path": [
+										"api",
+										"edit-property",
+										"1"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 26 Dec 2023 15:57:13 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 26 Dec 2023 15:57:13 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.4"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Property successfully updated\",\n    \"data\": {\n        \"id\": 1,\n        \"title\": \"Ático en el corazón de Esplugues3UPp\",\n        \"address\": \"Esplugues de Llobregat\",\n        \"reference\": \"AR3\",\n        \"price\": 780,\n        \"information\": \"Ebusa Consultores inmobiliarios le presenta esta vivienda construida en 1993 en pleno centro de esplugues de llobregat, vivienda que consta de 125m², amplio salón con cocina americana y chimenea en este, 3 dormitorios, 2 individuales y 1 matrimonial, baño y aseo,\\n\\nEs una vivienda muy luminosa, materiales de primera clase, salón con salida a balcón de aproximadamente 10m², suelo de marmol negro que se dejará recien pulido, la cocina dispone de vitrocerámica eléctrica con pequeños detalles como son una freidora y un grill para hacer comidas a la brasa. La habitación de matrimonio es una suite con un espectacular baño con jacuzzi mas entrada a un bonito vestidor. Arriba tenemos la cubierta por la cual solo se puede entrar por la vivienda exclusivamente, es una terraza de uso y disfrute propios para el propietario de esta vivienda. INCLUYE 2 PLAZAS DE PARQUING EN EL PRECIO.\",\n        \"office_id\": 1,\n        \"locality_id\": 1,\n        \"map\": \"<iframe src=\\\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.7558016657213!2d-58.36733122445677!3d-34.63561087294286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a334b6925e5473%3A0x1ca5b2748858b40d!2sEstadio%20Alberto%20J.%20Armando-%20La%20Bombonera!5e0!3m2!1ses-419!2sar!4v1701474311104!5m2!1ses-419!2sar\\\" width=\\\"600\\\" height=\\\"450\\\" style=\\\"border:0;\\\" allowfullscreen=\\\"\\\" loading=\\\"lazy\\\" referrerpolicy=\\\"no-referrer-when-downgrade\\\"></iframe>\",\n        \"status\": true,\n        \"number_room\": 3,\n        \"hall_area\": 10,\n        \"area\": 125,\n        \"number_bath\": 2,\n        \"terrace_area\": null,\n        \"balcony_area\": null,\n        \"heating\": true,\n        \"airconditioning\": true,\n        \"year_construction\": 2010,\n        \"floor_type\": null,\n        \"gas\": true,\n        \"energy_certification\": \"E\",\n        \"elevator\": false,\n        \"shared_terrace\": null,\n        \"parking\": true,\n        \"storage_room\": null,\n        \"pool\": false,\n        \"garden\": false,\n        \"public_transport\": null,\n        \"shopping\": true,\n        \"market\": true,\n        \"education_center\": true,\n        \"health_center\": true,\n        \"recreation_area\": null,\n        \"metadata_id\": 1,\n        \"slug\": \"Ático-en-el-corazón-de-Esplugues3\",\n        \"office\": {\n            \"id\": 1,\n            \"name\": \"Oficina ECI en Sant Ildefons\",\n            \"cif\": \"B67336958\",\n            \"address\": \"Av. Sant Ildefons 8, Local 6\",\n            \"map\": \"Map coordinates for Office 1\",\n            \"email\": \"info@ebusa.es\",\n            \"phone\": \"931 564 980\",\n            \"path_image\": \"office1.jpg\",\n            \"metadata_id\": null,\n            \"slug\": null\n        },\n        \"locality\": {\n            \"id\": 1,\n            \"name\": \"Locality 1\"\n        },\n        \"images\": [\n            {\n                \"id\": 1,\n                \"path\": \"/property/1/pngtree-3-golden-3d-realistic-stars-png-image_6506672.jpg\",\n                \"property_id\": 1\n            }\n        ],\n        \"metadata\": {\n            \"id\": 1,\n            \"title\": \"example title\",\n            \"description\": \"example description\",\n            \"path_image\": null,\n            \"status_index\": \"true\",\n            \"section\": null\n        }\n    }\n}"
 						}
 					]
 				},
@@ -1257,12 +1824,10 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "http://localhost:8000/api/property",
-									"protocol": "http",
+									"raw": "{{APP_URL}}/api/property",
 									"host": [
-										"localhost"
+										"{{APP_URL}}"
 									],
-									"port": "8000",
 									"path": [
 										"api",
 										"property"
@@ -1353,12 +1918,10 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "http://localhost:8000/api/property/2",
-									"protocol": "http",
+									"raw": "{{APP_URL}}/api/property/2",
 									"host": [
-										"localhost"
+										"{{APP_URL}}"
 									],
-									"port": "8000",
 									"path": [
 										"api",
 										"property",
@@ -1450,12 +2013,10 @@
 								"method": "DELETE",
 								"header": [],
 								"url": {
-									"raw": "http://localhost:8000/api/property/1",
-									"protocol": "http",
+									"raw": "{{APP_URL}}/api/property/1",
 									"host": [
-										"localhost"
+										"{{APP_URL}}"
 									],
-									"port": "8000",
 									"path": [
 										"api",
 										"property",
@@ -1512,148 +2073,44 @@
 							"body": "{\n    \"success\": true,\n    \"message\": \"Property successfully deleted\",\n    \"data\": null\n}"
 						}
 					]
-				}
-			]
-		},
-		{
-			"name": "Blog",
-			"item": [
+				},
 				{
-					"name": "create-blog",
+					"name": "property-getBySlug",
 					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{TOKEN}}",
-									"type": "string"
-								}
-							]
-						},
-						"method": "POST",
+						"method": "GET",
 						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "title",
-									"value": "Blog title 4",
-									"type": "text"
-								},
-								{
-									"key": "down",
-									"value": "this is down",
-									"type": "text"
-								},
-								{
-									"key": "author",
-									"value": "Juan Paez",
-									"type": "text"
-								},
-								{
-									"key": "body",
-									"value": "<div contenteditable=\"true\" style=\"border: 1px solid #ccc; padding: 10px;\">\n    <p>¡Hola! Este es un ejemplo de contenido generado por un editor WYSIWYG.</p>\n    <p>Los usuarios pueden editar y dar formato al texto directamente.</p>\n    <ul>\n        <li>Elemento de lista 1</li>\n        <li>Elemento de lista 2</li>\n        <li>Elemento de lista 3</li>\n    </ul>\n    <p>Pueden agregar imágenes, enlaces, y más...</p>\n</div>",
-									"type": "text"
-								},
-								{
-									"key": "date",
-									"value": "2023-10-20",
-									"type": "text"
-								},
-								{
-									"key": "category_id",
-									"value": "1",
-									"type": "text"
-								},
-								{
-									"key": "image_1",
-									"type": "file",
-									"src": "/C:/Proyectos/ECI/imagenes/thumb_390_1400_500_0_0_crop.jpg"
-								},
-								{
-									"key": "image_2",
-									"type": "file",
-									"src": [],
-									"disabled": true
-								}
-							]
-						},
 						"url": {
-							"raw": "{{APP_URL}}/api/blog",
+							"raw": "{{APP_URL}}/api/get-property/Ático-en-el-corazón-de-Esplugues3",
 							"host": [
 								"{{APP_URL}}"
 							],
 							"path": [
 								"api",
-								"blog"
+								"get-property",
+								"Ático-en-el-corazón-de-Esplugues3"
 							]
 						}
 					},
 					"response": [
 						{
-							"name": "create-ok",
+							"name": "property-getBySlug",
 							"originalRequest": {
-								"method": "POST",
+								"method": "GET",
 								"header": [],
-								"body": {
-									"mode": "formdata",
-									"formdata": [
-										{
-											"key": "title",
-											"value": "Blog title 2",
-											"type": "text"
-										},
-										{
-											"key": "down",
-											"value": "this is down",
-											"type": "text"
-										},
-										{
-											"key": "author",
-											"value": "Juan Paez",
-											"type": "text"
-										},
-										{
-											"key": "body",
-											"value": "<div contenteditable=\"true\" style=\"border: 1px solid #ccc; padding: 10px;\">\n    <p>¡Hola! Este es un ejemplo de contenido generado por un editor WYSIWYG.</p>\n    <p>Los usuarios pueden editar y dar formato al texto directamente.</p>\n    <ul>\n        <li>Elemento de lista 1</li>\n        <li>Elemento de lista 2</li>\n        <li>Elemento de lista 3</li>\n    </ul>\n    <p>Pueden agregar imágenes, enlaces, y más...</p>\n</div>",
-											"type": "text"
-										},
-										{
-											"key": "date",
-											"value": "2023-10-20",
-											"type": "text"
-										},
-										{
-											"key": "category_id",
-											"value": "1",
-											"type": "text"
-										},
-										{
-											"key": "image_1",
-											"type": "file",
-											"src": "/C:/Users/gabri/Pictures/argentina-campeon.jpg"
-										},
-										{
-											"key": "image_2",
-											"type": "file",
-											"src": "/C:/Users/gabri/Pictures/wallpaper-mundial/MessiCampeon.jpg"
-										}
-									]
-								},
 								"url": {
-									"raw": "{{APP_URL}}/api/blog",
+									"raw": "{{APP_URL}}/api/get-property/Ático-en-el-corazón-de-Esplugues3",
 									"host": [
 										"{{APP_URL}}"
 									],
 									"path": [
 										"api",
-										"blog"
+										"get-property",
+										"Ático-en-el-corazón-de-Esplugues3"
 									]
 								}
 							},
-							"status": "Created",
-							"code": 201,
+							"status": "OK",
+							"code": 200,
 							"_postman_previewlanguage": "json",
 							"header": [
 								{
@@ -1662,11 +2119,11 @@
 								},
 								{
 									"key": "Date",
-									"value": "Wed, 20 Dec 2023 00:00:44 GMT"
+									"value": "Tue, 26 Dec 2023 15:58:33 GMT"
 								},
 								{
 									"key": "Date",
-									"value": "Wed, 20 Dec 2023 00:00:44 GMT"
+									"value": "Tue, 26 Dec 2023 15:58:33 GMT"
 								},
 								{
 									"key": "Connection",
@@ -1698,7 +2155,259 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"success\": true,\n    \"message\": \"blog successfully created\",\n    \"data\": {\n        \"id\": 3,\n        \"title\": \"Blog title 2\",\n        \"down\": \"this is down\",\n        \"author\": \"Juan Paez\",\n        \"body\": \"<div contenteditable=\\\"true\\\" style=\\\"border: 1px solid #ccc; padding: 10px;\\\">\\n    <p>¡Hola! Este es un ejemplo de contenido generado por un editor WYSIWYG.</p>\\n    <p>Los usuarios pueden editar y dar formato al texto directamente.</p>\\n    <ul>\\n        <li>Elemento de lista 1</li>\\n        <li>Elemento de lista 2</li>\\n        <li>Elemento de lista 3</li>\\n    </ul>\\n    <p>Pueden agregar imágenes, enlaces, y más...</p>\\n</div>\",\n        \"date\": \"2023-10-20T00:00:00.000000Z\",\n        \"category_id\": 1,\n        \"category\": {\n            \"id\": 1,\n            \"name\": \"interes general\"\n        }\n    }\n}"
+							"body": "{\n    \"success\": true,\n    \"message\": \"Properties obtained correctly\",\n    \"data\": {\n        \"id\": 1,\n        \"title\": \"Ático en el corazón de Esplugues3UPp\",\n        \"address\": \"Esplugues de Llobregat\",\n        \"reference\": \"AR3\",\n        \"price\": 780,\n        \"information\": \"Ebusa Consultores inmobiliarios le presenta esta vivienda construida en 1993 en pleno centro de esplugues de llobregat, vivienda que consta de 125m², amplio salón con cocina americana y chimenea en este, 3 dormitorios, 2 individuales y 1 matrimonial, baño y aseo,\\n\\nEs una vivienda muy luminosa, materiales de primera clase, salón con salida a balcón de aproximadamente 10m², suelo de marmol negro que se dejará recien pulido, la cocina dispone de vitrocerámica eléctrica con pequeños detalles como son una freidora y un grill para hacer comidas a la brasa. La habitación de matrimonio es una suite con un espectacular baño con jacuzzi mas entrada a un bonito vestidor. Arriba tenemos la cubierta por la cual solo se puede entrar por la vivienda exclusivamente, es una terraza de uso y disfrute propios para el propietario de esta vivienda. INCLUYE 2 PLAZAS DE PARQUING EN EL PRECIO.\",\n        \"office_id\": 1,\n        \"locality_id\": 1,\n        \"map\": \"<iframe src=\\\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.7558016657213!2d-58.36733122445677!3d-34.63561087294286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a334b6925e5473%3A0x1ca5b2748858b40d!2sEstadio%20Alberto%20J.%20Armando-%20La%20Bombonera!5e0!3m2!1ses-419!2sar!4v1701474311104!5m2!1ses-419!2sar\\\" width=\\\"600\\\" height=\\\"450\\\" style=\\\"border:0;\\\" allowfullscreen=\\\"\\\" loading=\\\"lazy\\\" referrerpolicy=\\\"no-referrer-when-downgrade\\\"></iframe>\",\n        \"status\": true,\n        \"number_room\": 3,\n        \"hall_area\": 10,\n        \"area\": 125,\n        \"number_bath\": 2,\n        \"terrace_area\": null,\n        \"balcony_area\": null,\n        \"heating\": true,\n        \"airconditioning\": true,\n        \"year_construction\": 2010,\n        \"floor_type\": null,\n        \"gas\": true,\n        \"energy_certification\": \"E\",\n        \"elevator\": false,\n        \"shared_terrace\": null,\n        \"parking\": true,\n        \"storage_room\": null,\n        \"pool\": false,\n        \"garden\": false,\n        \"public_transport\": null,\n        \"shopping\": true,\n        \"market\": true,\n        \"education_center\": true,\n        \"health_center\": true,\n        \"recreation_area\": null,\n        \"metadata_id\": 1,\n        \"slug\": \"Ático-en-el-corazón-de-Esplugues3\",\n        \"office\": {\n            \"id\": 1,\n            \"name\": \"Oficina ECI en Sant Ildefons\",\n            \"cif\": \"B67336958\",\n            \"address\": \"Av. Sant Ildefons 8, Local 6\",\n            \"map\": \"Map coordinates for Office 1\",\n            \"email\": \"info@ebusa.es\",\n            \"phone\": \"931 564 980\",\n            \"path_image\": \"office1.jpg\",\n            \"metadata_id\": null,\n            \"slug\": null\n        },\n        \"locality\": {\n            \"id\": 1,\n            \"name\": \"Locality 1\"\n        },\n        \"images\": [\n            {\n                \"id\": 1,\n                \"path\": \"/property/1/pngtree-3-golden-3d-realistic-stars-png-image_6506672.jpg\",\n                \"property_id\": 1\n            }\n        ]\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Blog",
+			"item": [
+				{
+					"name": "create-blog",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Blog title 1",
+									"type": "text"
+								},
+								{
+									"key": "down",
+									"value": "this is down",
+									"type": "text"
+								},
+								{
+									"key": "author",
+									"value": "Juan Paez",
+									"type": "text"
+								},
+								{
+									"key": "body",
+									"value": "<div contenteditable=\"true\" style=\"border: 1px solid #ccc; padding: 10px;\">\n    <p>¡Hola! Este es un ejemplo de contenido generado por un editor WYSIWYG.</p>\n    <p>Los usuarios pueden editar y dar formato al texto directamente.</p>\n    <ul>\n        <li>Elemento de lista 1</li>\n        <li>Elemento de lista 2</li>\n        <li>Elemento de lista 3</li>\n    </ul>\n    <p>Pueden agregar imágenes, enlaces, y más...</p>\n</div>",
+									"type": "text"
+								},
+								{
+									"key": "date",
+									"value": "2023-10-20",
+									"type": "text"
+								},
+								{
+									"key": "category_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "image_1",
+									"type": "file",
+									"src": "/C:/Proyectos/ECI/Tools/imagenes/thumb_393_1400_500_0_0_crop.jpg"
+								},
+								{
+									"key": "slug",
+									"value": "blog-title-2UP",
+									"type": "text"
+								},
+								{
+									"key": "image_2",
+									"type": "file",
+									"src": [],
+									"disabled": true
+								},
+								{
+									"key": "metaTitle",
+									"value": "title blog",
+									"type": "text"
+								},
+								{
+									"key": "metaDescription",
+									"value": "description meta blog",
+									"type": "text"
+								},
+								{
+									"key": "metaStatusindex",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "image_",
+									"type": "file",
+									"src": [],
+									"disabled": true
+								},
+								{
+									"key": "image_meta",
+									"type": "file",
+									"src": "/C:/Users/gabri/Pictures/ARGENTINA/pngtree-3-golden-3d-realistic-stars-png-image_6506672.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{APP_URL}}/api/blog",
+							"host": [
+								"{{APP_URL}}"
+							],
+							"path": [
+								"api",
+								"blog"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "create-blog",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "Blog title 1",
+											"type": "text"
+										},
+										{
+											"key": "down",
+											"value": "this is down",
+											"type": "text"
+										},
+										{
+											"key": "author",
+											"value": "Juan Paez",
+											"type": "text"
+										},
+										{
+											"key": "body",
+											"value": "<div contenteditable=\"true\" style=\"border: 1px solid #ccc; padding: 10px;\">\n    <p>¡Hola! Este es un ejemplo de contenido generado por un editor WYSIWYG.</p>\n    <p>Los usuarios pueden editar y dar formato al texto directamente.</p>\n    <ul>\n        <li>Elemento de lista 1</li>\n        <li>Elemento de lista 2</li>\n        <li>Elemento de lista 3</li>\n    </ul>\n    <p>Pueden agregar imágenes, enlaces, y más...</p>\n</div>",
+											"type": "text"
+										},
+										{
+											"key": "date",
+											"value": "2023-10-20",
+											"type": "text"
+										},
+										{
+											"key": "category_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "image_1",
+											"type": "file",
+											"src": "/C:/Proyectos/ECI/Tools/imagenes/thumb_393_1400_500_0_0_crop.jpg"
+										},
+										{
+											"key": "slug",
+											"value": "blog-title-2UP",
+											"type": "text"
+										},
+										{
+											"key": "image_2",
+											"type": "file",
+											"src": [],
+											"disabled": true
+										},
+										{
+											"key": "metaTitle",
+											"value": "title blog",
+											"type": "text"
+										},
+										{
+											"key": "metaDescription",
+											"value": "description meta blog",
+											"type": "text"
+										},
+										{
+											"key": "metaStatusindex",
+											"value": "true",
+											"type": "text"
+										},
+										{
+											"key": "image_",
+											"type": "file",
+											"src": [],
+											"disabled": true
+										},
+										{
+											"key": "image_meta",
+											"type": "file",
+											"src": "/C:/Users/gabri/Pictures/ARGENTINA/pngtree-3-golden-3d-realistic-stars-png-image_6506672.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{APP_URL}}/api/blog",
+									"host": [
+										"{{APP_URL}}"
+									],
+									"path": [
+										"api",
+										"blog"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 26 Dec 2023 16:00:28 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 26 Dec 2023 16:00:28 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.4"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"blog successfully created\",\n    \"data\": {\n        \"id\": 1,\n        \"title\": \"Blog title 1\",\n        \"down\": \"this is down\",\n        \"author\": \"Juan Paez\",\n        \"body\": \"<div contenteditable=\\\"true\\\" style=\\\"border: 1px solid #ccc; padding: 10px;\\\">\\n    <p>¡Hola! Este es un ejemplo de contenido generado por un editor WYSIWYG.</p>\\n    <p>Los usuarios pueden editar y dar formato al texto directamente.</p>\\n    <ul>\\n        <li>Elemento de lista 1</li>\\n        <li>Elemento de lista 2</li>\\n        <li>Elemento de lista 3</li>\\n    </ul>\\n    <p>Pueden agregar imágenes, enlaces, y más...</p>\\n</div>\",\n        \"date\": \"2023-10-20T00:00:00.000000Z\",\n        \"category_id\": 1,\n        \"metadata_id\": 2,\n        \"slug\": \"blog-title-2UP\",\n        \"category\": {\n            \"id\": 1,\n            \"name\": \"Category 1\"\n        },\n        \"blog_images\": [\n            {\n                \"id\": 1,\n                \"path\": \"/blog/1/thumb_393_1400_500_0_0_crop.jpg\",\n                \"blog_id\": 1\n            }\n        ],\n        \"metadata\": {\n            \"id\": 2,\n            \"title\": \"title blog\",\n            \"description\": \"description meta blog\",\n            \"path_image\": \"/metadata/2/pngtree-3-golden-3d-realistic-stars-png-image_6506672.jpg\",\n            \"status_index\": \"true\",\n            \"section\": null\n        }\n    }\n}"
 						}
 					]
 				},
@@ -1761,18 +2470,44 @@
 									"type": "file",
 									"src": "/C:/Users/gabri/Pictures/wallpaper-mundial/MessiCampeon.jpg",
 									"disabled": true
+								},
+								{
+									"key": "metaTitle",
+									"value": "title blog 16",
+									"type": "text"
+								},
+								{
+									"key": "metaDescription",
+									"value": "descripction example",
+									"type": "text"
+								},
+								{
+									"key": "metaStatusindex",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "image_meta",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "slug",
+									"value": "blog-title-2UP",
+									"type": "text"
 								}
 							]
 						},
 						"url": {
-							"raw": "{{APP_URL}}/api/edit-blog/3",
+							"raw": "{{APP_URL}}/api/edit-blog/1",
 							"host": [
 								"{{APP_URL}}"
 							],
 							"path": [
 								"api",
 								"edit-blog",
-								"3"
+								"1"
 							]
 						}
 					},
@@ -1904,6 +2639,13 @@
 							"path": [
 								"api",
 								"blog"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "2",
+									"disabled": true
+								}
 							]
 						}
 					},
@@ -2153,6 +2895,424 @@
 							"body": "{\n    \"success\": true,\n    \"message\": \"blog successfully deleted\",\n    \"data\": null\n}"
 						}
 					]
+				},
+				{
+					"name": "blog-getBySlug",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{APP_URL}}/api/get-blog/blog-title-2UP",
+							"host": [
+								"{{APP_URL}}"
+							],
+							"path": [
+								"api",
+								"get-blog",
+								"blog-title-2UP"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "blog-getBySlug",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{APP_URL}}/api/get-blog/blog-title-2UP",
+									"host": [
+										"{{APP_URL}}"
+									],
+									"path": [
+										"api",
+										"get-blog",
+										"blog-title-2UP"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 26 Dec 2023 16:04:05 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 26 Dec 2023 16:04:05 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.4"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"blogs obtained correctly\",\n    \"data\": {\n        \"id\": 1,\n        \"title\": \"Blog title 1\",\n        \"down\": \"this is down\",\n        \"author\": \"Juan Paez\",\n        \"body\": \"<div contenteditable=\\\"true\\\" style=\\\"border: 1px solid #ccc; padding: 10px;\\\">\\n    <p>¡Hola! Este es un ejemplo de contenido generado por un editor WYSIWYG.</p>\\n    <p>Los usuarios pueden editar y dar formato al texto directamente.</p>\\n    <ul>\\n        <li>Elemento de lista 1</li>\\n        <li>Elemento de lista 2</li>\\n        <li>Elemento de lista 3</li>\\n    </ul>\\n    <p>Pueden agregar imágenes, enlaces, y más...</p>\\n</div>\",\n        \"date\": \"2023-10-20T00:00:00.000000Z\",\n        \"category_id\": 1,\n        \"metadata_id\": 2,\n        \"slug\": \"blog-title-2UP\",\n        \"category\": {\n            \"id\": 1,\n            \"name\": \"Category 1\"\n        },\n        \"blog_images\": [\n            {\n                \"id\": 1,\n                \"path\": \"/blog/1/thumb_393_1400_500_0_0_crop.jpg\",\n                \"blog_id\": 1\n            }\n        ],\n        \"metadata\": {\n            \"id\": 2,\n            \"title\": \"title blog\",\n            \"description\": \"description meta blog\",\n            \"path_image\": \"/metadata/2/pngtree-3-golden-3d-realistic-stars-png-image_6506672.jpg\",\n            \"status_index\": \"true\",\n            \"section\": null\n        }\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Metadata",
+			"item": [
+				{
+					"name": "create-metadata",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "metaTitle",
+									"value": "example title",
+									"type": "text"
+								},
+								{
+									"key": "metaDescription",
+									"value": "example description",
+									"type": "text"
+								},
+								{
+									"key": "metaStatusindex",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "metaSection",
+									"value": "home",
+									"type": "text"
+								},
+								{
+									"key": "image_meta",
+									"type": "file",
+									"src": "/C:/Users/gabri/Pictures/ARGENTINA/d7ln44c-d08277cd-1700-4d83-b2bf-5bf1109c8d2d.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{APP_URL}}/api/metadata",
+							"host": [
+								"{{APP_URL}}"
+							],
+							"path": [
+								"api",
+								"metadata"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "create-metadata",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "metaTitle",
+											"value": "example title",
+											"type": "text"
+										},
+										{
+											"key": "metaDescription",
+											"value": "example description",
+											"type": "text"
+										},
+										{
+											"key": "metaStatusindex",
+											"value": "true",
+											"type": "text"
+										},
+										{
+											"key": "metaSection",
+											"value": "home",
+											"type": "text"
+										},
+										{
+											"key": "image_meta",
+											"type": "file",
+											"src": "/C:/Users/gabri/Pictures/ARGENTINA/d7ln44c-d08277cd-1700-4d83-b2bf-5bf1109c8d2d.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{APP_URL}}/api/metadata",
+									"host": [
+										"{{APP_URL}}"
+									],
+									"path": [
+										"api",
+										"metadata"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 26 Dec 2023 04:17:25 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 26 Dec 2023 04:17:25 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.4"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"metadata created\",\n    \"data\": {\n        \"id\": 13,\n        \"title\": \"example title\",\n        \"description\": \"example description\",\n        \"path_image\": \"/metadata/13/d7ln44c-d08277cd-1700-4d83-b2bf-5bf1109c8d2d.png\",\n        \"status_index\": \"true\",\n        \"section\": \"home\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "edit-metadata",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "metaTitle",
+									"value": "example titleUP",
+									"type": "text"
+								},
+								{
+									"key": "metaDescription",
+									"value": "example description",
+									"type": "text"
+								},
+								{
+									"key": "metaStatusindex",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "metaSection",
+									"value": "home",
+									"type": "text"
+								},
+								{
+									"key": "image_meta",
+									"type": "file",
+									"src": "/C:/Users/gabri/Pictures/ARGENTINA/d7ln44c-d08277cd-1700-4d83-b2bf-5bf1109c8d2d.png",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{APP_URL}}/api/edit-metadata/13",
+							"host": [
+								"{{APP_URL}}"
+							],
+							"path": [
+								"api",
+								"edit-metadata",
+								"13"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "edit-metadata",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "metaTitle",
+											"value": "example titleUP",
+											"type": "text"
+										},
+										{
+											"key": "metaDescription",
+											"value": "example description",
+											"type": "text"
+										},
+										{
+											"key": "metaStatusindex",
+											"value": "true",
+											"type": "text"
+										},
+										{
+											"key": "metaSection",
+											"value": "home",
+											"type": "text"
+										},
+										{
+											"key": "image_meta",
+											"type": "file",
+											"src": "/C:/Users/gabri/Pictures/ARGENTINA/d7ln44c-d08277cd-1700-4d83-b2bf-5bf1109c8d2d.png",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{APP_URL}}/api/edit-metadata/13",
+									"host": [
+										"{{APP_URL}}"
+									],
+									"path": [
+										"api",
+										"edit-metadata",
+										"13"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 26 Dec 2023 04:21:07 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 26 Dec 2023 04:21:07 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.4"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"metadata created\",\n    \"data\": {\n        \"id\": 13,\n        \"title\": \"example titleUP\",\n        \"description\": \"example description\",\n        \"path_image\": \"/metadata/13/d7ln44c-d08277cd-1700-4d83-b2bf-5bf1109c8d2d.png\",\n        \"status_index\": \"true\",\n        \"section\": \"home\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "get-metadat",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{APP_URL}}/api/metadata",
+							"host": [
+								"{{APP_URL}}"
+							],
+							"path": [
+								"api",
+								"metadata"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		}

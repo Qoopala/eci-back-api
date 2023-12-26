@@ -24,13 +24,33 @@ class PropertyService
             $property->price = $request->price;
             $property->information = $request->information;
             $property->number_room = $request->number_room;
+            $property->hall_area = $request->hall_area; // Agregado
+            $property->area = $request->area; // Agregado
             $property->number_bath = $request->number_bath;
-            $property->square_meter = $request->square_meter;
-            $property->energy_certification = $request->energy_certification;
+            $property->terrace_area = $request->terrace_area; // Agregado
+            $property->balcony_area = $request->balcony_area; // Agregado
             $property->map = $request->map;
             $property->status = $request->status;
             $property->office_id = $request->office_id;
             $property->locality_id = $request->locality_id;
+            $property->heating = $request->heating; // Agregado
+            $property->airconditioning = $request->airconditioning; // Agregado
+            $property->year_construction = $request->year_construction; // Agregado
+            $property->floor_type = $request->floor_type; // Agregado
+            $property->gas = $request->gas; // Agregado
+            $property->energy_certification = $request->energy_certification;
+            $property->elevator = $request->elevator; // Agregado
+            $property->shared_terrace = $request->shared_terrace; // Agregado
+            $property->parking = $request->parking; // Agregado
+            $property->storage_room = $request->storage_room; // Agregado
+            $property->pool = $request->pool; // Agregado
+            $property->garden = $request->garden; // Agregado
+            $property->public_transport = $request->public_transport; // Agregado
+            $property->shopping = $request->shopping; // Agregado
+            $property->market = $request->market; // Agregado
+            $property->education_center = $request->education_center; // Agregado
+            $property->health_center = $request->health_center; // Agregado
+            $property->recreation_area = $request->recreation_area; // Agregado
             $property->slug = $request->slug;
             $property->save();
 
@@ -43,20 +63,13 @@ class PropertyService
                     $image->save();
                 }
             }
-            
-            $arrayFeatures = json_decode($request->features);
-            foreach ($arrayFeatures as $value) {
-                $feature = new Feature();
-                $feature->name = $value;
-                $feature->property_id = $property->id;
-                $feature->save();
-            }
+        
             $metadataId = MetadataService::store($request);
             if(!$metadataId) return ServiceResponse::badRequest('Error updated metadata');
             $property->metadata_id = $metadataId;
             $property->save();
             DB::commit();
-            $response = Property::with('office', 'locality', 'images', 'features','metadata')->find($property->id);
+            $response = Property::with('office', 'locality', 'images', 'metadata')->find($property->id);
             return ServiceResponse::created(__('messages.property_create_ok'), $response);
         } catch (\Throwable $th) {
             DB::rollBack();
@@ -88,20 +101,11 @@ class PropertyService
                     }
                 }
             }
-            
-            $old_features = Feature::where('property_id', $id)->delete();
-            $arrayFeatures = json_decode($request->features);
-            foreach ($arrayFeatures as $value) {
-                $feature = new Feature();
-                $feature->name = $value;
-                $feature->property_id = $property->id;
-                $feature->save();
-            }
 
             $metadataId = MetadataService::update($request, $property->metadata_id);
             if(!$metadataId) return ServiceResponse::badRequest('Error updated metadata');
             DB::commit();
-            $response = Property::with('office', 'locality', 'images', 'features')->find($id);
+            $response = Property::with('office', 'locality', 'images', 'metadata')->find($id);
             return ServiceResponse::created(__('messages.property_update_ok'), $response);
         } catch (\Throwable $th) {
             DB::rollBack();
