@@ -79,7 +79,7 @@ class BlogService
             if(!$metadataId) return ServiceResponse::badRequest('Error updated metadata');
             DB::commit();
             $response = Blog::with('category','blogImages', 'metadata')->find($id);
-            return ServiceResponse::created(__('messages.property_update_ok'), $response);
+            return ServiceResponse::created(__('messages.blog_update_ok'), $response);
         } catch (\Throwable $th) {
             DB::rollBack();
             return (config('app.debug')) ? ServiceResponse::serverError($th->getMessage()) : ServiceResponse::serverError();

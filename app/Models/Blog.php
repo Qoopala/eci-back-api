@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Askedio\SoftCascade\Traits\SoftCascadeTrait;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -12,8 +13,11 @@ class Blog extends Model
 {
     use HasFactory;
     use SoftDeletes;
+    use SoftCascadeTrait;
 
     public $table = 'blogs';
+
+    protected $softCascade = ['metadata', 'blogImages'];
 
     protected $fillable = [
         'title',
