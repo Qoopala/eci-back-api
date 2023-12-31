@@ -27,6 +27,7 @@ class Property extends Model
         'information',
         'office_id',
         'locality_id',
+        'sublocality_id',
         'map',
         'status',
         'number_room',
@@ -76,6 +77,7 @@ class Property extends Model
         'status' => 'boolean',
         'office_id' => 'integer',
         'locality_id' => 'integer',
+        'sublocality_id' => 'integer',
         'slug' => 'string',
         'hall_area' => 'float',
         'area' => 'float',
@@ -107,6 +109,11 @@ class Property extends Model
     public function locality(): BelongsTo
     {
         return $this->belongsTo(Locality::class, 'locality_id');
+    }
+
+    public function sublocality(): BelongsTo
+    {
+        return $this->belongsTo(Sublocality::class, 'sublocality_id');
     }
 
     public function metadata(): BelongsTo

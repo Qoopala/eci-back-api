@@ -53,5 +53,15 @@ return [
     'partner_not_found' => 'Partner not found',
     'partner_delete_ok' => 'Partner successfully deleted',
     'partner_update_ok' => 'Partner successfully updated',
+    
+    //REVIEW
+    'review_create_ok' => 'Review successfully created',
+    'review_get_ok' => 'Review obtained correctly',
+    'review_not_found' => 'Review not found',
+    'review_delete_ok' => 'Review successfully deleted',
+    'review_update_ok' => 'Review successfully updated',
 
+    //LOCALITY
+    'locality_get_ok' => 'locality obtained correctly',
+    'locality_not_found' => 'locality not found',
 ];

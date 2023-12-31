@@ -33,6 +33,7 @@ class PropertyService
             $property->status = $request->status;
             $property->office_id = $request->office_id;
             $property->locality_id = $request->locality_id;
+            $property->sublocality_id = $request->sublocality_id;
             $property->heating = $request->heating; // Agregado
             $property->airconditioning = $request->airconditioning; // Agregado
             $property->year_construction = $request->year_construction; // Agregado
@@ -69,7 +70,7 @@ class PropertyService
             $property->metadata_id = $metadataId;
             $property->save();
             DB::commit();
-            $response = Property::with('office', 'locality', 'images', 'metadata')->find($property->id);
+            $response = Property::with('office', 'locality', 'images', 'metadata', 'sublocality')->find($property->id);
             return ServiceResponse::created(__('messages.property_create_ok'), $response);
         } catch (\Throwable $th) {
             DB::rollBack();
@@ -105,7 +106,7 @@ class PropertyService
             $metadataId = MetadataService::update($request, $property->metadata_id);
             if(!$metadataId) return ServiceResponse::badRequest('Error updated metadata');
             DB::commit();
-            $response = Property::with('office', 'locality', 'images', 'metadata')->find($id);
+            $response = Property::with('office', 'locality', 'images', 'metadata', 'sublocality')->find($id);
             return ServiceResponse::created(__('messages.property_update_ok'), $response);
         } catch (\Throwable $th) {
             DB::rollBack();

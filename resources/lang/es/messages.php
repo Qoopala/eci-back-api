@@ -53,4 +53,15 @@ return [
     'partner_delete_ok' => 'Colaborador eliminado correctamente',
     'partner_update_ok' => 'Colaborador actualizado correctamente',
 
+    //REVIEW
+    'review_create_ok' => 'Review creada correctamente',
+    'review_get_ok' => 'Review obtenida correctamente',
+    'review_not_found' => 'Review no encontrada',
+    'review_delete_ok' => 'Review eliminada correctamente',
+    'review_update_ok' => 'Review actualizada correctamente',
+
+    //LOCALITY
+    'locality_get_ok' => 'Localidad obtenida correctamente',
+    'locality_not_found' => 'Localidad no encontrada',
+
 ];
