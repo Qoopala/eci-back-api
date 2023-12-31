@@ -113,3 +113,6 @@ Route::resource('partner', PartnerController::class)->only([
 Route::resource('review', ReviewController::class)->only([
     'index', 'show'
 ]);
+
+//LOCALITIES
+Route::get('localities', [PropertyController::class, 'getLocalities']);

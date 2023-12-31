@@ -28,7 +28,8 @@ class Office extends Model
         'phone',
         'feature',
         'metadata_id',
-        'slug'
+        'slug',
+        'locality_id'
     ];
 
     protected $hidden = [
@@ -46,6 +47,7 @@ class Office extends Model
         'phone'=>'string',
         'feature'=>'string',
         'metadata_id'=>'integer',
+        'locality_id'=>'integer',
         'slug' => 'string'
     ];
 
@@ -68,5 +70,12 @@ class Office extends Model
     {
         return $this->hasMany(Partner::class);
     }
+
+    public function locality(): BelongsTo
+    {
+        return $this->belongsTo(Locality::class, 'locality_id');
+    }
+
+
 
 }

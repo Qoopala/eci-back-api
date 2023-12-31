@@ -41,7 +41,7 @@ class OfficeService
             $office->save();
             DB::commit();
 
-            $response = Office::with('officeImages', 'metadata', 'partners')->find($office->id);
+            $response = Office::with('officeImages', 'metadata', 'partners', 'locality')->find($office->id);
             return ServiceResponse::created(__('messages.office_create_ok'), $response);
         } catch (\Throwable $th) {
             DB::rollBack();
@@ -76,7 +76,7 @@ class OfficeService
             $metadataId = MetadataService::update($request, $office->metadata_id);
             if(!$metadataId) return ServiceResponse::badRequest('Error updated metadata');
             DB::commit();
-            $response = office::with('officeImages', 'metadata', 'partners')->find($id);
+            $response = office::with('officeImages', 'metadata', 'partners', 'locality')->find($id);
             return ServiceResponse::created(__('messages.office_update_ok'), $response);
         } catch (\Throwable $th) {
             DB::rollBack();

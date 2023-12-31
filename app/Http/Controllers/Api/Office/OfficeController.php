@@ -15,7 +15,7 @@ class OfficeController extends Controller
     public function index()
     {
         try {
-            $office = Office::with('officeImages', 'metadata', 'partners')->get();
+            $office = Office::with('officeImages', 'metadata', 'partners', 'locality')->get();
             if($office) return ApiResponse::ok(__('messages.office_get_ok'), $office);
             else return ApiResponse::not_found(__('messages.office_not_found'));
         } catch (\Throwable $th) {
@@ -50,7 +50,7 @@ class OfficeController extends Controller
     public function show(string $id)
     {
         try {
-            $office = Office::with('officeImages', 'metadata', 'partners')->find($id);
+            $office = Office::with('officeImages', 'metadata', 'partners', 'locality')->find($id);
             if($office) return ApiResponse::ok(__('messages.office_get_ok'), $office);
             else return ApiResponse::not_found(__('messages.office_not_found'));
         } catch (\Throwable $th) {
@@ -104,7 +104,7 @@ class OfficeController extends Controller
     public function getBySlug($slug)
     {
         try {
-            $office = Office::with('officeImages', 'metadata', 'partners')->where('slug', $slug)->first();
+            $office = Office::with('officeImages', 'metadata', 'partners', 'locality')->where('slug', $slug)->first();
             if($office) return ApiResponse::ok(__('messages.office_get_ok'), $office);
             else return ApiResponse::not_found(__('messages.office_not_found'));
         } catch (\Throwable $th) {
