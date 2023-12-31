@@ -9,6 +9,7 @@ use Core\Blog\Services\BlogService;
 use Core\Blog\Validations\BlogValidation;
 use Core\Image\Validations\ImageValidation;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class BlogController extends Controller
 {
@@ -17,7 +18,21 @@ class BlogController extends Controller
         $perPage = $request->query('per_page', 20);
         try {
             $query = Blog::query();
-            $blogs = $query->with('category', 'blogImages', 'metadata')->paginate($perPage);
+            $blogs = $query->select(
+                'id',
+                'title',
+                'down',
+                'author',
+                'body',
+                DB::raw("DATE_FORMAT(date, '%Y-%m-%d') as formatted_date"),
+                'category_id',
+                'metadata_id',
+                'slug'
+            )
+            ->with('category', 'blogImages', 'metadata')
+            ->orderBy('date', 'desc')
+            ->paginate($perPage);
+            
             if($blogs) return ApiResponse::ok(__('messages.blog_get_ok'), $blogs);
             else return ApiResponse::not_found(__('messages.blog_not_found'));
         } catch (\Throwable $th) {
