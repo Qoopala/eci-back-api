@@ -35,6 +35,8 @@ Route::get('status', function (){ return response('service in operation'); });
 //AUTH
 Route::post('register', [AuthController::class, 'register'])->name('user.register');
 Route::post('login', [AuthController::class, 'login']);
+Route::post('password/email', [AuthController::class , 'sendResetLinkEmail'])->name('password.email');
+Route::post('password/reset', [AuthController::class , 'reset'])->name('password.reset');;
 
 
 Route::group(['middleware' => ['auth:sanctum']], function () {
