@@ -572,6 +572,268 @@
 							"body": "{\n    \"success\": true,\n    \"message\": \"User successfully logout\",\n    \"data\": null\n}"
 						}
 					]
+				},
+				{
+					"name": "send-mail-reset",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"gabrielvega9316@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{APP_URL}}/api/password/email",
+							"host": [
+								"{{APP_URL}}"
+							],
+							"path": [
+								"api",
+								"password",
+								"email"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"gabrielvega9316@gmail.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{APP_URL}}/api/password/email",
+									"host": [
+										"{{APP_URL}}"
+									],
+									"path": [
+										"api",
+										"password",
+										"email"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 27 Dec 2023 06:02:41 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 27 Dec 2023 06:02:41 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.4"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Email enviado\",\n    \"data\": \"We have emailed your password reset link!\"\n}"
+						}
+					]
+				},
+				{
+					"name": "reset-password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "password",
+									"value": "123456789123",
+									"type": "text"
+								},
+								{
+									"key": "token",
+									"value": "ec89b1c68a84f471f8ef57e63a0ae95e5d3658c81dd0440a7cc86793f577ec46",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "gabrielvega9316@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "123456789123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/password/reset?token=ec89b1c68a84f471f8ef57e63a0ae95e5d3658c81dd0440a7cc86793f577ec46&email=gabrielvega9316@gmail.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"password",
+								"reset"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "ec89b1c68a84f471f8ef57e63a0ae95e5d3658c81dd0440a7cc86793f577ec46"
+								},
+								{
+									"key": "email",
+									"value": "gabrielvega9316@gmail.com"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "reset-password",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "password",
+											"value": "123456789",
+											"type": "text"
+										},
+										{
+											"key": "token",
+											"value": "8013a36d6ce0b16ae52a15adcb3daf285f9db5d239f60e0b778cb5ca917cc99e",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "gabrielvega9316@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password_confirmation",
+											"value": "123456789",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/password/reset?token=8013a36d6ce0b16ae52a15adcb3daf285f9db5d239f60e0b778cb5ca917cc99e&email=gabrielvega9316%40gmail.com",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"password",
+										"reset"
+									],
+									"query": [
+										{
+											"key": "token",
+											"value": "8013a36d6ce0b16ae52a15adcb3daf285f9db5d239f60e0b778cb5ca917cc99e"
+										},
+										{
+											"key": "email",
+											"value": "gabrielvega9316%40gmail.com"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 27 Dec 2023 06:03:53 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 27 Dec 2023 06:03:53 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.4"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Contraseña actuaizada con exito\",\n    \"data\": \"Your password has been reset!\"\n}"
+						}
+					]
 				}
 			]
 		},
@@ -598,7 +860,7 @@
 							"formdata": [
 								{
 									"key": "title",
-									"value": "Ático en el corazón de Esplugues3",
+									"value": "Ático en el corazón de Esplugues5",
 									"type": "text"
 								},
 								{
@@ -662,15 +924,14 @@
 									"type": "text"
 								},
 								{
-									"key": "features",
-									"value": "[\"Piso segunda mano\", \"garage\"]",
-									"type": "text",
-									"disabled": true
+									"key": "sublocality_id",
+									"value": "3",
+									"type": "text"
 								},
 								{
 									"key": "image_1",
 									"type": "file",
-									"src": "/C:/Users/gabri/Pictures/ARGENTINA/pngtree-3-golden-3d-realistic-stars-png-image_6506672.jpg"
+									"src": "/C:/Proyectos/ECI/Tools/imagenes/prop3-1.jpg"
 								},
 								{
 									"key": "image_2",
@@ -801,7 +1062,7 @@
 								},
 								{
 									"key": "slug",
-									"value": "Ático-en-el-corazón-de-Esplugues3",
+									"value": "Ático-en-el-corazón-de-Esplugues5",
 									"type": "text"
 								}
 							]
@@ -3021,13 +3282,13 @@
 								},
 								{
 									"key": "metaSection",
-									"value": "home",
+									"value": "contact",
 									"type": "text"
 								},
 								{
 									"key": "image_meta",
 									"type": "file",
-									"src": "/C:/Users/gabri/Pictures/ARGENTINA/d7ln44c-d08277cd-1700-4d83-b2bf-5bf1109c8d2d.png"
+									"src": "/C:/Proyectos/ECI/Tools/imagenes/meta_1.png"
 								}
 							]
 						},
@@ -3339,7 +3600,7 @@
 							"formdata": [
 								{
 									"key": "name",
-									"value": "Oficina ECI en Sant Ildefons2",
+									"value": "Oficina ECI de prueba",
 									"type": "text"
 								},
 								{
@@ -3370,21 +3631,23 @@
 								{
 									"key": "image_1",
 									"type": "file",
-									"src": "/C:/Proyectos/ECI/Tools/imagenes/office-1.webp"
+									"src": "/C:/Proyectos/ECI/Tools/imagenes/office-2.webp"
 								},
 								{
 									"key": "Image_2",
 									"type": "file",
-									"src": "/C:/Proyectos/ECI/Tools/imagenes/office-2.webp"
+									"src": "/C:/Proyectos/ECI/Tools/imagenes/office-2.webp",
+									"disabled": true
 								},
 								{
 									"key": "image_meta",
 									"type": "file",
-									"src": "/C:/Users/gabri/Pictures/cv_gabriel/174857.png"
+									"src": "/C:/Proyectos/ECI/Tools/imagenes/meta_1.png",
+									"disabled": true
 								},
 								{
 									"key": "slug",
-									"value": "Oficina-ECI-en-Sant-Ildefons2",
+									"value": "Oficina-ECI-prueba",
 									"type": "text"
 								},
 								{
@@ -3405,6 +3668,11 @@
 								{
 									"key": "metaStatusindex",
 									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "locality_id",
+									"value": "2",
 									"type": "text"
 								}
 							]
@@ -3431,7 +3699,7 @@
 									"formdata": [
 										{
 											"key": "name",
-											"value": "Oficina ECI en Sant Ildefons",
+											"value": "Oficina ECI de prueba",
 											"type": "text"
 										},
 										{
@@ -3462,21 +3730,23 @@
 										{
 											"key": "image_1",
 											"type": "file",
-											"src": "/C:/Proyectos/ECI/Tools/imagenes/office-1.webp"
+											"src": "/C:/Proyectos/ECI/Tools/imagenes/office-2.webp"
 										},
 										{
 											"key": "Image_2",
 											"type": "file",
-											"src": "/C:/Proyectos/ECI/Tools/imagenes/office-2.webp"
+											"src": "/C:/Proyectos/ECI/Tools/imagenes/office-2.webp",
+											"disabled": true
 										},
 										{
 											"key": "image_meta",
 											"type": "file",
-											"src": "/C:/Users/gabri/Pictures/cv_gabriel/174857.png"
+											"src": "/C:/Proyectos/ECI/Tools/imagenes/meta_1.png",
+											"disabled": true
 										},
 										{
 											"key": "slug",
-											"value": "Oficina-ECI-en-Sant-Ildefons",
+											"value": "Oficina-ECI-prueba",
 											"type": "text"
 										},
 										{
@@ -3497,6 +3767,11 @@
 										{
 											"key": "metaStatusindex",
 											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "locality_id",
+											"value": "2",
 											"type": "text"
 										}
 									]
@@ -3522,11 +3797,11 @@
 								},
 								{
 									"key": "Date",
-									"value": "Tue, 26 Dec 2023 19:39:14 GMT"
+									"value": "Mon, 01 Jan 2024 20:41:18 GMT"
 								},
 								{
 									"key": "Date",
-									"value": "Tue, 26 Dec 2023 19:39:14 GMT"
+									"value": "Mon, 01 Jan 2024 20:41:18 GMT"
 								},
 								{
 									"key": "Connection",
@@ -3558,7 +3833,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"success\": true,\n    \"message\": \"Office successfully created\",\n    \"data\": {\n        \"id\": 2,\n        \"name\": \"Oficina ECI en Sant Ildefons\",\n        \"cif\": \"B67336958B67336958\",\n        \"address\": \"av. Sant Ildefons 8, Local 6a\",\n        \"map\": \"Map coordinates for Office 1\",\n        \"email\": \"info@ebusa.es\",\n        \"phone\": \"931 564 980\",\n        \"feature\": \"<ul class=\\\"list\\\" data-astro-cid-prcas4qd=\\\"\\\"><li data-astro-cid-prcas4qd=\\\"\\\"><strong data-astro-cid-prcas4qd=\\\"\\\">Asesoramiento integral</strong><br data-astro-cid-prcas4qd=\\\"\\\">\\nOfrecemos un enfoque personalizado que abarca desde la valoración inicial hasta el cierre de la transacción.\\n</li><li data-astro-cid-prcas4qd=\\\"\\\"><strong data-astro-cid-prcas4qd=\\\"\\\">Rapidez y Eficacia</strong><br data-astro-cid-prcas4qd=\\\"\\\">\\nNuestros procesos ágiles garantizan una transacción rápida y sin contratiempos.\\n</li><li data-astro-cid-prcas4qd=\\\"\\\"><strong data-astro-cid-prcas4qd=\\\"\\\">\\nConfianza y seguridad\\n</strong><br data-astro-cid-prcas4qd=\\\"\\\">\\nManejamos todas las cuestiones legales para que tu experiencia sea totalmente segura.\\n</li><li data-astro-cid-prcas4qd=\\\"\\\"><strong data-astro-cid-prcas4qd=\\\"\\\">Ubicación Estratégica:</strong><br data-astro-cid-prcas4qd=\\\"\\\">\\nNos encontramos en el corazón de Sant Ildefons, cerca de ti y de tus necesidades.\\n</li></ul>\",\n        \"metadata_id\": 1,\n        \"slug\": \"Oficina-ECI-en-Sant-Ildefons\",\n        \"office_images\": [\n            {\n                \"id\": 3,\n                \"path\": \"/office/2/office-1.webp\",\n                \"office_id\": 2\n            },\n            {\n                \"id\": 4,\n                \"path\": \"/office/2/office-2.webp\",\n                \"office_id\": 2\n            }\n        ],\n        \"metadata\": {\n            \"id\": 1,\n            \"title\": \"example meta\",\n            \"description\": \"meta description\",\n            \"path_image\": \"/metadata/1/174857.png\",\n            \"status_index\": \"1\",\n            \"section\": null\n        }\n    }\n}"
+							"body": "{\n    \"success\": true,\n    \"message\": \"Office successfully created\",\n    \"data\": {\n        \"id\": 4,\n        \"name\": \"Oficina ECI de prueba\",\n        \"cif\": \"B67336958B67336958\",\n        \"address\": \"av. Sant Ildefons 8, Local 6a\",\n        \"map\": \"Map coordinates for Office 1\",\n        \"email\": \"info@ebusa.es\",\n        \"phone\": \"931 564 980\",\n        \"feature\": \"<ul class=\\\"list\\\" data-astro-cid-prcas4qd=\\\"\\\"><li data-astro-cid-prcas4qd=\\\"\\\"><strong data-astro-cid-prcas4qd=\\\"\\\">Asesoramiento integral</strong><br data-astro-cid-prcas4qd=\\\"\\\">\\nOfrecemos un enfoque personalizado que abarca desde la valoración inicial hasta el cierre de la transacción.\\n</li><li data-astro-cid-prcas4qd=\\\"\\\"><strong data-astro-cid-prcas4qd=\\\"\\\">Rapidez y Eficacia</strong><br data-astro-cid-prcas4qd=\\\"\\\">\\nNuestros procesos ágiles garantizan una transacción rápida y sin contratiempos.\\n</li><li data-astro-cid-prcas4qd=\\\"\\\"><strong data-astro-cid-prcas4qd=\\\"\\\">\\nConfianza y seguridad\\n</strong><br data-astro-cid-prcas4qd=\\\"\\\">\\nManejamos todas las cuestiones legales para que tu experiencia sea totalmente segura.\\n</li><li data-astro-cid-prcas4qd=\\\"\\\"><strong data-astro-cid-prcas4qd=\\\"\\\">Ubicación Estratégica:</strong><br data-astro-cid-prcas4qd=\\\"\\\">\\nNos encontramos en el corazón de Sant Ildefons, cerca de ti y de tus necesidades.\\n</li></ul>\",\n        \"metadata_id\": 8,\n        \"slug\": \"Oficina-ECI-prueba\",\n        \"locality_id\": 2,\n        \"office_images\": [\n            {\n                \"id\": 7,\n                \"path\": \"/office/4/office-2.webp\",\n                \"office_id\": 4\n            }\n        ],\n        \"metadata\": {\n            \"id\": 8,\n            \"title\": \"example meta\",\n            \"description\": \"meta description\",\n            \"path_image\": null,\n            \"status_index\": \"1\",\n            \"section\": null\n        },\n        \"partners\": [],\n        \"locality\": {\n            \"id\": 2,\n            \"name\": \"Esplugues de Llobregat\"\n        }\n    }\n}"
 						}
 					]
 				},
@@ -3910,7 +4185,7 @@
 					},
 					"response": [
 						{
-							"name": "get-all-ok",
+							"name": "get-offices",
 							"originalRequest": {
 								"method": "GET",
 								"header": [],
@@ -3935,11 +4210,11 @@
 								},
 								{
 									"key": "Date",
-									"value": "Tue, 26 Dec 2023 20:18:21 GMT"
+									"value": "Sun, 31 Dec 2023 04:08:00 GMT"
 								},
 								{
 									"key": "Date",
-									"value": "Tue, 26 Dec 2023 20:18:21 GMT"
+									"value": "Sun, 31 Dec 2023 04:08:00 GMT"
 								},
 								{
 									"key": "Connection",
@@ -3971,7 +4246,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"success\": true,\n    \"message\": \"Office obtained correctly\",\n    \"data\": [\n        {\n            \"id\": 2,\n            \"name\": \"Oficina ECI en Sant IldefonsUp\",\n            \"cif\": \"B67336958B67336958\",\n            \"address\": \"av. Sant Ildefons 8, Local 6a\",\n            \"map\": \"Map coordinates for Office 1\",\n            \"email\": \"info@ebusa.es\",\n            \"phone\": \"931 564 980\",\n            \"feature\": \"<ul class=\\\"list\\\" data-astro-cid-prcas4qd=\\\"\\\"><li data-astro-cid-prcas4qd=\\\"\\\"><strong data-astro-cid-prcas4qd=\\\"\\\">Asesoramiento integral</strong><br data-astro-cid-prcas4qd=\\\"\\\">\\nOfrecemos un enfoque personalizado que abarca desde la valoración inicial hasta el cierre de la transacción.\\n</li><li data-astro-cid-prcas4qd=\\\"\\\"><strong data-astro-cid-prcas4qd=\\\"\\\">Rapidez y Eficacia</strong><br data-astro-cid-prcas4qd=\\\"\\\">\\nNuestros procesos ágiles garantizan una transacción rápida y sin contratiempos.\\n</li><li data-astro-cid-prcas4qd=\\\"\\\"><strong data-astro-cid-prcas4qd=\\\"\\\">\\nConfianza y seguridad\\n</strong><br data-astro-cid-prcas4qd=\\\"\\\">\\nManejamos todas las cuestiones legales para que tu experiencia sea totalmente segura.\\n</li><li data-astro-cid-prcas4qd=\\\"\\\"><strong data-astro-cid-prcas4qd=\\\"\\\">Ubicación Estratégica:</strong><br data-astro-cid-prcas4qd=\\\"\\\">\\nNos encontramos en el corazón de Sant Ildefons, cerca de ti y de tus necesidades.\\n</li></ul>\",\n            \"metadata_id\": 1,\n            \"slug\": \"Oficina-ECI-en-Sant-Ildefons\",\n            \"office_images\": [\n                {\n                    \"id\": 3,\n                    \"path\": \"/office/2/office-1.webp\",\n                    \"office_id\": 2\n                },\n                {\n                    \"id\": 4,\n                    \"path\": \"/office/2/office-2.webp\",\n                    \"office_id\": 2\n                }\n            ],\n            \"metadata\": {\n                \"id\": 1,\n                \"title\": \"example meta\",\n                \"description\": \"meta description\",\n                \"path_image\": \"/metadata/1/174857.png\",\n                \"status_index\": \"1\",\n                \"section\": null\n            }\n        }\n    ]\n}"
+							"body": "{\n    \"success\": true,\n    \"message\": \"Office obtained correctly\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"EC Inmobiliarios Esplugues S.L.\",\n            \"cif\": \"B-44636587\",\n            \"address\": \"Av. Cornellà, 113, local 4, 08950 Esplugues de Llobregat\",\n            \"map\": \"Map coordinates for Office 1\",\n            \"email\": \"info@ebusa.es\",\n            \"phone\": \"931373749\",\n            \"feature\": \"necesita update\",\n            \"metadata_id\": null,\n            \"slug\": null,\n            \"locality_id\": 2,\n            \"office_images\": [],\n            \"metadata\": null,\n            \"partners\": [],\n            \"locality\": {\n                \"id\": 2,\n                \"name\": \"Esplugues de Llobregat\"\n            }\n        },\n        {\n            \"id\": 2,\n            \"name\": \"EC Inmobiliarios Gavarra S.L.\",\n            \"cif\": \"B-44636504\",\n            \"address\": \"Calle La Miranda, 41-43, local 4, 08940 Cornellà de Llobregat\",\n            \"map\": \"Map coordinates for Office 2\",\n            \"email\": \"info@ebusa.es\",\n            \"phone\": \"931389669\",\n            \"feature\": \"necesita update\",\n            \"metadata_id\": null,\n            \"slug\": null,\n            \"locality_id\": 1,\n            \"office_images\": [\n                {\n                    \"id\": 3,\n                    \"path\": \"/office/2/office-1.webp\",\n                    \"office_id\": 2\n                },\n                {\n                    \"id\": 4,\n                    \"path\": \"/office/2/office-2.webp\",\n                    \"office_id\": 2\n                }\n            ],\n            \"metadata\": null,\n            \"partners\": [\n                {\n                    \"id\": 2,\n                    \"name\": \"Juan Peres\",\n                    \"role\": \"Vendedor\",\n                    \"path_image\": \"/partner/2/partner-1.webp\",\n                    \"office_id\": 2,\n                    \"metadata_id\": null\n                }\n            ],\n            \"locality\": {\n                \"id\": 1,\n                \"name\": \"Cornellà de Llobregat\"\n            }\n        },\n        {\n            \"id\": 3,\n            \"name\": \"Ebusa Consultores Inmobiliarios S.L.\",\n            \"cif\": \"B-67336958\",\n            \"address\": \"Av. Sant Ildefons 8, local 6, 08940 Cornellà de Llobregat\",\n            \"map\": \"Map coordinates for Office 3\",\n            \"email\": \"info@ebusa.es\",\n            \"phone\": \"931564980\",\n            \"feature\": \"necesita update\",\n            \"metadata_id\": null,\n            \"slug\": null,\n            \"locality_id\": 1,\n            \"office_images\": [\n                {\n                    \"id\": 5,\n                    \"path\": \"/office/3/office-1.webp\",\n                    \"office_id\": 3\n                },\n                {\n                    \"id\": 6,\n                    \"path\": \"/office/3/office-2.webp\",\n                    \"office_id\": 3\n                }\n            ],\n            \"metadata\": null,\n            \"partners\": [],\n            \"locality\": {\n                \"id\": 1,\n                \"name\": \"Cornellà de Llobregat\"\n            }\n        }\n    ]\n}"
 						}
 					]
 				}
@@ -4000,7 +4275,7 @@
 							"formdata": [
 								{
 									"key": "name",
-									"value": "Juan Perez",
+									"value": "Marcos Rojo",
 									"type": "text"
 								},
 								{
@@ -4010,7 +4285,7 @@
 								},
 								{
 									"key": "office_id",
-									"value": "2",
+									"value": "1",
 									"type": "text"
 								},
 								{
@@ -4378,7 +4653,7 @@
 							"formdata": [
 								{
 									"key": "name",
-									"value": "Matias Gonza",
+									"value": "Pablo Perez",
 									"type": "text"
 								},
 								{
@@ -4708,6 +4983,300 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"success\": true,\n    \"message\": \"messages.review_get_ok\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"Matias Perezz\",\n            \"quote\": \"El acompañamiento durante cada fase del proceso de venta fue excepcional, en todo momento nos sentimos apoyados y logramos vender el piso que teníamos en Cornellà de Llobregat con ECI.\",\n            \"thumbnail\": \"/review/1/partner-1.webp\"\n        },\n        {\n            \"id\": 2,\n            \"name\": \"Matias Gonza\",\n            \"quote\": \"El acompañamiento durante cada fase del proceso de venta fue excepcional, en todo momento nos sentimos apoyados y logramos vender el piso que teníamos en Cornellà de Llobregat con ECI.\",\n            \"thumbnail\": \"/review/2/partner-1.webp\"\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Locality",
+			"item": [
+				{
+					"name": "get-localities",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{APP_URL}}/api/localities",
+							"host": [
+								"{{APP_URL}}"
+							],
+							"path": [
+								"api",
+								"localities"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "General Data",
+			"item": [
+				{
+					"name": "get-data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{APP_URL}}/api/general",
+							"host": [
+								"{{APP_URL}}"
+							],
+							"path": [
+								"api",
+								"general"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get-ok",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{APP_URL}}/api/general",
+									"host": [
+										"{{APP_URL}}"
+									],
+									"path": [
+										"api",
+										"general"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 31 Dec 2023 16:44:07 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 31 Dec 2023 16:44:07 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.4"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"datos generales obtenidos correctamente\",\n    \"data\": {\n        \"sitename\": \"Ebusa Consultora Inmobiliaria\",\n        \"description\": \"En ECI Ebusa Consultora Inmobiliaria, nos distinguimos por nuestra atención a cada detalle en la gestión inmobiliaria, nuestro enfoque se centra en proporcionar un soporte constante y cercano a nuestros clientes en cada etapa, desde la valoración inicial hasta la finalización de la transacción. Implementamos estrategias inteligentes y personalizadas para identificar y atraer a los compradores ideales, optimizando así las oportunidades de venta. Facilitamos las transacciones fluidas y satisfactorias para todas las partes involucradas.\",\n        \"imagen\": \"\",\n        \"phone\": \"+34 622 659 054\",\n        \"email\": \"info@ebusa.es\",\n        \"instagram\": \"https://www.instagram.com/ebusa.realestate\",\n        \"Linkedin\": \"https://www.linkedin.com/company/ebusa-consultora-inmobiliaria/\",\n        \"Facebook\": \"https://www.facebook.com/ebusa.realestate\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "update-data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "sitename",
+									"value": "Ebusa Consultora Inmobiliaria",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "En ECI Ebusa Consultora Inmobiliaria, nos distinguimos por nuestra atención a cada detalle en la gestión inmobiliaria, nuestro enfoque se centra en proporcionar un soporte constante y cercano a nuestros clientes en cada etapa, desde la valoración inicial hasta la finalización de la transacción. Implementamos estrategias inteligentes y personalizadas para identificar y atraer a los compradores ideales, optimizando así las oportunidades de venta. Facilitamos las transacciones fluidas y satisfactorias para todas las partes involucradas.",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "+34 622 659 054",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "info@ebusa.es",
+									"type": "text"
+								},
+								{
+									"key": "instagram",
+									"value": "https://www.instagram.com/ebusa.realestate",
+									"type": "text"
+								},
+								{
+									"key": "linkedin",
+									"value": "https://www.linkedin.com/company/ebusa-consultora-inmobiliaria/",
+									"type": "text"
+								},
+								{
+									"key": "facebook",
+									"value": "https://www.facebook.com/ebusa.realestate",
+									"type": "text"
+								},
+								{
+									"key": "image_1",
+									"type": "file",
+									"src": "/C:/Proyectos/ECI/Tools/imagenes/eci-logo.4l-LYu9C.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{APP_URL}}/api/general",
+							"host": [
+								"{{APP_URL}}"
+							],
+							"path": [
+								"api",
+								"general"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "update-data",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "sitename",
+											"value": "Ebusa Consultora Inmobiliaria",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "En ECI Ebusa Consultora Inmobiliaria, nos distinguimos por nuestra atención a cada detalle en la gestión inmobiliaria, nuestro enfoque se centra en proporcionar un soporte constante y cercano a nuestros clientes en cada etapa, desde la valoración inicial hasta la finalización de la transacción. Implementamos estrategias inteligentes y personalizadas para identificar y atraer a los compradores ideales, optimizando así las oportunidades de venta. Facilitamos las transacciones fluidas y satisfactorias para todas las partes involucradas.",
+											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "+34 622 659 054",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "info@ebusa.es",
+											"type": "text"
+										},
+										{
+											"key": "instagram",
+											"value": "https://www.instagram.com/ebusa.realestate",
+											"type": "text"
+										},
+										{
+											"key": "linkedin",
+											"value": "https://www.linkedin.com/company/ebusa-consultora-inmobiliaria/",
+											"type": "text"
+										},
+										{
+											"key": "facebook",
+											"value": "https://www.facebook.com/ebusa.realestate",
+											"type": "text"
+										},
+										{
+											"key": "image_1",
+											"type": "file",
+											"src": "/C:/Proyectos/ECI/Tools/imagenes/eci-logo.4l-LYu9C.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{APP_URL}}/api/general",
+									"host": [
+										"{{APP_URL}}"
+									],
+									"path": [
+										"api",
+										"general"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 31 Dec 2023 17:05:42 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 31 Dec 2023 17:05:42 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.4"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"data actualizada correctamente\",\n    \"data\": {\n        \"sitename\": \"Ebusa Consultora Inmobiliaria\",\n        \"description\": \"En ECI Ebusa Consultora Inmobiliaria, nos distinguimos por nuestra atención a cada detalle en la gestión inmobiliaria, nuestro enfoque se centra en proporcionar un soporte constante y cercano a nuestros clientes en cada etapa, desde la valoración inicial hasta la finalización de la transacción. Implementamos estrategias inteligentes y personalizadas para identificar y atraer a los compradores ideales, optimizando así las oportunidades de venta. Facilitamos las transacciones fluidas y satisfactorias para todas las partes involucradas.\",\n        \"phone\": \"+34 622 659 054\",\n        \"email\": \"info@ebusa.es\",\n        \"instagram\": \"https://www.instagram.com/ebusa.realestate\",\n        \"linkedin\": \"https://www.linkedin.com/company/ebusa-consultora-inmobiliaria/\",\n        \"facebook\": \"https://www.facebook.com/ebusa.realestate\",\n        \"image\": \"/general/1/eci-logo.4l-LYu9C.png\"\n    }\n}"
 						}
 					]
 				}

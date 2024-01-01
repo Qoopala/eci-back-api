@@ -24,6 +24,7 @@ class OfficeService
             $office->phone = $request->phone;
             $office->feature = $request->feature;
             $office->slug = $request->slug;
+            $office->locality_id = $request->locality_id;
             $office->save();
 
             $images = ImageService::store($request, 'office', $office->id);
