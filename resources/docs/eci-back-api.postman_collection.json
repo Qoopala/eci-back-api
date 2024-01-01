@@ -4796,7 +4796,7 @@
 							"formdata": [
 								{
 									"key": "name",
-									"value": "Matias Pere",
+									"value": "Matias Sanchez",
 									"type": "text"
 								},
 								{
@@ -5003,6 +5003,101 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"success\": true,\n    \"message\": \"messages.review_get_ok\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"Matias Perezz\",\n            \"quote\": \"El acompañamiento durante cada fase del proceso de venta fue excepcional, en todo momento nos sentimos apoyados y logramos vender el piso que teníamos en Cornellà de Llobregat con ECI.\",\n            \"thumbnail\": \"/review/1/partner-1.webp\"\n        },\n        {\n            \"id\": 2,\n            \"name\": \"Matias Gonza\",\n            \"quote\": \"El acompañamiento durante cada fase del proceso de venta fue excepcional, en todo momento nos sentimos apoyados y logramos vender el piso que teníamos en Cornellà de Llobregat con ECI.\",\n            \"thumbnail\": \"/review/2/partner-1.webp\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "delete-reviews",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{APP_URL}}/api/review/2",
+							"host": [
+								"{{APP_URL}}"
+							],
+							"path": [
+								"api",
+								"review",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "delete-ok",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{APP_URL}}/api/review/2",
+									"host": [
+										"{{APP_URL}}"
+									],
+									"path": [
+										"api",
+										"review",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 01 Jan 2024 21:33:39 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 01 Jan 2024 21:33:39 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.4"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Review successfully deleted\",\n    \"data\": null\n}"
 						}
 					]
 				}
