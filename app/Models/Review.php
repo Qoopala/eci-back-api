@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Review extends Model
@@ -17,6 +18,7 @@ class Review extends Model
         'name',
         'quote',
         'thumbnail',
+        'office_id'
     ];
 
     protected $hidden = [
@@ -29,5 +31,12 @@ class Review extends Model
         'name'=>'string',
         'quote'=>'string',
         'thumbnail'=>'string',
+        'office_id' => 'integer'
     ];
+
+
+    public function office(): BelongsTo
+    {
+        return $this->belongsTo(Office::class, 'office_id');
+    }
 }

@@ -11,6 +11,7 @@ class ReviewValidation
         $rules = [
             'name'=>'required|string',
             'quote'=>'required|string',
+            'office_id'=>'required',
         ];
 
         $validator = Validator::make($data, $rules);

@@ -16,6 +16,7 @@ class ReviewService
             $review = new  Review();
             $review->name = $request->name;
             $review->quote = $request->quote;
+            $review->office_id = $request->office_id;
             $review->save();
 
             $images = ImageService::store($request, 'review', $review->id);
@@ -28,7 +29,7 @@ class ReviewService
             $review->save();
             DB::commit();
 
-            $response = Review::find($review->id);
+            $response = Review::with('office')->find($review->id);
             return ServiceResponse::created(__('messages.review_create_ok'), $response);
         } catch (\Throwable $th) {
             DB::rollBack();
@@ -58,7 +59,7 @@ class ReviewService
             }
         
             DB::commit();
-            $response = Review::find($id);
+            $response = Review::with('office')->find($id);
             return ServiceResponse::created(__('messages.review_update_ok'), $response);
         } catch (\Throwable $th) {
             DB::rollBack();

@@ -76,6 +76,9 @@ class Office extends Model
         return $this->belongsTo(Locality::class, 'locality_id');
     }
 
-
+    public function reviews(): HasMany
+    {
+        return $this->hasMany(Review::class);
+    }
 
 }
