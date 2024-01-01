@@ -15,7 +15,7 @@ class ReviewController extends Controller
     public function index()
     {
         try {
-            $review = Review::get();
+            $review = Review::with('office')->get();
             if($review) return ApiResponse::ok(__('messages.review_get_ok'), $review);
             else return ApiResponse::not_found(__('messages.review_not_found'));
         } catch (\Throwable $th) {
@@ -50,7 +50,7 @@ class ReviewController extends Controller
     public function show(string $id)
     {
         try {
-            $review = Review::find($id);
+            $review = Review::with('office')->find($id);
             if($review) return ApiResponse::ok(__('messages.review_get_ok'), $review);
             else return ApiResponse::not_found(__('messages.review_not_found'));
         } catch (\Throwable $th) {

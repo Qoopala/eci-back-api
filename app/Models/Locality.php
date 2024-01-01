@@ -23,13 +23,14 @@ class Locality extends Model
         return $this->hasMany(Property::class);
     }
 
-    /**
-     * Get all of the sublocalities for the Locality
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     */
+    public function offices(): HasMany
+    {
+        return $this->hasMany(Office::class);
+    }
+
     public function sublocalities(): HasMany
     {
         return $this->hasMany(Sublocality::class);
     }
+
 }
