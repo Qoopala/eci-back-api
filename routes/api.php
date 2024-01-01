@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Api\Auth\AuthController;
 use App\Http\Controllers\Api\Blog\BlogController;
+use App\Http\Controllers\Api\GeneralDataController;
 use App\Http\Controllers\Api\Metadata\MetadataController;
 use App\Http\Controllers\Api\Office\OfficeController;
 use App\Http\Controllers\Api\Office\PartnerController;
@@ -79,6 +80,9 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::resource('review', ReviewController::class)->except([
         'index', 'show'
     ]);
+
+    // GENERAL DATA PROTECTED
+    Route::post('general', [GeneralDataController::class, 'store']);
 });
 
 // PROPERTY
@@ -116,3 +120,6 @@ Route::resource('review', ReviewController::class)->only([
 
 //LOCALITIES
 Route::get('localities', [PropertyController::class, 'getLocalities']);
+
+// GENERAL DATA
+Route::get('general', [GeneralDataController::class, 'index']);
