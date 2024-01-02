@@ -68,7 +68,17 @@ class BlogController extends Controller
     public function show($id)
     {
         try {
-            $blog = Blog::with('category', 'blogImages', 'metadata')->find($id);
+            $blog = Blog::select(
+                'id',
+                'title',
+                'down',
+                'author',
+                'body',
+                DB::raw("DATE_FORMAT(date, '%Y-%m-%d') as formatted_date"),
+                'category_id',
+                'metadata_id',
+                'slug'
+            )->with('category', 'blogImages', 'metadata')->find($id);
             if($blog) return ApiResponse::ok(__('messages.blog_get_ok'), $blog);
             else return ApiResponse::not_found(__('messages.blog_not_found'));
         } catch (\Throwable $th) {
@@ -122,7 +132,17 @@ class BlogController extends Controller
     public function getBySlug($slug)
     {
         try {
-            $blog = Blog::with('category', 'blogImages', 'metadata')->where('slug', $slug)->first();
+            $blog = Blog::select(
+                'id',
+                'title',
+                'down',
+                'author',
+                'body',
+                DB::raw("DATE_FORMAT(date, '%Y-%m-%d') as formatted_date"),
+                'category_id',
+                'metadata_id',
+                'slug'
+            )->with('category', 'blogImages', 'metadata')->where('slug', $slug)->first();
             if($blog) return ApiResponse::ok(__('messages.blog_get_ok'), $blog);
             else return ApiResponse::not_found(__('messages.blog_not_found'));
         } catch (\Throwable $th) {

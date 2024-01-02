@@ -42,7 +42,17 @@ class BlogService
             $blog->metadata_id = $metadataId;
             $blog->save();
             DB::commit();
-            $response = Blog::with('category','blogImages', 'metadata')->find($blog->id);
+            $response = Blog::select(
+                'id',
+                'title',
+                'down',
+                'author',
+                'body',
+                DB::raw("DATE_FORMAT(date, '%Y-%m-%d') as formatted_date"),
+                'category_id',
+                'metadata_id',
+                'slug'
+            )->with('category','blogImages', 'metadata')->find($blog->id);
             return ServiceResponse::created(__('messages.blog_create_ok'), $response);
         } catch (\Throwable $th) {
             DB::rollBack();
@@ -78,7 +88,17 @@ class BlogService
             $metadataId = MetadataService::update($request, $blog->metadata_id);
             if(!$metadataId) return ServiceResponse::badRequest('Error updated metadata');
             DB::commit();
-            $response = Blog::with('category','blogImages', 'metadata')->find($id);
+            $response = Blog::select(
+                'id',
+                'title',
+                'down',
+                'author',
+                'body',
+                DB::raw("DATE_FORMAT(date, '%Y-%m-%d') as formatted_date"),
+                'category_id',
+                'metadata_id',
+                'slug'
+            )->with('category','blogImages', 'metadata')->find($id);
             return ServiceResponse::created(__('messages.blog_update_ok'), $response);
         } catch (\Throwable $th) {
             DB::rollBack();
