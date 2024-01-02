@@ -21,7 +21,7 @@ return new class extends Migration
             $table->foreignId('office_id')->references('id')->on('offices');
             $table->foreignId('locality_id')->references('id')->on('localities');
             $table->string('map', 800);
-            $table->boolean('status');
+            $table->string('status', 50);
             
             //DISTRIBUCION
             $table->integer('number_room')->nullable();

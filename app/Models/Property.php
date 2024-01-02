@@ -74,7 +74,7 @@ class Property extends Model
         'square_meter' => 'float',
         'energy_certification' => 'string',
         'map' => 'string',
-        'status' => 'boolean',
+        'status' => 'string',
         'office_id' => 'integer',
         'locality_id' => 'integer',
         'sublocality_id' => 'integer',

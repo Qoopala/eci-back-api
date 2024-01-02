@@ -22,7 +22,7 @@ class PropertyValidation
             'terrace_area' => 'nullable|numeric', // Agregado
             'balcony_area' => 'nullable|numeric', // Agregado
             'map' => 'required|string',
-            'status' => 'required',
+            'status' => 'required|string',
             'office_id' => 'required|integer',
             'locality_id' => 'required|integer',
             'heating' => 'nullable|boolean', // Agregado
