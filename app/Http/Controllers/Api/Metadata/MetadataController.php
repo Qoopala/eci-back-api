@@ -12,12 +12,21 @@ use Illuminate\Http\Request;
 
 class MetadataController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
         try {
-            $metadata = Metadata::get();
-            if($metadata) return ApiResponse::ok(__('messages.metadata_get_ok'), $metadata);
-            else return ApiResponse::not_found(__('messages.metadata_not_found'));
+            $section = $request->input('section');
+    
+            $metadataQuery = Metadata::when($section, function ($query) use ($section) {
+                return $query->where('section', $section);
+            });
+            $metadata = $metadataQuery->get();
+    
+            if ($metadata->isNotEmpty()) {
+                return ApiResponse::ok(__('messages.metadata_get_ok'), $metadata);
+            } else {
+                return ApiResponse::not_found(__('messages.metadata_not_found'));
+            }
         } catch (\Throwable $th) {
             return (config('app.debug')) ? ApiResponse::serverError($th->getMessage()) : ApiResponse::serverError();
         }
