@@ -61,11 +61,9 @@ class ReviewController extends Controller
     public function update(Request $request, string $id)
     {
         $data = $request->all();
-        $validate = ReviewValidation::validateStore($data, $id);
-        if($validate) return ApiResponse::badRequest($validate);
 
         $validateImage = ImageValidation::validateImage($request);
-        if($validate) return ApiResponse::badRequest($validateImage);
+        // if($validate) return ApiResponse::badRequest($validateImage);
 
         try {
             $response = ReviewService::update($request, $id);

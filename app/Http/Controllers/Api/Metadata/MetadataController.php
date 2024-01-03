@@ -71,11 +71,9 @@ class MetadataController extends Controller
     public function update(Request $request, string $id)
     {
         $data = $request->all();
-        $validate = MetadataValidation::validateStore($data);
-        if($validate) return ApiResponse::badRequest($validate);
 
         $validateImage = ImageValidation::validateImage($request);
-        if($validate) return ApiResponse::badRequest($validateImage);
+        // if($validateImage) return ApiResponse::badRequest($validateImage);
 
         try {
             $metadataId = MetadataService::update($request, $id);

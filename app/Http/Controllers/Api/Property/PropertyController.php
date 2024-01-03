@@ -64,11 +64,9 @@ class PropertyController extends Controller
     public function update(Request $request, string $id)
     {
         $data = $request->all();
-        $validate = PropertyValidation::validateStore($data, $id);
-        if($validate) return ApiResponse::badRequest($validate);
 
         $validateImage = ImageValidation::validateImage($request);
-        if($validate) return ApiResponse::badRequest($validateImage);
+        // if($validateImage) return ApiResponse::badRequest($validateImage);
 
         try {
             $response = PropertyService::update($request, $id);

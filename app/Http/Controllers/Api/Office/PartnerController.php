@@ -61,11 +61,11 @@ class PartnerController extends Controller
     public function update(Request $request, string $id)
     {
         $data = $request->all();
-        $validate = PartnerValidation::validateStore($data, $id);
-        if($validate) return ApiResponse::badRequest($validate);
+        // $validate = PartnerValidation::validateStore($data, $id);
+        // if($validate) return ApiResponse::badRequest($validate);
 
         $validateImage = ImageValidation::validateImage($request);
-        if($validate) return ApiResponse::badRequest($validateImage);
+        // if($validate) return ApiResponse::badRequest($validateImage);
 
         try {
             $response = PartnerService::update($request, $id);
