@@ -64,10 +64,11 @@ class PropertyService
                     $image->save();
                 }
             }
-        
-            $metadataId = MetadataService::store($request);
-            if(!$metadataId) return ServiceResponse::badRequest('Error updated metadata');
-            $property->metadata_id = $metadataId;
+            if(isset($request->metaTitle)){
+                $metadataId = MetadataService::store($request);
+                if(!$metadataId) return ServiceResponse::badRequest('Error updated metadata');
+                $property->metadata_id = $metadataId;
+            }
             $property->save();
             DB::commit();
             $response = Property::with('office', 'locality', 'images', 'metadata', 'sublocality')->find($property->id);
@@ -102,9 +103,10 @@ class PropertyService
                     }
                 }
             }
-
-            $metadataId = MetadataService::update($request, $property->metadata_id);
-            if(!$metadataId) return ServiceResponse::badRequest('Error updated metadata');
+            if(isset($request->metaTitle)){
+                $metadataId = MetadataService::update($request, $property->metadata_id);
+                if(!$metadataId) return ServiceResponse::badRequest('Error updated metadata');
+            }
             DB::commit();
             $response = Property::with('office', 'locality', 'images', 'metadata', 'sublocality')->find($id);
             return ServiceResponse::created(__('messages.property_update_ok'), $response);
