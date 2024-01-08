@@ -33,7 +33,7 @@ class PropertyController extends Controller
         if($validate) return ApiResponse::badRequest($validate);
 
         $validateImage = ImageValidation::validateImage($request);
-        if($validate) return ApiResponse::badRequest($validateImage);
+        if($validateImage) return ApiResponse::badRequest($validateImage);
 
         try {
             $response = PropertyService::store($request);
@@ -66,7 +66,7 @@ class PropertyController extends Controller
         $data = $request->all();
 
         $validateImage = ImageValidation::validateImage($request);
-        // if($validateImage) return ApiResponse::badRequest($validateImage);
+        if($validateImage) return ApiResponse::badRequest($validateImage);
 
         try {
             $response = PropertyService::update($request, $id);
