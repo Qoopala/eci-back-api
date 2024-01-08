@@ -25,6 +25,7 @@ class PropertyValidation
             'status' => 'required|string',
             'office_id' => 'required|integer',
             'locality_id' => 'required|integer',
+            'sublocality_id' => 'required|integer',
             'heating' => 'nullable|boolean', // Agregado
             'airconditioning' => 'nullable|boolean', // Agregado
             'year_construction' => 'nullable|integer', // Agregado
