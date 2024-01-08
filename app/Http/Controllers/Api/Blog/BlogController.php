@@ -48,7 +48,7 @@ class BlogController extends Controller
         if($validate) return ApiResponse::badRequest($validate);
 
         $validateImage = ImageValidation::validateImage($request);
-        if($validate) return ApiResponse::badRequest($validateImage);
+        if($validateImage) return ApiResponse::badRequest($validateImage);
 
         try {
             $response = BlogService::store($request);
@@ -91,7 +91,7 @@ class BlogController extends Controller
         $data = $request->all();
 
         $validateImage = ImageValidation::validateImage($request);
-        // if($validateImage) return ApiResponse::badRequest($validateImage);
+        if($validateImage) return ApiResponse::badRequest($validateImage);
 
         try {
             $response = BlogService::update($request, $id);

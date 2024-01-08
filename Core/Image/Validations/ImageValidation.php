@@ -8,7 +8,8 @@ use Illuminate\Support\Facades\Validator;
 class ImageValidation
 {
     static function validateImage(Request $request){
-         $data = $request->all();
+        if(!count($request->file())) return false;
+        $data = $request->all();
          $rules = [];
          for ($i = 1; $i <= 10; $i++) {
              $rules["image_{$i}"] = "image|mimes:jpeg,png,jpg,gif,webp|max:2048";

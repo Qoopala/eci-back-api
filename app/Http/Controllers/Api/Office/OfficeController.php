@@ -30,7 +30,7 @@ class OfficeController extends Controller
         if($validate) return ApiResponse::badRequest($validate);
 
         $validateImage = ImageValidation::validateImage($request);
-        if($validate) return ApiResponse::badRequest($validateImage);
+        if($validateImage) return ApiResponse::badRequest($validateImage);
 
         try {
             $response = OfficeService::store($request);
@@ -65,7 +65,7 @@ class OfficeController extends Controller
         // if($validate) return ApiResponse::badRequest($validate);
 
         $validateImage = ImageValidation::validateImage($request);
-        // if($validate) return ApiResponse::badRequest($validateImage);
+        if($validateImage) return ApiResponse::badRequest($validateImage);
 
         try {
             $response = OfficeService::update($request, $id);
