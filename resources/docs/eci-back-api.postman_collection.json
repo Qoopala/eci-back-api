@@ -860,7 +860,7 @@
 							"formdata": [
 								{
 									"key": "title",
-									"value": "Ático en el corazón de Esplugues5",
+									"value": "Ático atico ideal para parejas en El Gall2",
 									"type": "text"
 								},
 								{
@@ -870,47 +870,48 @@
 								},
 								{
 									"key": "reference",
-									"value": "AR3",
+									"value": "EB-ESa12",
 									"type": "text"
 								},
 								{
 									"key": "price",
-									"value": "780.000",
+									"value": "199000",
 									"type": "text"
 								},
 								{
 									"key": "information",
-									"value": "Ebusa Consultores inmobiliarios le presenta esta vivienda construida en 1993 en pleno centro de esplugues de llobregat, vivienda que consta de 125m², amplio salón con cocina americana y chimenea en este, 3 dormitorios, 2 individuales y 1 matrimonial, baño y aseo,\n\nEs una vivienda muy luminosa, materiales de primera clase, salón con salida a balcón de aproximadamente 10m², suelo de marmol negro que se dejará recien pulido, la cocina dispone de vitrocerámica eléctrica con pequeños detalles como son una freidora y un grill para hacer comidas a la brasa. La habitación de matrimonio es una suite con un espectacular baño con jacuzzi mas entrada a un bonito vestidor. Arriba tenemos la cubierta por la cual solo se puede entrar por la vivienda exclusivamente, es una terraza de uso y disfrute propios para el propietario de esta vivienda. INCLUYE 2 PLAZAS DE PARQUING EN EL PRECIO.",
+									"value": "Ebusa Consultores inmobiliarios le presenta esta vivienda en el Gall de Esplugues de Llobregat, se trata de un pequeño ático para actualizar a gusto de uno mismo, ideal para parejas.\nEs una vivienda muy luminosa, en la que todas sus estancias son exteriores, pese a tener una parte exterior y otra interior, no hay ningún otro edificio que tape sus vistas maravillosas. Salón de unos 15m², dispone de 2 dormitorios uno de matrimonio y otro individual, cocina y baño completo con plato de ducha\n\nSe encuentra en una zona muy tranquila de esplugues, disponiendo de todos los servicios a mano, transporte público, a 2 minutos de la parada de tram de La Sardana, colegios, guarderías y parques infantiles próximos a esta.\nEbusa Consultores inmobiliarios le ofrece un servicio exclusivo para realizar un análisis financiero gratuito y obtener la mejor hipoteca posible.\n\n¡ No dude en contactar con nosotros !",
 									"type": "text"
 								},
 								{
 									"key": "number_room",
-									"value": "3",
-									"type": "text"
-								},
-								{
-									"key": "number_bath",
 									"value": "2",
 									"type": "text"
 								},
 								{
+									"key": "number_bath",
+									"value": "1",
+									"type": "text"
+								},
+								{
 									"key": "area",
-									"value": "125",
+									"value": "55",
 									"type": "text"
 								},
 								{
 									"key": "energy_certification",
 									"value": "E",
-									"type": "text"
+									"type": "text",
+									"disabled": true
 								},
 								{
 									"key": "map",
-									"value": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.7558016657213!2d-58.36733122445677!3d-34.63561087294286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a334b6925e5473%3A0x1ca5b2748858b40d!2sEstadio%20Alberto%20J.%20Armando-%20La%20Bombonera!5e0!3m2!1ses-419!2sar!4v1701474311104!5m2!1ses-419!2sar\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+									"value": "s/coordenadas",
 									"type": "text"
 								},
 								{
 									"key": "status",
-									"value": "1",
+									"value": "available",
 									"type": "text"
 								},
 								{
@@ -925,90 +926,100 @@
 								},
 								{
 									"key": "sublocality_id",
-									"value": "3",
+									"value": "1",
 									"type": "text"
 								},
 								{
 									"key": "image_1",
 									"type": "file",
-									"src": "/C:/Proyectos/ECI/Tools/imagenes/prop3-1.jpg"
+									"src": "/C:/Proyectos/ECI/Tools/imagenes/inmuebles/inmueble5/img2.jpg"
 								},
 								{
 									"key": "image_2",
 									"type": "file",
-									"src": [],
-									"disabled": true
+									"src": "/C:/Proyectos/ECI/Tools/imagenes/inmuebles/inmueble7/img2.jpg"
 								},
 								{
 									"key": "image_3",
 									"type": "file",
-									"src": [],
-									"disabled": true
+									"src": []
 								},
 								{
-									"key": "metaTitle",
+									"key": "meta_title",
 									"value": "example title",
 									"type": "text"
 								},
 								{
 									"key": "metaDescription",
 									"value": "example description",
-									"type": "text"
+									"type": "text",
+									"disabled": true
 								},
 								{
 									"key": "metaStatusindex",
 									"value": "true",
-									"type": "text"
+									"type": "text",
+									"disabled": true
 								},
 								{
 									"key": "hall_area",
 									"value": "10",
-									"type": "text"
+									"type": "text",
+									"disabled": true
 								},
 								{
 									"key": "terrace_area",
-									"value": "",
-									"type": "text"
+									"value": "1",
+									"type": "text",
+									"disabled": true
 								},
 								{
 									"key": "balcony_area",
-									"value": "",
-									"type": "text"
+									"value": "1",
+									"type": "text",
+									"disabled": true
 								},
 								{
 									"key": "heating",
 									"value": "1",
-									"type": "text"
+									"type": "text",
+									"disabled": true
 								},
 								{
 									"key": "airconditioning",
 									"value": "1",
-									"type": "text"
+									"type": "text",
+									"disabled": true
 								},
 								{
 									"key": "year_construction",
-									"value": "2010",
-									"type": "text"
+									"value": "2014",
+									"type": "text",
+									"disabled": true
 								},
 								{
 									"key": "floor_type",
-									"value": "",
-									"type": "text"
+									"value": "piso",
+									"type": "text",
+									"disabled": true
 								},
 								{
 									"key": "gas",
 									"value": "1",
-									"type": "text"
+									"type": "text",
+									"disabled": true
 								},
 								{
 									"key": "elevator",
-									"value": "0",
-									"type": "text"
+									"value": "1",
+									"type": "text",
+									"disabled": true
 								},
 								{
 									"key": "shared_terrace",
 									"value": "",
-									"type": "text"
+									"type": "text",
+									"disabled": true
 								},
 								{
 									"key": "parking",
@@ -1018,52 +1029,67 @@
 								{
 									"key": "storage_room",
 									"value": "",
-									"type": "text"
+									"type": "text",
+									"disabled": true
 								},
 								{
 									"key": "pool",
-									"value": "0",
-									"type": "text"
+									"value": "1",
+									"type": "text",
+									"disabled": true
 								},
 								{
 									"key": "garden",
-									"value": "0",
-									"type": "text"
+									"value": "1",
+									"type": "text",
+									"disabled": true
 								},
 								{
 									"key": "public_transport",
 									"value": "",
-									"type": "text"
+									"type": "text",
+									"disabled": true
 								},
 								{
 									"key": "shopping",
 									"value": "1",
-									"type": "text"
+									"type": "text",
+									"disabled": true
 								},
 								{
 									"key": "market",
 									"value": "1",
-									"type": "text"
+									"type": "text",
+									"disabled": true
 								},
 								{
 									"key": "education_center",
 									"value": "1",
-									"type": "text"
+									"type": "text",
+									"disabled": true
 								},
 								{
 									"key": "health_center",
 									"value": "1",
-									"type": "text"
+									"type": "text",
+									"disabled": true
 								},
 								{
 									"key": "recreation_area",
 									"value": "",
-									"type": "text"
+									"type": "text",
+									"disabled": true
 								},
 								{
 									"key": "slug",
-									"value": "Ático-en-el-corazón-de-Esplugues5",
+									"value": "Plaza-de-parking-en-Barcelona2",
 									"type": "text"
+								},
+								{
+									"key": "image_4",
+									"type": "file",
+									"src": "/C:/Proyectos/ECI/Tools/imagenes/inmuebles/inmueble7/img4.jpg",
+									"disabled": true
 								}
 							]
 						},
@@ -2061,7 +2087,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{APP_URL}}/api/property",
+							"raw": "{{APP_URL}}/api/property?sublocality=Esplugues Centre,Cornellà Centre&price_from=300000",
 							"host": [
 								"{{APP_URL}}"
 							],
@@ -2073,6 +2099,29 @@
 								{
 									"key": "page",
 									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "bath",
+									"value": "6",
+									"disabled": true
+								},
+								{
+									"key": "room",
+									"value": "3",
+									"disabled": true
+								},
+								{
+									"key": "sublocality",
+									"value": "Esplugues Centre,Cornellà Centre"
+								},
+								{
+									"key": "price_from",
+									"value": "300000"
+								},
+								{
+									"key": "price_to",
+									"value": "30000",
 									"disabled": true
 								}
 							]
@@ -2149,6 +2198,100 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"success\": true,\n    \"message\": \"Properties obtained correctly\",\n    \"data\": {\n        \"current_page\": 1,\n        \"data\": [\n            {\n                \"id\": 1,\n                \"title\": \"Property Title\",\n                \"address\": \"Property Address\",\n                \"reference\": \"Property Reference\",\n                \"price\": 1000000,\n                \"information\": \"Property Information\",\n                \"number_room\": 3,\n                \"number_bath\": 2,\n                \"square_meter\": 150.5,\n                \"energy_certification\": \"E\",\n                \"map\": \"Property Map\",\n                \"status\": true,\n                \"office_id\": 1,\n                \"locality_id\": 1,\n                \"office\": {\n                    \"id\": 1,\n                    \"name\": \"Office 1\",\n                    \"cif\": \"ABC123\",\n                    \"address\": \"123 Main Street\",\n                    \"map\": \"Map coordinates for Office 1\",\n                    \"email\": \"office1@example.com\",\n                    \"phone\": \"123-456-7890\",\n                    \"path_image\": \"office1.jpg\"\n                },\n                \"locality\": {\n                    \"id\": 1,\n                    \"name\": \"Locality 1\"\n                },\n                \"images\": [],\n                \"features\": []\n            },\n            {\n                \"id\": 2,\n                \"title\": \"Property dos\",\n                \"address\": \"España 400\",\n                \"reference\": \"Property Reference\",\n                \"price\": 1000000,\n                \"information\": \"Property Information\",\n                \"number_room\": 3,\n                \"number_bath\": 2,\n                \"square_meter\": 150.5,\n                \"energy_certification\": \"B\",\n                \"map\": \"Property Map\",\n                \"status\": true,\n                \"office_id\": 1,\n                \"locality_id\": 1,\n                \"office\": {\n                    \"id\": 1,\n                    \"name\": \"Office 1\",\n                    \"cif\": \"ABC123\",\n                    \"address\": \"123 Main Street\",\n                    \"map\": \"Map coordinates for Office 1\",\n                    \"email\": \"office1@example.com\",\n                    \"phone\": \"123-456-7890\",\n                    \"path_image\": \"office1.jpg\"\n                },\n                \"locality\": {\n                    \"id\": 1,\n                    \"name\": \"Locality 1\"\n                },\n                \"images\": [],\n                \"features\": []\n            },\n            {\n                \"id\": 3,\n                \"title\": \"Property tres\",\n                \"address\": \"España 400\",\n                \"reference\": \"Property Reference\",\n                \"price\": 1000000,\n                \"information\": \"Property Information\",\n                \"number_room\": 3,\n                \"number_bath\": 2,\n                \"square_meter\": 150.5,\n                \"energy_certification\": \"B\",\n                \"map\": \"Property Map\",\n                \"status\": true,\n                \"office_id\": 1,\n                \"locality_id\": 1,\n                \"office\": {\n                    \"id\": 1,\n                    \"name\": \"Office 1\",\n                    \"cif\": \"ABC123\",\n                    \"address\": \"123 Main Street\",\n                    \"map\": \"Map coordinates for Office 1\",\n                    \"email\": \"office1@example.com\",\n                    \"phone\": \"123-456-7890\",\n                    \"path_image\": \"office1.jpg\"\n                },\n                \"locality\": {\n                    \"id\": 1,\n                    \"name\": \"Locality 1\"\n                },\n                \"images\": [],\n                \"features\": []\n            },\n            {\n                \"id\": 4,\n                \"title\": \"Property cuatro\",\n                \"address\": \"España 400\",\n                \"reference\": \"Property Reference\",\n                \"price\": 1000000,\n                \"information\": \"Property Information\",\n                \"number_room\": 3,\n                \"number_bath\": 2,\n                \"square_meter\": 150.5,\n                \"energy_certification\": \"B\",\n                \"map\": \"Property Map\",\n                \"status\": true,\n                \"office_id\": 1,\n                \"locality_id\": 1,\n                \"office\": {\n                    \"id\": 1,\n                    \"name\": \"Office 1\",\n                    \"cif\": \"ABC123\",\n                    \"address\": \"123 Main Street\",\n                    \"map\": \"Map coordinates for Office 1\",\n                    \"email\": \"office1@example.com\",\n                    \"phone\": \"123-456-7890\",\n                    \"path_image\": \"office1.jpg\"\n                },\n                \"locality\": {\n                    \"id\": 1,\n                    \"name\": \"Locality 1\"\n                },\n                \"images\": [],\n                \"features\": []\n            },\n            {\n                \"id\": 5,\n                \"title\": \"Property cinco\",\n                \"address\": \"España 400\",\n                \"reference\": \"Property Reference\",\n                \"price\": 1000000,\n                \"information\": \"Property Information\",\n                \"number_room\": 3,\n                \"number_bath\": 2,\n                \"square_meter\": 150.5,\n                \"energy_certification\": \"B\",\n                \"map\": \"Property Map\",\n                \"status\": true,\n                \"office_id\": 1,\n                \"locality_id\": 1,\n                \"office\": {\n                    \"id\": 1,\n                    \"name\": \"Office 1\",\n                    \"cif\": \"ABC123\",\n                    \"address\": \"123 Main Street\",\n                    \"map\": \"Map coordinates for Office 1\",\n                    \"email\": \"office1@example.com\",\n                    \"phone\": \"123-456-7890\",\n                    \"path_image\": \"office1.jpg\"\n                },\n                \"locality\": {\n                    \"id\": 1,\n                    \"name\": \"Locality 1\"\n                },\n                \"images\": [],\n                \"features\": []\n            },\n            {\n                \"id\": 6,\n                \"title\": \"Property seis\",\n                \"address\": \"España 400\",\n                \"reference\": \"Property Reference\",\n                \"price\": 1000000,\n                \"information\": \"Property Information\",\n                \"number_room\": 3,\n                \"number_bath\": 2,\n                \"square_meter\": 150.5,\n                \"energy_certification\": \"B\",\n                \"map\": \"Property Map\",\n                \"status\": true,\n                \"office_id\": 1,\n                \"locality_id\": 1,\n                \"office\": {\n                    \"id\": 1,\n                    \"name\": \"Office 1\",\n                    \"cif\": \"ABC123\",\n                    \"address\": \"123 Main Street\",\n                    \"map\": \"Map coordinates for Office 1\",\n                    \"email\": \"office1@example.com\",\n                    \"phone\": \"123-456-7890\",\n                    \"path_image\": \"office1.jpg\"\n                },\n                \"locality\": {\n                    \"id\": 1,\n                    \"name\": \"Locality 1\"\n                },\n                \"images\": [],\n                \"features\": []\n            },\n            {\n                \"id\": 10,\n                \"title\": \"Espectacular casa en Cubelles\",\n                \"address\": \"Corrientes 1000\",\n                \"reference\": \"ARUS130\",\n                \"price\": 130000,\n                \"information\": \"EBUSA CONSULTORES INMOBILIARIOS les presenta este inmueble en el barrio de Sant Ildefonso en la calle Doctor Tiene una superficie de 50 m2, 2 dormitorios (1 doble y 1 individual ), salón con vistas al exterior, cocina con salida a galería, baño de 3 piezas con bañera. Es una vivienda muy luminosa y soleada, tiene orientación a sur por lo cual al ser un piso alto disfrutarás de unas vistas magníficas. La finca dispone de dos ascensores.\\nLa carpintería del piso es de aluminio, el suelo de parquet, cocina y baño llevan una reforma de 5 años. Nota de información al consumidor:\\nEstimado Cliente, rogamos consulte las condiciones de adquisición del presente inmueble con nuestro Departamento Comercial (valor de la propiedad, impuestos, honorarios de agencia, otros gastos, etc. ).\",\n                \"number_room\": 2,\n                \"number_bath\": 1,\n                \"square_meter\": 44,\n                \"energy_certification\": \"B\",\n                \"map\": \"<iframe src=\\\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.7558016657213!2d-58.36733122445677!3d-34.63561087294286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a334b6925e5473%3A0x1ca5b2748858b40d!2sEstadio%20Alberto%20J.%20Armando-%20La%20Bombonera!5e0!3m2!1ses-419!2sar!4v1701474311104!5m2!1ses-419!2sar\\\" width=\\\"600\\\" height=\\\"450\\\" style=\\\"border:0;\\\" allowfullscreen=\\\"\\\" loading=\\\"lazy\\\" referrerpolicy=\\\"no-referrer-when-downgrade\\\"></iframe>\",\n                \"status\": true,\n                \"office_id\": 1,\n                \"locality_id\": 1,\n                \"office\": {\n                    \"id\": 1,\n                    \"name\": \"Office 1\",\n                    \"cif\": \"ABC123\",\n                    \"address\": \"123 Main Street\",\n                    \"map\": \"Map coordinates for Office 1\",\n                    \"email\": \"office1@example.com\",\n                    \"phone\": \"123-456-7890\",\n                    \"path_image\": \"office1.jpg\"\n                },\n                \"locality\": {\n                    \"id\": 1,\n                    \"name\": \"Locality 1\"\n                },\n                \"images\": [\n                    {\n                        \"id\": 7,\n                        \"path\": \"C:\\\\Proyectos\\\\ECI\\\\eci-back-api\\\\storage\\\\app/property\\\\10/thumb_380_1400_500_0_0_crop.jpg\",\n                        \"property_id\": 10\n                    },\n                    {\n                        \"id\": 8,\n                        \"path\": \"C:\\\\Proyectos\\\\ECI\\\\eci-back-api\\\\storage\\\\app/property\\\\10/thumb_389_1400_500_0_0_crop.jpg\",\n                        \"property_id\": 10\n                    }\n                ],\n                \"features\": [\n                    {\n                        \"id\": 1,\n                        \"name\": \"Piso segunda mano\",\n                        \"property_id\": 10\n                    },\n                    {\n                        \"id\": 2,\n                        \"name\": \"Aire acondicionado\",\n                        \"property_id\": 10\n                    },\n                    {\n                        \"id\": 3,\n                        \"name\": \"Ascensor\",\n                        \"property_id\": 10\n                    }\n                ]\n            }\n        ],\n        \"first_page_url\": \"http://localhost:8000/api/property?page=1\",\n        \"from\": 1,\n        \"last_page\": 1,\n        \"last_page_url\": \"http://localhost:8000/api/property?page=1\",\n        \"links\": [\n            {\n                \"url\": null,\n                \"label\": \"&laquo; Previous\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:8000/api/property?page=1\",\n                \"label\": \"1\",\n                \"active\": true\n            },\n            {\n                \"url\": null,\n                \"label\": \"Next &raquo;\",\n                \"active\": false\n            }\n        ],\n        \"next_page_url\": null,\n        \"path\": \"http://localhost:8000/api/property\",\n        \"per_page\": 20,\n        \"prev_page_url\": null,\n        \"to\": 7,\n        \"total\": 7\n    }\n}"
+						},
+						{
+							"name": "get-properties-with-params",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{APP_URL}}/api/property?sublocality=Esplugues Centre,Cornellà Centre&price_from=300000",
+									"host": [
+										"{{APP_URL}}"
+									],
+									"path": [
+										"api",
+										"property"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "2",
+											"disabled": true
+										},
+										{
+											"key": "bath",
+											"value": "6",
+											"disabled": true
+										},
+										{
+											"key": "room",
+											"value": "3",
+											"disabled": true
+										},
+										{
+											"key": "sublocality",
+											"value": "Esplugues Centre,Cornellà Centre"
+										},
+										{
+											"key": "price_from",
+											"value": "300000"
+										},
+										{
+											"key": "price_to",
+											"value": "30000",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 10 Jan 2024 01:07:14 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 10 Jan 2024 01:07:14 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.4"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "56"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Properties obtained correctly\",\n    \"data\": {\n        \"current_page\": 1,\n        \"data\": [\n            {\n                \"id\": 5,\n                \"title\": \"Piso en venta en camino de estraleta\",\n                \"address\": \"Cornellà Centre, Cornellà de Llobregat\",\n                \"reference\": \"-\",\n                \"price\": 315000,\n                \"information\": \"Ebusa Consultores inmobiliarios le presenta esta vivienda en el centro de Cornellá de Llobregat.\\n\\nDispone de 4 dormitorios, 2 baños, cocina con galería, amplio balcón con vistas al patio interior de manzana, piscina comunitaria de la que podrán disfrutar en temporada alta.\\nLa finca dispone de ascensor.\\n\\nSe encuentra en una zona muy tranquila de Cornellá, disponiendo de todos los servicios a mano ya sea supermercados, centros comerciales o pequeños comercios. Conexión con transporte público, a 2 minutos de la parada de autobús y de tranvía, colegios, guarderías y parques infantiles próximos a esta.\\n\\nEbusa Consultores inmobiliarios le ofrece un servicio exclusivo para realizar un análisis financiero gratuito y obtener la mejor hipoteca posible.\\n\\n¡No dude en contactar con nosotros!\\n\\nInformación al consumidor: Les comunicamos que en el precio ofertado de venta, no están incluidos los gastos de compraventa ni los impuestos, ni los honorarios a percibir por la agencia.\",\n                \"office_id\": 2,\n                \"locality_id\": 1,\n                \"map\": \"41.360553714660206, 2.0755432529301094\",\n                \"status\": \"available\",\n                \"number_room\": 4,\n                \"hall_area\": null,\n                \"area\": 104,\n                \"number_bath\": 2,\n                \"terrace_area\": 1,\n                \"balcony_area\": 1,\n                \"heating\": null,\n                \"airconditioning\": true,\n                \"year_construction\": 1978,\n                \"floor_type\": null,\n                \"gas\": true,\n                \"energy_certification\": null,\n                \"elevator\": true,\n                \"shared_terrace\": null,\n                \"parking\": null,\n                \"storage_room\": null,\n                \"pool\": true,\n                \"garden\": null,\n                \"public_transport\": null,\n                \"shopping\": null,\n                \"market\": null,\n                \"education_center\": null,\n                \"health_center\": null,\n                \"recreation_area\": null,\n                \"metadata_id\": 18,\n                \"slug\": \"piso-en-venta-en-camino-de-estraleta\",\n                \"sublocality_id\": 3,\n                \"office\": {\n                    \"id\": 2,\n                    \"name\": \"Oficina Gavarra \",\n                    \"cif\": \"B-44636504\",\n                    \"address\": \"Calle La Miranda, 41-43, local 4, 08940 Cornellà de Llobregat\",\n                    \"map\": \"41.36037377824274, 2.0753155999999997\",\n                    \"email\": \"info@ebusa.es\",\n                    \"phone\": \"931389669\",\n                    \"feature\": \"<ul><li><span style=\\\\\\\"font-weight: 400;\\\\\\\" data-mce-style=\\\\\\\"font-weight: 400;\\\\\\\">Asesoramiento integral<br></span>Ofrecemos un enfoque personalizado que abarca desde la valoración inicial hasta el cierre de la transacción.</li><li><span style=\\\\\\\"font-weight: 400;\\\\\\\" data-mce-style=\\\\\\\"font-weight: 400;\\\\\\\">Rapidez y Eficacia<br></span><span style=\\\\\\\"font-weight: 400;\\\\\\\" data-mce-style=\\\\\\\"font-weight: 400;\\\\\\\">Nuestros procesos ágiles garantizan una transacción rápida y sin contratiempos.</span></li><li><span style=\\\\\\\"font-weight: 400;\\\\\\\" data-mce-style=\\\\\\\"font-weight: 400;\\\\\\\">Confianza y seguridad<br></span><span style=\\\\\\\"font-weight: 400;\\\\\\\" data-mce-style=\\\\\\\"font-weight: 400;\\\\\\\">Manejamos todas las cuestiones legales para que tu experiencia sea totalmente segura.</span></li><li><span style=\\\\\\\"font-weight: 400;\\\\\\\" data-mce-style=\\\\\\\"font-weight: 400;\\\\\\\">Ubicación Estratégica:<br></span><span style=\\\\\\\"font-weight: 400;\\\\\\\" data-mce-style=\\\\\\\"font-weight: 400;\\\\\\\">Nos encontramos en el corazón de Cornellà de Llobregat, cerca de ti y de tus necesidades.</span></li></ul>\",\n                    \"metadata_id\": 15,\n                    \"slug\": \"gavarra\",\n                    \"locality_id\": 1\n                },\n                \"locality\": {\n                    \"id\": 1,\n                    \"name\": \"Cornellà de Llobregat\"\n                },\n                \"images\": [\n                    {\n                        \"id\": 62,\n                        \"path\": \"/property/5/img1.png\",\n                        \"property_id\": 5\n                    },\n                    {\n                        \"id\": 63,\n                        \"path\": \"/property/5/img2.png\",\n                        \"property_id\": 5\n                    },\n                    {\n                        \"id\": 64,\n                        \"path\": \"/property/5/img3.png\",\n                        \"property_id\": 5\n                    },\n                    {\n                        \"id\": 65,\n                        \"path\": \"/property/5/img4.png\",\n                        \"property_id\": 5\n                    },\n                    {\n                        \"id\": 66,\n                        \"path\": \"/property/5/img5.png\",\n                        \"property_id\": 5\n                    },\n                    {\n                        \"id\": 67,\n                        \"path\": \"/property/5/img6.png\",\n                        \"property_id\": 5\n                    },\n                    {\n                        \"id\": 68,\n                        \"path\": \"/property/5/img7.png\",\n                        \"property_id\": 5\n                    },\n                    {\n                        \"id\": 69,\n                        \"path\": \"/property/5/img8.png\",\n                        \"property_id\": 5\n                    },\n                    {\n                        \"id\": 70,\n                        \"path\": \"/property/5/img9.png\",\n                        \"property_id\": 5\n                    },\n                    {\n                        \"id\": 71,\n                        \"path\": \"/property/5/img10.png\",\n                        \"property_id\": 5\n                    },\n                    {\n                        \"id\": 72,\n                        \"path\": \"/property/5/img11.png\",\n                        \"property_id\": 5\n                    },\n                    {\n                        \"id\": 73,\n                        \"path\": \"/property/5/img12.png\",\n                        \"property_id\": 5\n                    }\n                ],\n                \"metadata\": {\n                    \"id\": 18,\n                    \"title\": \"Metadata default inmueble\",\n                    \"description\": \"Metadata description default\",\n                    \"path_image\": null,\n                    \"status_index\": null,\n                    \"section\": \"inmueble\"\n                },\n                \"sublocality\": {\n                    \"id\": 3,\n                    \"name\": \"Cornellà Centre\",\n                    \"locality_id\": 1\n                }\n            },\n            {\n                \"id\": 4,\n                \"title\": \"Ático en venta en Centre\",\n                \"address\": \"Esplugues de Llobregat\",\n                \"reference\": \"-\",\n                \"price\": 780000,\n                \"information\": \"Ebusa Consultores inmobiliarios le presenta esta vivienda construida en 1993 en pleno centro de esplugues de llobregat, vivienda que consta de 125m², amplio salón con cocina americana y chimenea en este, 3 dormitorios, 2 individuales y 1 matrimonial, baño y aseo,\\n\\nEs una vivienda muy luminosa, materiales de primera clase, salón con salida a balcón de aproximadamente 10m², suelo de marmol negro que se dejará recien pulido, la cocina dispone de vitrocerámica eléctrica con pequeños detalles como son una freidora y un grill para hacer comidas a la brasa. La habitación de matrimonio es una suite con un espectacular baño con jacuzzi mas entrada a un bonito vestidor. Arriba tenemos la cubierta por la cual solo se puede entrar por la vivienda exclusivamente, es una terraza de uso y disfrute propios para el propietario de esta vivienda. INCLUYE 2 PLAZAS DE PARQUING EN EL PRECIO.\\n\\nSe encuentra en una zona muy tranquila de Esplugues, pleno centro de la ciudad, disponiendo de todos los servicios a mano, transporte público, colegios, guarderías, zonas peatonales y parques infantiles próximos a esta.\\nEbusa Consultores inmobiliarios le ofrece un servicio exclusivo para realizar un análisis financiero gratuito y obtener la mejor hipoteca posible.\\n\\n¡ No dude en contactar con nosotros!\\n\\nInformación al consumidor: Les comunicamos que en el precio ofertado de venta, no están incluidos los gastos de compraventa ni los impuestos, ni los honorarios a percibir por la agencia.\",\n                \"office_id\": 1,\n                \"locality_id\": 2,\n                \"map\": \"41.371246799209004, 2.0828339119188084\",\n                \"status\": \"available\",\n                \"number_room\": 3,\n                \"hall_area\": null,\n                \"area\": 125,\n                \"number_bath\": 2,\n                \"terrace_area\": 1,\n                \"balcony_area\": 1,\n                \"heating\": null,\n                \"airconditioning\": true,\n                \"year_construction\": 1993,\n                \"floor_type\": null,\n                \"gas\": true,\n                \"energy_certification\": null,\n                \"elevator\": true,\n                \"shared_terrace\": null,\n                \"parking\": true,\n                \"storage_room\": null,\n                \"pool\": null,\n                \"garden\": null,\n                \"public_transport\": null,\n                \"shopping\": null,\n                \"market\": null,\n                \"education_center\": null,\n                \"health_center\": null,\n                \"recreation_area\": null,\n                \"metadata_id\": 18,\n                \"slug\": \"atico-en-venta-en-centre\",\n                \"sublocality_id\": 12,\n                \"office\": {\n                    \"id\": 1,\n                    \"name\": \"Oficina Esplugues\",\n                    \"cif\": \"B-44636587\",\n                    \"address\": \"Av. Cornellà, 113, local 4, 08950 Esplugues de Llobregat\",\n                    \"map\": \"41.37114309999998, 2.0827947\",\n                    \"email\": \"info@ebusa.es\",\n                    \"phone\": \"931373749\",\n                    \"feature\": \"<ul><li><span style=\\\\\\\"font-weight: 400;\\\\\\\" data-mce-style=\\\\\\\"font-weight: 400;\\\\\\\">Asesoramiento integral<br>\\n</span>Ofrecemos un enfoque personalizado que abarca desde la valoración inicial hasta el cierre de la transacción.\\n</li><li><span data-mce-style=\\\\\\\"font-weight: 400;\\\\\\\">Rapidez y Eficacia<br></span>\\n<span style=\\\\\\\"font-weight: 400;\\\\\\\" data-mce-style=\\\\\\\"font-weight: 400;\\\\\\\">Nuestros procesos ágiles garantizan una transacción rápida y sin contratiempos.</span></li><li><span style=\\\\\\\"font-weight: 400;\\\\\\\" data-mce-style=\\\\\\\"font-weight: 400;\\\\\\\">Confianza y seguridad<br></span><span style=\\\\\\\"font-weight: 400;\\\\\\\" data-mce-style=\\\\\\\"font-weight: 400;\\\\\\\">Manejamos todas las cuestiones legales para que tu experiencia sea totalmente segura.</span></li><li><span style=\\\\\\\"font-weight: 400;\\\\\\\" data-mce-style=\\\\\\\"font-weight: 400;\\\\\\\">Ubicación Estratégica:<br></span><span style=\\\\\\\"font-weight: 400;\\\\\\\" data-mce-style=\\\\\\\"font-weight: 400;\\\\\\\">Nos encontramos en el corazón de Esplugues de Llobregat, cerca de ti y de tus necesidades.</span></li></ul>\",\n                    \"metadata_id\": 14,\n                    \"slug\": \"esplugues\",\n                    \"locality_id\": 2\n                },\n                \"locality\": {\n                    \"id\": 2,\n                    \"name\": \"Esplugues de Llobregat\"\n                },\n                \"images\": [\n                    {\n                        \"id\": 36,\n                        \"path\": \"/property/4/img1.png\",\n                        \"property_id\": 4\n                    },\n                    {\n                        \"id\": 37,\n                        \"path\": \"/property/4/img2.png\",\n                        \"property_id\": 4\n                    },\n                    {\n                        \"id\": 38,\n                        \"path\": \"/property/4/img3.png\",\n                        \"property_id\": 4\n                    },\n                    {\n                        \"id\": 39,\n                        \"path\": \"/property/4/img4.png\",\n                        \"property_id\": 4\n                    },\n                    {\n                        \"id\": 40,\n                        \"path\": \"/property/4/img5.png\",\n                        \"property_id\": 4\n                    },\n                    {\n                        \"id\": 41,\n                        \"path\": \"/property/4/img6.png\",\n                        \"property_id\": 4\n                    },\n                    {\n                        \"id\": 42,\n                        \"path\": \"/property/4/img7.png\",\n                        \"property_id\": 4\n                    },\n                    {\n                        \"id\": 43,\n                        \"path\": \"/property/4/img8.png\",\n                        \"property_id\": 4\n                    },\n                    {\n                        \"id\": 44,\n                        \"path\": \"/property/4/img9.png\",\n                        \"property_id\": 4\n                    },\n                    {\n                        \"id\": 45,\n                        \"path\": \"/property/4/img10.png\",\n                        \"property_id\": 4\n                    },\n                    {\n                        \"id\": 46,\n                        \"path\": \"/property/4/img11.png\",\n                        \"property_id\": 4\n                    },\n                    {\n                        \"id\": 47,\n                        \"path\": \"/property/4/img12.png\",\n                        \"property_id\": 4\n                    },\n                    {\n                        \"id\": 48,\n                        \"path\": \"/property/4/img13.png\",\n                        \"property_id\": 4\n                    },\n                    {\n                        \"id\": 49,\n                        \"path\": \"/property/4/img14.png\",\n                        \"property_id\": 4\n                    },\n                    {\n                        \"id\": 50,\n                        \"path\": \"/property/4/img15.png\",\n                        \"property_id\": 4\n                    },\n                    {\n                        \"id\": 51,\n                        \"path\": \"/property/4/img16.png\",\n                        \"property_id\": 4\n                    },\n                    {\n                        \"id\": 52,\n                        \"path\": \"/property/4/img17.png\",\n                        \"property_id\": 4\n                    },\n                    {\n                        \"id\": 53,\n                        \"path\": \"/property/4/img18.png\",\n                        \"property_id\": 4\n                    },\n                    {\n                        \"id\": 54,\n                        \"path\": \"/property/4/img19.png\",\n                        \"property_id\": 4\n                    },\n                    {\n                        \"id\": 55,\n                        \"path\": \"/property/4/img20.png\",\n                        \"property_id\": 4\n                    },\n                    {\n                        \"id\": 56,\n                        \"path\": \"/property/4/img21.png\",\n                        \"property_id\": 4\n                    },\n                    {\n                        \"id\": 57,\n                        \"path\": \"/property/4/img22.png\",\n                        \"property_id\": 4\n                    },\n                    {\n                        \"id\": 58,\n                        \"path\": \"/property/4/img23.png\",\n                        \"property_id\": 4\n                    },\n                    {\n                        \"id\": 59,\n                        \"path\": \"/property/4/img24.png\",\n                        \"property_id\": 4\n                    },\n                    {\n                        \"id\": 60,\n                        \"path\": \"/property/4/img25.png\",\n                        \"property_id\": 4\n                    },\n                    {\n                        \"id\": 61,\n                        \"path\": \"/property/4/img26.png\",\n                        \"property_id\": 4\n                    }\n                ],\n                \"metadata\": {\n                    \"id\": 18,\n                    \"title\": \"Metadata default inmueble\",\n                    \"description\": \"Metadata description default\",\n                    \"path_image\": null,\n                    \"status_index\": null,\n                    \"section\": \"inmueble\"\n                },\n                \"sublocality\": {\n                    \"id\": 12,\n                    \"name\": \"Esplugues Centre\",\n                    \"locality_id\": 2\n                }\n            },\n            {\n                \"id\": 7,\n                \"title\": \"Obra seminueva en La Montesa\",\n                \"address\": \"Esplugues de Llobregat\",\n                \"reference\": \"EB-ES05\",\n                \"price\": 360000,\n                \"information\": \"Ebusa Consultores inmobiliarios le presenta esta vivienda de obra semi nueva, construida en el 2014 en plena avinguda Cornella de Esplugues Llobregat, primera planta que consta de 84m², amplio salón de 25m², 3 dormitorios, 2 individuales y 1 matrimonial con una pequeña balconera, 2 baños completos, amplia cocina americana.\\n\\nEs una vivienda muy luminosa, cristalería de aluminio blanco con doble cristal, materiales de primera clase, sistemas domóticos en las persianas, balcón de 15m² para tener una pequeña mesa y comer al aire libre. PLAZA DE PARQUING OPCIONAL.\\n\\nSe encuentra en una zona muy tranquila de esplugues, disponiendo de todos los servicios a mano, transporte público, colegios, guarderías y parques infantiles próximos a esta.\\nEbusa Consultores inmobiliarios le ofrece un servicio exclusivo para realizar un análisis financiero gratuito y obtener la mejor hipoteca posible.\\n\\n¡ No dude en contactar con nosotros !\",\n                \"office_id\": 1,\n                \"locality_id\": 2,\n                \"map\": \"s/coordenadas\",\n                \"status\": \"available\",\n                \"number_room\": 3,\n                \"hall_area\": null,\n                \"area\": 99,\n                \"number_bath\": 2,\n                \"terrace_area\": 1,\n                \"balcony_area\": null,\n                \"heating\": true,\n                \"airconditioning\": true,\n                \"year_construction\": 2014,\n                \"floor_type\": \"piso\",\n                \"gas\": null,\n                \"energy_certification\": null,\n                \"elevator\": true,\n                \"shared_terrace\": null,\n                \"parking\": true,\n                \"storage_room\": null,\n                \"pool\": null,\n                \"garden\": null,\n                \"public_transport\": null,\n                \"shopping\": null,\n                \"market\": null,\n                \"education_center\": null,\n                \"health_center\": null,\n                \"recreation_area\": null,\n                \"metadata_id\": 18,\n                \"slug\": \"obra-seminueva-en-la-montesa\",\n                \"sublocality_id\": 12,\n                \"office\": {\n                    \"id\": 1,\n                    \"name\": \"Oficina Esplugues\",\n                    \"cif\": \"B-44636587\",\n                    \"address\": \"Av. Cornellà, 113, local 4, 08950 Esplugues de Llobregat\",\n                    \"map\": \"41.37114309999998, 2.0827947\",\n                    \"email\": \"info@ebusa.es\",\n                    \"phone\": \"931373749\",\n                    \"feature\": \"<ul><li><span style=\\\\\\\"font-weight: 400;\\\\\\\" data-mce-style=\\\\\\\"font-weight: 400;\\\\\\\">Asesoramiento integral<br>\\n</span>Ofrecemos un enfoque personalizado que abarca desde la valoración inicial hasta el cierre de la transacción.\\n</li><li><span data-mce-style=\\\\\\\"font-weight: 400;\\\\\\\">Rapidez y Eficacia<br></span>\\n<span style=\\\\\\\"font-weight: 400;\\\\\\\" data-mce-style=\\\\\\\"font-weight: 400;\\\\\\\">Nuestros procesos ágiles garantizan una transacción rápida y sin contratiempos.</span></li><li><span style=\\\\\\\"font-weight: 400;\\\\\\\" data-mce-style=\\\\\\\"font-weight: 400;\\\\\\\">Confianza y seguridad<br></span><span style=\\\\\\\"font-weight: 400;\\\\\\\" data-mce-style=\\\\\\\"font-weight: 400;\\\\\\\">Manejamos todas las cuestiones legales para que tu experiencia sea totalmente segura.</span></li><li><span style=\\\\\\\"font-weight: 400;\\\\\\\" data-mce-style=\\\\\\\"font-weight: 400;\\\\\\\">Ubicación Estratégica:<br></span><span style=\\\\\\\"font-weight: 400;\\\\\\\" data-mce-style=\\\\\\\"font-weight: 400;\\\\\\\">Nos encontramos en el corazón de Esplugues de Llobregat, cerca de ti y de tus necesidades.</span></li></ul>\",\n                    \"metadata_id\": 14,\n                    \"slug\": \"esplugues\",\n                    \"locality_id\": 2\n                },\n                \"locality\": {\n                    \"id\": 2,\n                    \"name\": \"Esplugues de Llobregat\"\n                },\n                \"images\": [\n                    {\n                        \"id\": 107,\n                        \"path\": \"/property/7/img1.jpg\",\n                        \"property_id\": 7\n                    },\n                    {\n                        \"id\": 108,\n                        \"path\": \"/property/7/img2.jpg\",\n                        \"property_id\": 7\n                    },\n                    {\n                        \"id\": 109,\n                        \"path\": \"/property/7/img3.jpg\",\n                        \"property_id\": 7\n                    },\n                    {\n                        \"id\": 110,\n                        \"path\": \"/property/7/img4.jpg\",\n                        \"property_id\": 7\n                    },\n                    {\n                        \"id\": 111,\n                        \"path\": \"/property/7/img5.jpg\",\n                        \"property_id\": 7\n                    },\n                    {\n                        \"id\": 112,\n                        \"path\": \"/property/7/img6.jpg\",\n                        \"property_id\": 7\n                    },\n                    {\n                        \"id\": 113,\n                        \"path\": \"/property/7/img7.jpg\",\n                        \"property_id\": 7\n                    },\n                    {\n                        \"id\": 114,\n                        \"path\": \"/property/7/img8.jpg\",\n                        \"property_id\": 7\n                    },\n                    {\n                        \"id\": 115,\n                        \"path\": \"/property/7/img9.jpg\",\n                        \"property_id\": 7\n                    },\n                    {\n                        \"id\": 116,\n                        \"path\": \"/property/7/img10.jpg\",\n                        \"property_id\": 7\n                    },\n                    {\n                        \"id\": 117,\n                        \"path\": \"/property/7/img11.jpg\",\n                        \"property_id\": 7\n                    },\n                    {\n                        \"id\": 118,\n                        \"path\": \"/property/7/img12.jpg\",\n                        \"property_id\": 7\n                    },\n                    {\n                        \"id\": 119,\n                        \"path\": \"/property/7/img13.jpg\",\n                        \"property_id\": 7\n                    },\n                    {\n                        \"id\": 120,\n                        \"path\": \"/property/7/img14.jpg\",\n                        \"property_id\": 7\n                    },\n                    {\n                        \"id\": 121,\n                        \"path\": \"/property/7/img15.jpg\",\n                        \"property_id\": 7\n                    },\n                    {\n                        \"id\": 122,\n                        \"path\": \"/property/7/img16.jpg\",\n                        \"property_id\": 7\n                    },\n                    {\n                        \"id\": 123,\n                        \"path\": \"/property/7/img17.jpg\",\n                        \"property_id\": 7\n                    },\n                    {\n                        \"id\": 124,\n                        \"path\": \"/property/7/img18.jpg\",\n                        \"property_id\": 7\n                    },\n                    {\n                        \"id\": 125,\n                        \"path\": \"/property/7/img19.jpg\",\n                        \"property_id\": 7\n                    },\n                    {\n                        \"id\": 126,\n                        \"path\": \"/property/7/img20.jpg\",\n                        \"property_id\": 7\n                    },\n                    {\n                        \"id\": 127,\n                        \"path\": \"/property/7/img21.jpg\",\n                        \"property_id\": 7\n                    },\n                    {\n                        \"id\": 128,\n                        \"path\": \"/property/7/img22.jpg\",\n                        \"property_id\": 7\n                    },\n                    {\n                        \"id\": 129,\n                        \"path\": \"/property/7/img23.jpg\",\n                        \"property_id\": 7\n                    },\n                    {\n                        \"id\": 130,\n                        \"path\": \"/property/7/img24.jpg\",\n                        \"property_id\": 7\n                    },\n                    {\n                        \"id\": 131,\n                        \"path\": \"/property/7/img25.jpg\",\n                        \"property_id\": 7\n                    }\n                ],\n                \"metadata\": {\n                    \"id\": 18,\n                    \"title\": \"Metadata default inmueble\",\n                    \"description\": \"Metadata description default\",\n                    \"path_image\": null,\n                    \"status_index\": null,\n                    \"section\": \"inmueble\"\n                },\n                \"sublocality\": {\n                    \"id\": 12,\n                    \"name\": \"Esplugues Centre\",\n                    \"locality_id\": 2\n                }\n            }\n        ],\n        \"first_page_url\": \"http://localhost:8000/api/property?page=1\",\n        \"from\": 1,\n        \"last_page\": 1,\n        \"last_page_url\": \"http://localhost:8000/api/property?page=1\",\n        \"links\": [\n            {\n                \"url\": null,\n                \"label\": \"&laquo; Previous\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:8000/api/property?page=1\",\n                \"label\": \"1\",\n                \"active\": true\n            },\n            {\n                \"url\": null,\n                \"label\": \"Next &raquo;\",\n                \"active\": false\n            }\n        ],\n        \"next_page_url\": null,\n        \"path\": \"http://localhost:8000/api/property\",\n        \"per_page\": 20,\n        \"prev_page_url\": null,\n        \"to\": 3,\n        \"total\": 3\n    }\n}"
 						}
 					]
 				},
@@ -2256,14 +2399,14 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{APP_URL}}/api/property/1",
+							"raw": "{{APP_URL}}/api/property/14",
 							"host": [
 								"{{APP_URL}}"
 							],
 							"path": [
 								"api",
 								"property",
-								"1"
+								"14"
 							]
 						}
 					},
@@ -3163,14 +3306,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{APP_URL}}/api/get-blog/blog-title-2UP",
+							"raw": "{{APP_URL}}/api/get-blog/blog-title-2",
 							"host": [
 								"{{APP_URL}}"
 							],
 							"path": [
 								"api",
 								"get-blog",
-								"blog-title-2UP"
+								"blog-title-2"
 							]
 						}
 					},
@@ -3563,15 +3706,29 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{APP_URL}}/api/metadata",
+							"raw": "{{APP_URL}}/api/metadata?section=contact",
 							"host": [
 								"{{APP_URL}}"
 							],
 							"path": [
 								"api",
 								"metadata"
+							],
+							"query": [
+								{
+									"key": "section",
+									"value": "contact"
+								}
 							]
 						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-by-id-metadata",
+					"request": {
+						"method": "GET",
+						"header": []
 					},
 					"response": []
 				}
@@ -5268,7 +5425,8 @@
 								{
 									"key": "image_1",
 									"type": "file",
-									"src": "/C:/Proyectos/ECI/Tools/imagenes/eci-logo.4l-LYu9C.png"
+									"src": [],
+									"disabled": true
 								}
 							]
 						},
