@@ -2,7 +2,6 @@
 
 namespace Core\Property\Services;
 
-use App\Models\Feature;
 use App\Models\Image;
 use App\ServiceResponse;
 use App\Models\Property;
@@ -16,7 +15,6 @@ class PropertyService
 {
     static function index(Request $request){
         try {
-            
             $perPage = $request->query('per_page', 20);
             $query = Property::query();
             $numberBath = $request->query('bath');
@@ -72,34 +70,35 @@ class PropertyService
             $property->price = $request->price;
             $property->information = $request->information;
             $property->number_room = $request->number_room;
-            $property->hall_area = $request->hall_area; // Agregado
-            $property->area = $request->area; // Agregado
+            $property->hall_area = $request->hall_area; 
+            $property->area = $request->area; 
             $property->number_bath = $request->number_bath;
-            $property->terrace_area = $request->terrace_area; // Agregado
-            $property->balcony_area = $request->balcony_area; // Agregado
+            $property->terrace_area = $request->terrace_area; 
+            $property->balcony_area = $request->balcony_area; 
             $property->map = $request->map;
             $property->status = $request->status;
             $property->office_id = $request->office_id;
             $property->locality_id = $request->locality_id;
             $property->sublocality_id = $request->sublocality_id;
-            $property->heating = $request->heating; // Agregado
-            $property->airconditioning = $request->airconditioning; // Agregado
-            $property->year_construction = $request->year_construction; // Agregado
-            $property->floor_type = $request->floor_type; // Agregado
-            $property->gas = $request->gas; // Agregado
+            $property->heating = $request->heating; 
+            $property->airconditioning = $request->airconditioning; 
+            $property->year_construction = $request->year_construction; 
+            $property->floor_type = $request->floor_type; 
+            $property->gas = $request->gas; 
             $property->energy_certification = $request->energy_certification;
-            $property->elevator = $request->elevator; // Agregado
-            $property->shared_terrace = $request->shared_terrace; // Agregado
-            $property->parking = $request->parking; // Agregado
-            $property->storage_room = $request->storage_room; // Agregado
-            $property->pool = $request->pool; // Agregado
-            $property->garden = $request->garden; // Agregado
-            $property->public_transport = $request->public_transport; // Agregado
-            $property->shopping = $request->shopping; // Agregado
-            $property->market = $request->market; // Agregado
-            $property->education_center = $request->education_center; // Agregado
-            $property->health_center = $request->health_center; // Agregado
-            $property->recreation_area = $request->recreation_area; // Agregado
+            $property->energy_consumption = $request->energy_consumption;
+            $property->elevator = $request->elevator; 
+            $property->shared_terrace = $request->shared_terrace; 
+            $property->parking = $request->parking; 
+            $property->storage_room = $request->storage_room; 
+            $property->pool = $request->pool; 
+            $property->garden = $request->garden; 
+            $property->public_transport = $request->public_transport; 
+            $property->shopping = $request->shopping; 
+            $property->market = $request->market; 
+            $property->education_center = $request->education_center; 
+            $property->health_center = $request->health_center; 
+            $property->recreation_area = $request->recreation_area; 
             $property->slug = $request->slug;
             $property->save();
 
