@@ -6,6 +6,7 @@ use App\Models\Feature;
 use App\Models\Image;
 use App\ServiceResponse;
 use App\Models\Property;
+use App\Models\Sublocality;
 use Core\Image\Services\ImageService;
 use Core\Metadata\Services\MetadataService;
 use Illuminate\Http\Request;
@@ -13,6 +14,53 @@ use Illuminate\Support\Facades\DB;
 
 class PropertyService
 {
+    static function index(Request $request){
+        try {
+            
+            $perPage = $request->query('per_page', 20);
+            $query = Property::query();
+            $numberBath = $request->query('bath');
+            if ($numberBath) {
+                $query->where('number_bath', $numberBath);
+            }
+    
+            $numberRoom = $request->query('room');
+            if ($numberRoom) {
+                $query->where('number_room', $numberRoom);
+            }
+    
+            $sublocalities = $request->query('sublocality');
+            if ($sublocalities) {
+                $sublocalities = explode(',', $sublocalities);
+                $sublocalityIds = Sublocality::whereIn('name', $sublocalities)->pluck('id')->toArray();
+    
+                if (!empty($sublocalityIds)) {
+                    $query->whereIn('sublocality_id', $sublocalityIds);
+                } else {
+                    return ServiceResponse::not_found(__('messages.sublocalities_not_found'));
+                }
+            }
+
+            $priceFrom = $request->query('price_from');
+            $priceTo = $request->query('price_to');
+            if ($priceFrom !== null && $priceTo !== null) {
+                $query->whereBetween('price', [$priceFrom, $priceTo]);
+            } elseif ($priceFrom !== null) {
+                $query->where('price', '>=', $priceFrom);
+            } elseif ($priceTo !== null) {
+                $query->where('price', '<=', $priceTo);
+            }
+    
+            $properties = $query->with('office', 'locality', 'images', 'metadata', 'sublocality')->paginate($perPage);
+            return ServiceResponse::ok(__('messages.property_get_ok'), $properties);
+
+        } catch (\Throwable $th) {
+            DB::rollBack();
+            return (config('app.debug')) ? ServiceResponse::serverError($th->getMessage()) : ServiceResponse::serverError();
+        }
+    }
+
+
     static function store(Request $request){
 
         DB::beginTransaction();

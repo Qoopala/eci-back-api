@@ -15,12 +15,16 @@ class PropertyController extends Controller
 {
     public function index(Request $request)
     {
-        $perPage = $request->query('per_page', 20);
         try {
-            $query = Property::query();
-            $properties = $query->with('office', 'locality', 'images', 'metadata', 'sublocality')->paginate($perPage);
-            if($properties) return ApiResponse::ok(__('messages.property_get_ok'), $properties);
-            else return ApiResponse::not_found(__('messages.property_not_found'));
+            $response = PropertyService::index($request);
+    
+            if($response['success']) return ApiResponse::ok($response['message'], $response['data']);
+            else {
+                switch ($response['code']) {
+                    case 500:
+                        return ApiResponse::serverError($response['message']); break;
+                }
+            }
         } catch (\Throwable $th) {
             return (config('app.debug')) ? ApiResponse::serverError($th->getMessage()) : ApiResponse::serverError();
         }
