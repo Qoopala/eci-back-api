@@ -860,7 +860,7 @@
 							"formdata": [
 								{
 									"key": "title",
-									"value": "Ático atico ideal para parejas en El Gall2",
+									"value": "Ático atico ideal para parejas en El Gall3",
 									"type": "text"
 								},
 								{
@@ -932,12 +932,13 @@
 								{
 									"key": "image_1",
 									"type": "file",
-									"src": "/C:/Proyectos/ECI/Tools/imagenes/inmuebles/inmueble5/img2.jpg"
+									"src": "/C:/Proyectos/ECI/Tools/imagenes/inmuebles/inmueble8/img1.jpg"
 								},
 								{
 									"key": "image_2",
 									"type": "file",
-									"src": "/C:/Proyectos/ECI/Tools/imagenes/inmuebles/inmueble7/img2.jpg"
+									"src": "/C:/Proyectos/ECI/Tools/imagenes/inmuebles/inmueble7/img2.jpg",
+									"disabled": true
 								},
 								{
 									"key": "image_3",
@@ -1082,7 +1083,7 @@
 								},
 								{
 									"key": "slug",
-									"value": "Plaza-de-parking-en-Barcelona2",
+									"value": "Ático-atico-ideal-para-parejas-en-El6",
 									"type": "text"
 								},
 								{
@@ -1090,6 +1091,16 @@
 									"type": "file",
 									"src": "/C:/Proyectos/ECI/Tools/imagenes/inmuebles/inmueble7/img4.jpg",
 									"disabled": true
+								},
+								{
+									"key": "energy_consumption",
+									"value": "example",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "parking",
+									"type": "text"
 								}
 							]
 						},
@@ -2087,7 +2098,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{APP_URL}}/api/property?sublocality=Esplugues Centre,Cornellà Centre&price_from=300000",
+							"raw": "{{APP_URL}}/api/property?price_from=300000",
 							"host": [
 								"{{APP_URL}}"
 							],
@@ -2113,7 +2124,8 @@
 								},
 								{
 									"key": "sublocality",
-									"value": "Esplugues Centre,Cornellà Centre"
+									"value": "Esplugues Centre,Cornellà Centre",
+									"disabled": true
 								},
 								{
 									"key": "price_from",
@@ -2304,14 +2316,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{APP_URL}}/api/property/1",
+							"raw": "{{APP_URL}}/api/property/15",
 							"host": [
 								"{{APP_URL}}"
 							],
 							"path": [
 								"api",
 								"property",
-								"1"
+								"15"
 							]
 						}
 					},
@@ -2619,7 +2631,7 @@
 								{
 									"key": "image_1",
 									"type": "file",
-									"src": "/C:/Proyectos/ECI/Tools/imagenes/thumb_393_1400_500_0_0_crop.jpg"
+									"src": []
 								},
 								{
 									"key": "slug",
@@ -2640,12 +2652,14 @@
 								{
 									"key": "metaDescription",
 									"value": "description meta blog",
-									"type": "text"
+									"type": "text",
+									"disabled": true
 								},
 								{
 									"key": "metaStatusindex",
 									"value": "true",
-									"type": "text"
+									"type": "text",
+									"disabled": true
 								},
 								{
 									"key": "image_",
@@ -2656,7 +2670,8 @@
 								{
 									"key": "image_meta",
 									"type": "file",
-									"src": "/C:/Users/gabri/Pictures/ARGENTINA/pngtree-3-golden-3d-realistic-stars-png-image_6506672.jpg"
+									"src": "/C:/Users/gabri/Pictures/ARGENTINA/pngtree-3-golden-3d-realistic-stars-png-image_6506672.jpg",
+									"disabled": true
 								}
 							]
 						},
@@ -3804,7 +3819,7 @@
 								},
 								{
 									"key": "slug",
-									"value": "Oficina-ECI-prueba",
+									"value": "Oficina-ECI-prueba-2",
 									"type": "text"
 								},
 								{
@@ -3830,6 +3845,11 @@
 								{
 									"key": "locality_id",
 									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "name_general",
+									"value": "Oficina New Eci",
 									"type": "text"
 								}
 							]

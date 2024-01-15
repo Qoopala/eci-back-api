@@ -11,6 +11,7 @@ class OfficeValidation
 
         $rules = [
             'name'=>'required|string',
+            'name_general'=>'nullable|string',
             'cif'=>'required|string',
             'address'=>'required|string',
             'map'=>'required|string',

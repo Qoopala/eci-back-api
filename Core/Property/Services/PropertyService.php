@@ -69,6 +69,7 @@ class PropertyService
             $property->reference = $request->reference;
             $property->price = $request->price;
             $property->information = $request->information;
+            $property->type = $request->type;
             $property->number_room = $request->number_room;
             $property->hall_area = $request->hall_area; 
             $property->area = $request->area; 

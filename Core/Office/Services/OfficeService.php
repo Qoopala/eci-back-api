@@ -17,6 +17,7 @@ class OfficeService
         try {
             $office = new  Office();
             $office->name = $request->name;
+            $office->name_general = $request->name_general;
             $office->cif = $request->cif;
             $office->address = $request->address;
             $office->map = $request->map;
