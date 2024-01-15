@@ -21,6 +21,7 @@ class Office extends Model
 
     protected $fillable = [
         'name',
+        'name_general',
         'cif',
         'address',
         'map',
@@ -40,6 +41,7 @@ class Office extends Model
     
     protected $casts = [
         'name'=>'string',
+        'name_general'=>'string',
         'cif'=>'string',
         'address'=>'string',
         'map'=>'string',

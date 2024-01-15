@@ -15,6 +15,7 @@ class PropertyValidation
             'reference' => 'required|string',
             'price' => 'required|numeric',
             'information' => 'required|string',
+            'type' => 'nullable|string',
             'number_room' => 'required|numeric',
             'hall_area' => 'nullable|numeric', 
             'area' => 'nullable|numeric', 
