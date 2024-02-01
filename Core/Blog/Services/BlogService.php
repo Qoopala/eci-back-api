@@ -71,9 +71,6 @@ class BlogService
             $blog->update($data);
             
             if(count($request->file())){
-                $old_images =  BlogImage::where('blog_id', $id)->delete();
-                $delete_old_images = ImageService::delete('blog', $blog->id);
-                if(!$delete_old_images) return ServiceResponse::badRequest(__('messages.image_update_badrequest'));
     
                 $images = ImageService::store($request, 'blog', $blog->id);
                 if($images['success']) {
