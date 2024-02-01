@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('title', 100);
             $table->string('address', 100)->nullable();
-            $table->string('reference', 45);
+            $table->string('reference', 45)->nullable();
             $table->float('price', 10,2);
             $table->text('information');
             $table->foreignId('office_id')->references('id')->on('offices');

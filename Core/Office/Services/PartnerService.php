@@ -47,8 +47,6 @@ class PartnerService
             $partner->update($data);
             
             if(count($request->file())){
-                $delete_old_images = ImageService::delete('partner', $partner->id);
-                if(!$delete_old_images) return ServiceResponse::badRequest(__('messages.image_update_badrequest'));
     
                 $images = ImageService::store($request, 'partner', $partner->id);
                 if($images['success']) {

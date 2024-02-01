@@ -47,9 +47,7 @@ class ReviewService
             $review->update($data);
             
             if(count($request->file())){
-                $delete_old_images = ImageService::delete('review', $review->id);
-                if(!$delete_old_images) return ServiceResponse::badRequest(__('messages.image_update_badrequest'));
-    
+
                 $images = ImageService::store($request, 'review', $review->id);
                 if($images['success']) {
                     foreach ($images['data'] as $path_image) {
