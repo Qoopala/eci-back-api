@@ -61,9 +61,6 @@ class OfficeService
             $office->update($data);
             
             if(count($request->file())){
-                $old_images =  OfficeImages::where('office_id', $id)->delete();
-                $delete_old_images = ImageService::delete('office', $office->id);
-                if(!$delete_old_images) return ServiceResponse::badRequest(__('messages.image_update_badrequest'));
     
                 $images = ImageService::store($request, 'office', $office->id);
                 if($images['success']) {

@@ -18,7 +18,7 @@ class MetadataService
             $metadata = new Metadata();
             $metadata->title = $request->metaTitle;
             $metadata->description = $request->metaDescription;
-            $metadata->status_index = $request->metaStatusindex;
+            if(isset($request->metaStatusindex)) $metadata->status_index = $request->metaStatusindex;
             if(isset($request->metaSection)) $metadata->section = $request->metaSection;
             $metadata->save();
             
@@ -44,14 +44,12 @@ class MetadataService
 
         DB::beginTransaction();
         try {
-            $metadata->title = $request->metaTitle;
-            $metadata->description = $request->metaDescription;
-            $metadata->status_index = $request->metaStatusindex;
+            if(isset($request->metaTitle)) $metadata->title = $request->metaTitle;
+            if(isset($request->metaDescription)) $metadata->description = $request->metaDescription;
+            if(isset($request->metaStatusindex)) $metadata->status_index = $request->metaStatusindex;
             if(isset($request->metaSection)) $metadata->section = $request->metaSection;
             
             if(count($request->file())){
-                $delete_old_images = ImageService::delete('metadata', $metadata->id);
-                if(!$delete_old_images) return ServiceResponse::badRequest(__('messages.image_update_badrequest'));
     
                 $images = ImageService::store($request, 'metadata', $metadata->id);
                 if($images['success']) {

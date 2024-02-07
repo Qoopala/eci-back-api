@@ -37,12 +37,12 @@ class ImageService
         }
     }
 
-    static function delete($type, $id){
+    static function delete($path){
         try {
-            $directory = public_path("{$type}/{$id}");
-    
-            if (File::exists($directory)) {
-                File::deleteDirectory($directory);
+            $file_path = public_path($path);
+
+            if (File::exists($file_path)) {
+                File::delete($file_path);
                 return true; 
             }
             return false; 
