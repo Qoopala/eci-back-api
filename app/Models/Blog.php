@@ -17,7 +17,7 @@ class Blog extends Model
 
     public $table = 'blogs';
 
-    protected $softCascade = ['metadata', 'blogImages'];
+    protected $softCascade = ['blogImages'];
 
     protected $fillable = [
         'title',
