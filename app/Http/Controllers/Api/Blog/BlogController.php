@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api\Blog;
 use App\ApiResponse;
 use App\Http\Controllers\Controller;
 use App\Models\Blog;
+use App\Models\Metadata;
 use Core\Blog\Services\BlogService;
 use Core\Blog\Validations\BlogValidation;
 use Core\Image\Validations\ImageValidation;
@@ -117,6 +118,7 @@ class BlogController extends Controller
         try {
             $blog =  Blog::find($id);
             if ($blog) {
+                $metadata = Metadata::find($blog->metadata_id)->delete();
                 $blog->delete();
                 return ApiResponse::ok(__('messages.blog_delete_ok'));
             } else {
