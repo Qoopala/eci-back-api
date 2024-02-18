@@ -10,6 +10,7 @@ class ImageService
 {
     static function store(Request $request, $type, $id){
         try {
+            // dd($request->file());
             $folderPath = "{$type}" . DIRECTORY_SEPARATOR . "{$id}";
             $arrayPath = [];
     
@@ -18,13 +19,13 @@ class ImageService
             }
             $images = $request->file();
             if($type === 'metadata'){
-                $image = $images['image_meta'];
+                $image = $images['meta_image'];
                 $imageName = $image->getClientOriginalName();
                 $image->move(public_path($folderPath), $imageName);
                 $arrayPath[] = "/{$type}/{$id}/{$imageName}";
             }else{
                 foreach ($images as $key => $image) {
-                    if($key !== 'image_meta'){
+                    if($key !== 'meta_image'){
                         $imageName = $image->getClientOriginalName();
                         $image->move(public_path($folderPath), $imageName);
                         $arrayPath[] = "/{$type}/{$id}/{$imageName}";
