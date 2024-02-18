@@ -69,7 +69,7 @@ class PropertyService
 
             $attributes = [
                 'title', 'address', 'price', 'information', 'type', 'number_room', 'hall_area', 'area',
-                'number_bath', 'terrace_area', 'balcony_area', 'map', 'status', 'office_id', 'locality_id',
+                'number_bath', 'terrace','terrace_area', 'balcony','balcony_area', 'map', 'status', 'office_id', 'locality_id',
                 'sublocality_id', 'heating', 'airconditioning', 'year_construction', 'floor_type', 'gas',
                 'energy_certification', 'energy_consumption', 'elevator', 'shared_terrace', 'parking',
                 'storage_room', 'pool', 'garden', 'public_transport', 'shopping', 'market', 'education_center',

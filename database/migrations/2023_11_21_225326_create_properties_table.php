@@ -28,7 +28,9 @@ return new class extends Migration
             $table->float('hall_area', 8, 2)->nullable();
             $table->float('area', 8,2)->nullable();
             $table->integer('number_bath')->nullable();
+            $table->boolean('terrace')->nullable();
             $table->float('terrace_area', 8, 2)->nullable();
+            $table->boolean('balcony')->nullable();
             $table->float('balcony_area', 8, 2)->nullable();
             
             //CARACTERISTICAS GENERALES
